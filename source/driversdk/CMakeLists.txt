@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.6)
+PROJECT(driversdk)
+SUBDIRS(iodatasync pkdrvcmn pydrvhelper pkdriver )
+#IF(${CMAKE_SYSTEM_NAME} MATCHES Linux)
+#	SUBDIRS()
+#ENDIF(${CMAKE_SYSTEM_NAME} MATCHES Linux)

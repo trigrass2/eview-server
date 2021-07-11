@@ -1,0 +1,41 @@
+#!/bin/bash
+# chkconfig: 2345 85 90
+# description: eview 
+# processname: pkservermgr
+ 
+set -e
+export PK_HOME_PATH=/eview-server
+export LD_LIBRARY_PATH=/eview-server/bin:/eview-server/python/lib:$LD_LIBRARY_PATH
+export PATH=${PK_HOME_PATH}/bin:${PK_HOME_PATH}/python/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
+export PYTHONHOME=${PK_HOME_PATH}/python
+#. /lib/lsb/init-functions
+ 
+NAME=eview
+ 
+case "$1" in
+  start)
+    echo "Starting $NAME..."
+	#nohup /eview-server/bin/redis-server /icv/etc/redis.conf > /dev/null 2>&1 & 
+    nohup /eview-server/bin/pkservermgr > /dev/null 2>&1 &
+    echo "Start $NAME successful"
+    ;;
+ 
+  stop)
+    echo "Stopping $NAME..."
+    #ps -ef | grep /eview-server/bin/ | grep -v grep | cut -c 9-15  | xargs kill -s 9
+    nohup /eview-server/bin/pkservermgr stop> /dev/null 2>&1 &
+    echo  "Stop $NAME successful"
+    ;;
+ 
+  restart)
+    nohup /eview-server/bin/pkservermgr stop> /dev/null 2>&1 &
+    echo  "Stop $NAME successful"
+    nohup /eview-server/bin/pkservermgr > /dev/null 2>&1 &
+    echo "Start $NAME successful"
+    ;;
+ 
+  *)
+    echo "Usage: /etc/init.d/$NAME {start|stop}"
+    exit 1
+    ;;
+esac

@@ -1,0 +1,1 @@
+mongodriver-legacy，不是26compat，26compat有缺陷（获取元素为集合时）

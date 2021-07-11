@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="14.5.2" version="14.5.2" Modules="professional" RootPath="." Language="zh" Id="{C75F1117-94DF-479E-9FF6-24076F582F8C}">
+  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
+    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;MsiJavaComponent;MsiDriverPackagesComponent;UserAccountsComponent;ScheduledTasksComponent;SqlConnectionComponent;AutorunComponent;FirewallExceptionComponent;GameUxComponent;MsiDirectEditorComponent;SharePointSlnComponent;SilverlightSlnComponent;MultipleInstancesComponent;SccmComponent;ActSyncAppComponent"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_FINDEXE_TITLE" Value="选择 [|ProductName] 安装包" ValueLocId="AI.Property.FindExeTitle"/>
+    <ROW Property="AI_UPGRADE" Value="No"/>
+    <ROW Property="ALLUSERS" Value="1" MultiBuildValue="DefaultBuild:2"/>
+    <ROW Property="ARPHELPTELEPHONE" Value="021-31378880"/>
+    <ROW Property="ARPNOREPAIR" MultiBuildValue="DefaultBuild:1"/>
+    <ROW Property="ARPPRODUCTICON" Value="favicon.exe" Type="8"/>
+    <ROW Property="ARPURLINFOABOUT" Value="www.peakinfo.cn"/>
+    <ROW Property="AiPreferFastOem" MultiBuildValue="DefaultBuild:1"/>
+    <ROW Property="CTRLS" Value="2"/>
+    <ROW Property="MSIFASTINSTALL" MultiBuildValue="DefaultBuild:7"/>
+    <ROW Property="Manufacturer" Value="上海凌峰信息技术有限公司"/>
+    <ROW Property="ProductCode" Value="2052:{D7314843-6419-4FD6-85FE-A74E36C6EF00} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="2052"/>
+    <ROW Property="ProductName" Value="eview综合监控平台 客户端"/>
+    <ROW Property="ProductVersion" Value="3.0.0" Type="32"/>
+    <ROW Property="RUNAPPLICATION" Value="1" Type="4"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR;UPGRADE_1"/>
+    <ROW Property="UpgradeCode" Value="{01338739-AA6E-4977-BDA9-9C4EA5E03898}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003 RTM, Windows XP/2003 SP1, Windows XP SP2 x86" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003 RTM, Windows XP/2003 SP1, Windows XP SP2 x86" ValueLocId="-"/>
+    <ROW Property="disk_c" Value="c:\"/>
+    <ROW Property="disk_d" Value="d:\"/>
+    <ROW Property="eng_productname" Value="eview-client"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="HCNetSDKCom_Dir" Directory_Parent="bin_Dir" DefaultDir="HCNETS~1|HCNetSDKCom"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="__1_Dir" Directory_Parent="SHORTCUTDIR" DefaultDir="调试工具"/>
+    <ROW Directory="__Dir" Directory_Parent="SHORTCUTDIR" DefaultDir="帮助文件"/>
+    <ROW Directory="bin_Dir" Directory_Parent="APPDIR" DefaultDir="bin"/>
+    <ROW Directory="config_Dir" Directory_Parent="APPDIR" DefaultDir="config"/>
+    <ROW Directory="doc_Dir" Directory_Parent="APPDIR" DefaultDir="doc"/>
+    <ROW Directory="locales_Dir" Directory_Parent="bin_Dir" DefaultDir="locales"/>
+    <ROW Directory="log_Dir" Directory_Parent="APPDIR" DefaultDir="log"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AI_ExePath" ComponentId="{5FB4EEF0-0017-44AD-BEAD-55BAC23E80DF}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
+    <ROW Component="AnalyzeData.dll" ComponentId="{94BECC2D-9D01-4CB1-8015-17A5FF998869}" Directory_="HCNetSDKCom_Dir" Attributes="0" KeyPath="AnalyzeData.dll"/>
+    <ROW Component="AudioIntercom.dll" ComponentId="{358C5422-D395-4CEF-8F55-42F4ACBE7A78}" Directory_="HCNetSDKCom_Dir" Attributes="0" KeyPath="AudioIntercom.dll"/>
+    <ROW Component="AudioRender.dll" ComponentId="{432B37EB-9EFA-4DF1-9DB6-2389A357CC64}" Directory_="bin_Dir" Attributes="0" KeyPath="AudioRender.dll"/>
+    <ROW Component="ClientDemo.exe" ComponentId="{6C14E1C6-CED7-47BC-AA54-7315247F7BE7}" Directory_="bin_Dir" Attributes="0" KeyPath="ClientDemo.exe"/>
+    <ROW Component="D3DCompiler_43.dll" ComponentId="{325CD772-F1B0-45E5-93B6-64EF3FF0B502}" Directory_="bin_Dir" Attributes="0" KeyPath="D3DCompiler_43.dll"/>
+    <ROW Component="D3DX9_43.dll" ComponentId="{FF83D1D6-1810-47EE-ADE2-D3B717C437A6}" Directory_="bin_Dir" Attributes="0" KeyPath="D3DX9_43.dll"/>
+    <ROW Component="DVRDH.dll" ComponentId="{0DE2049E-17BC-40CE-AB7F-E944B9ECE5B9}" Directory_="bin_Dir" Attributes="0" KeyPath="DVRDH.dll"/>
+    <ROW Component="DVRH3C.dll" ComponentId="{6BCA0336-E066-4266-8D6E-44AFEC9C4474}" Directory_="bin_Dir" Attributes="0" KeyPath="DVRH3C.dll"/>
+    <ROW Component="DVRHK3.dll" ComponentId="{CCAE7EA5-B4CC-4F5A-AF07-278405F42A31}" Directory_="bin_Dir" Attributes="0" KeyPath="DVRHK3.dll"/>
+    <ROW Component="EagleEyeRender.dll" ComponentId="{E2413B9D-CB00-446A-B541-78725BE1CFA9}" Directory_="bin_Dir" Attributes="0" KeyPath="EagleEyeRender.dll"/>
+    <ROW Component="HCAlarm.dll" ComponentId="{3119C8C5-228E-4824-9DBB-16DB9752C644}" Directory_="HCNetSDKCom_Dir" Attributes="0" KeyPath="HCAlarm.dll"/>
+    <ROW Component="HCCore.dll" ComponentId="{E64516B3-A3E1-46BB-B23C-6FB321D3B772}" Directory_="bin_Dir" Attributes="0" KeyPath="HCCore.dll"/>
+    <ROW Component="HCCoreDevCfg.dll" ComponentId="{2E872EE5-D4C1-4C75-8126-EDFFE9E2D174}" Directory_="HCNetSDKCom_Dir" Attributes="0" KeyPath="HCCoreDevCfg.dll"/>
+    <ROW Component="HCDisplay.dll" ComponentId="{5F82D659-60E2-4E13-A4B9-02F78F6113CE}" Directory_="HCNetSDKCom_Dir" Attributes="0" KeyPath="HCDisplay.dll"/>
+    <ROW Component="HCGeneralCfgMgr.dll" ComponentId="{634E4D14-E132-4F0F-828B-CC2D32C964B4}" Directory_="HCNetSDKCom_Dir" Attributes="0" KeyPath="HCGeneralCfgMgr.dll"/>
+    <ROW Component="HCIndustry.dll" ComponentId="{FE25C8E6-171E-454A-A67F-9D6C1D4E9EED}" Directory_="HCNetSDKCom_Dir" Attributes="0" KeyPath="HCIndustry.dll"/>
+    <ROW Component="HCNetSDK.dll" ComponentId="{57C262A1-6E05-427F-9B1C-DC6FB5A8BF81}" Directory_="bin_Dir" Attributes="0" KeyPath="HCNetSDK.dll"/>
+    <ROW Component="HCPlayBack.dll" ComponentId="{8213B00D-8BE1-4E20-AA01-AA5A7D8AEFB5}" Directory_="HCNetSDKCom_Dir" Attributes="0" KeyPath="HCPlayBack.dll"/>
+    <ROW Component="HCPreview.dll" ComponentId="{97E5775E-9F1C-4F10-8004-5AD751380764}" Directory_="HCNetSDKCom_Dir" Attributes="0" KeyPath="HCPreview.dll"/>
+    <ROW Component="HCVoiceTalk.dll" ComponentId="{1C066F5B-3728-463F-AA46-0255C5D18388}" Directory_="HCNetSDKCom_Dir" Attributes="0" KeyPath="HCVoiceTalk.dll"/>
+    <ROW Component="HWDecode.dll" ComponentId="{55BBBA1D-B098-4F23-9BE4-39EF420C38A2}" Directory_="bin_Dir" Attributes="0" KeyPath="HWDecode.dll"/>
+    <ROW Component="Infra.dll" ComponentId="{11A974E1-9FB5-482E-A9FF-9562B0E98C9C}" Directory_="bin_Dir" Attributes="0" KeyPath="Infra.dll"/>
+    <ROW Component="IvsDrawer.dll" ComponentId="{703EDF0A-7B0A-4B93-98D9-1EDFA49DCDEA}" Directory_="bin_Dir" Attributes="0" KeyPath="IvsDrawer.dll"/>
+    <ROW Component="KedaPlat.dll" ComponentId="{AF95601A-9D76-4414-944A-3B68EBF6FC2B}" Directory_="bin_Dir" Attributes="0" KeyPath="KedaPlat.dll"/>
+    <ROW Component="MP_Render.dll" ComponentId="{1EA6A052-70A1-42F1-8BB9-D7DDA38B30A7}" Directory_="bin_Dir" Attributes="0" KeyPath="MP_Render.dll"/>
+    <ROW Component="MP_VIE.dll" ComponentId="{C325D20F-7546-4C37-8A1B-234E328EB60D}" Directory_="bin_Dir" Attributes="0" KeyPath="MP_VIE.dll"/>
+    <ROW Component="NetFramework.dll" ComponentId="{606D6F70-8AF3-4707-9C69-25FC2824D904}" Directory_="bin_Dir" Attributes="0" KeyPath="NetFramework.dll"/>
+    <ROW Component="NetSDKDemo.exe" ComponentId="{0409A19B-2E1E-46E3-9687-A2108B6BC9D2}" Directory_="bin_Dir" Attributes="0" KeyPath="NetSDKDemo.exe"/>
+    <ROW Component="OpenAL32.dll" ComponentId="{97D635FA-BF79-4F6D-B049-D5E6419930E0}" Directory_="HCNetSDKCom_Dir" Attributes="0" KeyPath="OpenAL32.dll"/>
+    <ROW Component="PlayCtrl.dll" ComponentId="{C520ED4F-5C46-41E5-8A50-A0F959DC6E81}" Directory_="bin_Dir" Attributes="0" KeyPath="PlayCtrl.dll"/>
+    <ROW Component="ProductInformation" ComponentId="{E7A61772-32DE-4D17-9069-791C18322078}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{3D5F3A60-FEFC-4F09-B070-51D4B4CDEB73}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="Stream.dll" ComponentId="{2C872550-A747-4429-B7F0-6BB4EF21A661}" Directory_="bin_Dir" Attributes="0" KeyPath="Stream.dll"/>
+    <ROW Component="StreamSvr.dll" ComponentId="{05649CFF-C274-4202-8271-F79A678C5B8A}" Directory_="bin_Dir" Attributes="0" KeyPath="StreamSvr.dll"/>
+    <ROW Component="StreamTransClient.dll" ComponentId="{09B7F3D1-96BA-4D40-93D4-8953C5BA5801}" Directory_="HCNetSDKCom_Dir" Attributes="0" KeyPath="StreamTransClient.dll"/>
+    <ROW Component="SuperRender.dll" ComponentId="{E28EBAAD-4777-4350-A7B6-74B6C47AF639}" Directory_="bin_Dir" Attributes="0" KeyPath="SuperRender.dll"/>
+    <ROW Component="SystemTransform.dll" ComponentId="{66120E02-CE92-4B25-B1DF-5A3657153DAB}" Directory_="HCNetSDKCom_Dir" Attributes="0" KeyPath="SystemTransform.dll"/>
+    <ROW Component="VTHStack.dll" ComponentId="{E1241B53-C1E1-4084-81E6-12F7355DE66E}" Directory_="bin_Dir" Attributes="0" KeyPath="VTHStack.dll"/>
+    <ROW Component="YUVProcess.dll" ComponentId="{FDFCD13A-FC9E-4B58-8E83-645AAEF55A7E}" Directory_="bin_Dir" Attributes="0" KeyPath="YUVProcess.dll"/>
+    <ROW Component="_" ComponentId="{C599D0E8-8572-40A0-80CB-7F6A89DECAAB}" Directory_="__Dir" Attributes="0"/>
+    <ROW Component="__1" ComponentId="{5478FC59-6BF7-4DF0-BB1E-96D4FD0F8C5B}" Directory_="__1_Dir" Attributes="0"/>
+    <ROW Component="aacdec.dll" ComponentId="{44C17ED1-7D12-4CEC-AE76-460C5E739C58}" Directory_="bin_Dir" Attributes="0" KeyPath="aacdec.dll"/>
+    <ROW Component="adpcmdec.dll" ComponentId="{6C442491-FC02-453D-BFED-F758FC105AD7}" Directory_="bin_Dir" Attributes="0" KeyPath="adpcmdec.dll"/>
+    <ROW Component="amrdec.dll" ComponentId="{62F2494D-B26C-47D7-A061-6A2D447FBD8C}" Directory_="bin_Dir" Attributes="0" KeyPath="amrdec.dll"/>
+    <ROW Component="armenc32.dll" ComponentId="{B1189028-A025-48AE-BDDA-A26D3F877470}" Directory_="bin_Dir" Attributes="0" KeyPath="armenc32.dll"/>
+    <ROW Component="avnetsdk.dll" ComponentId="{D3D0BD1C-03E8-4BFE-B2E9-FD41C2088C12}" Directory_="bin_Dir" Attributes="0" KeyPath="avnetsdk.dll"/>
+    <ROW Component="cef.pak" ComponentId="{8BA398E9-4F6F-4E3F-A70B-74D027F77EAE}" Directory_="bin_Dir" Attributes="0" KeyPath="cef.pak" Type="0"/>
+    <ROW Component="cliinit_RegVideo.dll" ComponentId="{C8211079-DCED-4B42-AD52-CD6DB4D2FBB5}" Directory_="bin_Dir" Attributes="0" KeyPath="cliinit_RegVideo.dll"/>
+    <ROW Component="d3dcompiler_47.dll" ComponentId="{EB108335-DAE5-4556-A2EB-A28B6A9B6852}" Directory_="bin_Dir" Attributes="0" KeyPath="d3dcompiler_47.dll"/>
+    <ROW Component="dbghelp.dll" ComponentId="{78C2B790-F1D0-4F0C-A96E-3A7A6DA1CFEA}" Directory_="bin_Dir" Attributes="0" KeyPath="dbghelp.dll"/>
+    <ROW Component="dhconfigsdk.dll" ComponentId="{9020D223-30FC-4D5F-9E93-FF4782DCCBC5}" Directory_="bin_Dir" Attributes="0" KeyPath="dhconfigsdk.dll"/>
+    <ROW Component="dhlog.dll" ComponentId="{9234D4C7-0DD4-481C-9755-CDDD9A6F022A}" Directory_="bin_Dir" Attributes="0" KeyPath="dhlog.dll"/>
+    <ROW Component="dhnetsdk.dll" ComponentId="{B5E838FA-9BB0-4A02-960F-76ACB764CB07}" Directory_="bin_Dir" Attributes="0" KeyPath="dhnetsdk.dll"/>
+    <ROW Component="dhplay.dll" ComponentId="{9A92FBFA-A814-4A04-9535-6530F167E1EC}" Directory_="bin_Dir" Attributes="0" KeyPath="dhplay.dll"/>
+    <ROW Component="doc" ComponentId="{C7BFE487-7CA7-4820-BF85-6CC099CBA2C2}" Directory_="doc_Dir" Attributes="0" KeyPath="doc"/>
+    <ROW Component="doc_1" ComponentId="{6E27D689-A46E-4E8D-B37B-6B4CA5C40160}" Directory_="doc_Dir" Attributes="0" KeyPath="doc_1"/>
+    <ROW Component="docx" ComponentId="{A1ED0F9B-0BCB-46BE-BCE0-F9190ED9E8A4}" Directory_="doc_Dir" Attributes="0" KeyPath="docx"/>
+    <ROW Component="docx_1" ComponentId="{7F57D3B5-17C7-4DDA-8B76-FFBE5086F293}" Directory_="doc_Dir" Attributes="0" KeyPath="docx_1"/>
+    <ROW Component="docx_2" ComponentId="{535B096E-D8EE-4C0C-8C47-4A418D859CCE}" Directory_="doc_Dir" Attributes="0" KeyPath="docx_2"/>
+    <ROW Component="docx_3" ComponentId="{3032495D-69C8-4314-8330-803F8F98E677}" Directory_="doc_Dir" Attributes="0" KeyPath="docx_3"/>
+    <ROW Component="docx_4" ComponentId="{EE6D0950-B7F9-45EC-A355-FA1946E8BA1B}" Directory_="doc_Dir" Attributes="0" KeyPath="docx_4"/>
+    <ROW Component="eview.pdf" ComponentId="{709F0161-A021-41A5-89D6-0CCFA791C38B}" Directory_="doc_Dir" Attributes="0" KeyPath="eview.pdf" Type="0"/>
+    <ROW Component="ffmpegsumo.dll" ComponentId="{BA24A399-4D21-45C8-94D6-36DF68E93889}" Directory_="bin_Dir" Attributes="0" KeyPath="ffmpegsumo.dll"/>
+    <ROW Component="g7221dec.dll" ComponentId="{2158600F-3527-44C0-BCD8-A1AD6C4D6C04}" Directory_="bin_Dir" Attributes="0" KeyPath="g7221dec.dll"/>
+    <ROW Component="gdiplus.dll" ComponentId="{3E41A789-2027-4902-AF67-7CEF87E28AD8}" Directory_="bin_Dir" Attributes="0" KeyPath="gdiplus.dll"/>
+    <ROW Component="h264dec.dll" ComponentId="{E274359D-2296-4F21-94DE-8461600AA5B5}" Directory_="bin_Dir" Attributes="0" KeyPath="h264dec.dll"/>
+    <ROW Component="hevcdec.dll" ComponentId="{CC734FAA-B8E1-46BC-B5CD-FFEDECE0A85E}" Directory_="bin_Dir" Attributes="0" KeyPath="hevcdec.dll"/>
+    <ROW Component="json.dll" ComponentId="{92C12EF9-C409-42EB-BFB3-3871A20A8FF8}" Directory_="bin_Dir" Attributes="0" KeyPath="json.dll"/>
+    <ROW Component="libEGL.dll" ComponentId="{6C21ACD5-3E3F-4243-B72D-A75FBA4D776F}" Directory_="bin_Dir" Attributes="0" KeyPath="libEGL.dll"/>
+    <ROW Component="libGLESv2.dll" ComponentId="{0E308002-914C-468E-A717-F6B320DEC6F3}" Directory_="bin_Dir" Attributes="0" KeyPath="libGLESv2.dll"/>
+    <ROW Component="libcef.dll" ComponentId="{89AA3E96-4658-490F-AF2A-01DCBED0E9A3}" Directory_="bin_Dir" Attributes="0" KeyPath="libcef.dll"/>
+    <ROW Component="libiconv2.dll" ComponentId="{59933EB4-FE93-4FC2-95DE-CB1B2CE07D4D}" Directory_="HCNetSDKCom_Dir" Attributes="0" KeyPath="libiconv2.dll"/>
+    <ROW Component="log" ComponentId="{12BCB4B8-0A00-42F2-8E95-764893711337}" Directory_="log_Dir" Attributes="0"/>
+    <ROW Component="logconfig.xml" ComponentId="{F85C17C9-35FC-464E-9A28-A2871F4B8B39}" Directory_="config_Dir" Attributes="0" KeyPath="logconfig.xml" Type="0"/>
+    <ROW Component="mfc120.dll" ComponentId="{BD4BD671-BCD1-4B37-B180-5144E1C6290D}" Directory_="bin_Dir" Attributes="0" KeyPath="mfc120.dll"/>
+    <ROW Component="mjpegdec.dll" ComponentId="{347B4F43-2534-41E6-B0D8-D1BD0901EFAC}" Directory_="bin_Dir" Attributes="0" KeyPath="mjpegdec.dll"/>
+    <ROW Component="mp2dec.dll" ComponentId="{F9158DF8-889F-4A7D-8A4D-FAA76FF1D7AC}" Directory_="bin_Dir" Attributes="0" KeyPath="mp2dec.dll"/>
+    <ROW Component="mp3dec.dll" ComponentId="{19394A32-8689-4DD0-9939-A0AB5F8ECA5D}" Directory_="bin_Dir" Attributes="0" KeyPath="mp3dec.dll"/>
+    <ROW Component="mpeg4dec.dll" ComponentId="{3B4C2E1D-EA9B-407A-B07B-BF156D6AF202}" Directory_="bin_Dir" Attributes="0" KeyPath="mpeg4dec.dll"/>
+    <ROW Component="mpeg4enc.dll" ComponentId="{63C2125A-9970-4CF1-804F-406EE5C6D539}" Directory_="bin_Dir" Attributes="0" KeyPath="mpeg4enc.dll"/>
+    <ROW Component="msvcp120.dll" ComponentId="{2540DC68-0CA3-4D4B-B664-36EB4C051A51}" Directory_="bin_Dir" Attributes="0" KeyPath="msvcp120.dll"/>
+    <ROW Component="msvcr120.dll" ComponentId="{884CD81C-1042-424B-B754-57B832CC3C9F}" Directory_="bin_Dir" Attributes="0" KeyPath="msvcr120.dll"/>
+    <ROW Component="msvcr90.dll" ComponentId="{97DC2121-8DD6-489A-AE1C-E87A59B21359}" Directory_="HCNetSDKCom_Dir" Attributes="0" KeyPath="msvcr90.dll"/>
+    <ROW Component="nppkvideo.dll" ComponentId="{5E265D7A-3D4E-4BFC-B0AA-753FB767B7A1}" Directory_="bin_Dir" Attributes="0" KeyPath="nppkvideo.dll"/>
+    <ROW Component="nppkvideo2.dll" ComponentId="{AD4E88E1-145D-4ACB-AB5A-2DDAC8DBC3C5}" Directory_="bin_Dir" Attributes="0" KeyPath="nppkvideo2.dll"/>
+    <ROW Component="nppkvideoui.dll" ComponentId="{E7A749D3-D984-4A24-8E4E-BEA96DE908C6}" Directory_="bin_Dir" Attributes="0" KeyPath="nppkvideoui.dll"/>
+    <ROW Component="pkTagMonitor.exe" ComponentId="{96D743E5-CC94-418B-9C40-4957AD1F1FCB}" Directory_="bin_Dir" Attributes="0" KeyPath="pkTagMonitor.exe"/>
+    <ROW Component="pkVideoAPI.dll" ComponentId="{354C259C-0963-4258-8CB7-BD0BFD2B2ACE}" Directory_="bin_Dir" Attributes="0" KeyPath="pkVideoAPI.dll"/>
+    <ROW Component="pkVideoAX.ocx" ComponentId="{C88F0C27-A58F-4715-8D3C-18DF8D198DE8}" Directory_="bin_Dir" Attributes="0" KeyPath="pkVideoAX.ocx"/>
+    <ROW Component="pkce.dll" ComponentId="{8C8535FE-962A-4D1D-882F-5862FF0F255D}" Directory_="bin_Dir" Attributes="0" KeyPath="pkce.dll"/>
+    <ROW Component="pkclientconfig.exe" ComponentId="{0F9DD7EC-36C4-4D11-AF9C-351622C2D7EF}" Directory_="bin_Dir" Attributes="0" KeyPath="pkclientconfig.exe"/>
+    <ROW Component="pkclientrun.exe" ComponentId="{EDAD99B0-A9B6-434B-8653-3DF7493C496A}" Directory_="bin_Dir" Attributes="0" KeyPath="pkclientrun.exe"/>
+    <ROW Component="pkcomm.dll" ComponentId="{42ABA5C6-4388-45AD-AB86-527511BD83E5}" Directory_="bin_Dir" Attributes="0" KeyPath="pkcomm.dll"/>
+    <ROW Component="pkdata.dll" ComponentId="{14A995F8-C976-4E8B-AB66-42F19F35BE17}" Directory_="bin_Dir" Attributes="0" KeyPath="pkdata.dll"/>
+    <ROW Component="pklog.dll" ComponentId="{B7367629-B01A-4F43-9350-2BC69CC2D94E}" Directory_="bin_Dir" Attributes="0" KeyPath="pklog.dll"/>
+    <ROW Component="pkmemdbapi.dll" ComponentId="{B081769D-30BD-4E76-A35F-1F83FD4A4838}" Directory_="bin_Dir" Attributes="0" KeyPath="pkmemdbapi.dll"/>
+    <ROW Component="postproc.dll" ComponentId="{D5B4042E-DB85-4F5F-AFC5-A6C610EFC1E7}" Directory_="bin_Dir" Attributes="0" KeyPath="postproc.dll"/>
+    <ROW Component="svac_dec.dll" ComponentId="{234D7115-56F8-4E82-943C-96E1481DA946}" Directory_="bin_Dir" Attributes="0" KeyPath="svac_dec.dll"/>
+    <ROW Component="wow_helper.exe" ComponentId="{08D75F6B-4663-43A6-B3E3-163D1FA11E36}" Directory_="bin_Dir" Attributes="256" KeyPath="wow_helper.exe"/>
+    <ROW Component="zhCN.pak" ComponentId="{E334966F-D591-479C-B6D2-89EE86DDF772}" Directory_="locales_Dir" Attributes="0" KeyPath="zhCN.pak" Type="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AI_ExePath AnalyzeData.dll AudioIntercom.dll AudioRender.dll ClientDemo.exe D3DCompiler_43.dll D3DX9_43.dll DVRDH.dll DVRH3C.dll DVRHK3.dll EagleEyeRender.dll HCAlarm.dll HCCore.dll HCCoreDevCfg.dll HCDisplay.dll HCGeneralCfgMgr.dll HCIndustry.dll HCNetSDK.dll HCPlayBack.dll HCPreview.dll HCVoiceTalk.dll HWDecode.dll Infra.dll IvsDrawer.dll KedaPlat.dll MP_Render.dll MP_VIE.dll NetFramework.dll NetSDKDemo.exe OpenAL32.dll PlayCtrl.dll ProductInformation SHORTCUTDIR Stream.dll StreamSvr.dll StreamTransClient.dll SuperRender.dll SystemTransform.dll VTHStack.dll YUVProcess.dll _ __1 aacdec.dll adpcmdec.dll amrdec.dll armenc32.dll avnetsdk.dll cef.pak cliinit_RegVideo.dll d3dcompiler_47.dll dbghelp.dll dhconfigsdk.dll dhlog.dll dhnetsdk.dll dhplay.dll doc doc_1 docx docx_1 docx_2 docx_3 docx_4 eview.pdf ffmpegsumo.dll g7221dec.dll gdiplus.dll h264dec.dll hevcdec.dll json.dll libEGL.dll libGLESv2.dll libcef.dll libiconv2.dll log logconfig.xml mfc120.dll mjpegdec.dll mp2dec.dll mp3dec.dll mpeg4dec.dll mpeg4enc.dll msvcp120.dll msvcr120.dll msvcr90.dll nppkvideo.dll nppkvideo2.dll nppkvideoui.dll pkTagMonitor.exe pkVideoAPI.dll pkVideoAX.ocx pkce.dll pkclientconfig.exe pkclientrun.exe pkcomm.dll pkdata.dll pklog.dll pkmemdbapi.dll postproc.dll svac_dec.dll wow_helper.exe zhCN.pak"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="AnalyzeData.dll" Component_="AnalyzeData.dll" FileName="ANALYZ~1.DLL|AnalyzeData.dll" Attributes="0" SourcePath="eview-client\bin\HCNetSDKCom\AnalyzeData.dll" SelfReg="false" NextFile="AudioIntercom.dll"/>
+    <ROW File="AudioIntercom.dll" Component_="AudioIntercom.dll" FileName="AUDIOI~1.DLL|AudioIntercom.dll" Attributes="0" SourcePath="eview-client\bin\HCNetSDKCom\AudioIntercom.dll" SelfReg="false" NextFile="HCAlarm.dll"/>
+    <ROW File="AudioRender.dll" Component_="AudioRender.dll" FileName="AUDIOR~1.DLL|AudioRender.dll" Attributes="0" SourcePath="eview-client\bin\AudioRender.dll" SelfReg="false" NextFile="avnetsdk.dll"/>
+    <ROW File="ClientDemo.exe" Component_="ClientDemo.exe" FileName="CLIENT~1.EXE|ClientDemo.exe" Attributes="0" SourcePath="eview-client\bin\ClientDemo.exe" SelfReg="false" NextFile="cliinit_RegVideo.dll" DigSign="true"/>
+    <ROW File="D3DCompiler_43.dll" Component_="D3DCompiler_43.dll" FileName="D3DCOM~1.DLL|D3DCompiler_43.dll" Attributes="0" SourcePath="eview-client\bin\D3DCompiler_43.dll" SelfReg="false" NextFile="d3dcompiler_47.dll"/>
+    <ROW File="D3DX9_43.dll" Component_="D3DX9_43.dll" FileName="D3DX9_43.dll" Attributes="0" SourcePath="eview-client\bin\D3DX9_43.dll" SelfReg="false" NextFile="dbghelp.dll"/>
+    <ROW File="DVRDH.dll" Component_="DVRDH.dll" FileName="DVRDH.dll" Attributes="0" SourcePath="eview-client\bin\DVRDH.dll" SelfReg="false" NextFile="DVRH3C.dll"/>
+    <ROW File="DVRH3C.dll" Component_="DVRH3C.dll" FileName="DVRH3C.dll" Attributes="0" SourcePath="eview-client\bin\DVRH3C.dll" SelfReg="false" NextFile="DVRHK3.dll"/>
+    <ROW File="DVRHK3.dll" Component_="DVRHK3.dll" FileName="DVRHK3.dll" Attributes="0" SourcePath="eview-client\bin\DVRHK3.dll" SelfReg="false" NextFile="EagleEyeRender.dll"/>
+    <ROW File="DemoLocalCfg.json" Component_="cef.pak" FileName="DEMOLO~1.JSO|DemoLocalCfg.json" Attributes="0" SourcePath="eview-client\bin\DemoLocalCfg.json" SelfReg="false" NextFile="DeviceCfg.json"/>
+    <ROW File="DeviceCfg.json" Component_="cef.pak" FileName="DEVICE~1.JSO|DeviceCfg.json" Attributes="0" SourcePath="eview-client\bin\DeviceCfg.json" SelfReg="false" NextFile="devtools_resources.pak"/>
+    <ROW File="EagleEyeRender.dll" Component_="EagleEyeRender.dll" FileName="EAGLEE~1.DLL|EagleEyeRender.dll" Attributes="0" SourcePath="eview-client\bin\EagleEyeRender.dll" SelfReg="false" NextFile="ffmpegsumo.dll"/>
+    <ROW File="HCAlarm.dll" Component_="HCAlarm.dll" FileName="HCAlarm.dll" Attributes="0" SourcePath="eview-client\bin\HCNetSDKCom\HCAlarm.dll" SelfReg="false" NextFile="HCCoreDevCfg.dll"/>
+    <ROW File="HCCore.dll" Component_="HCCore.dll" FileName="HCCore.dll" Attributes="0" SourcePath="eview-client\bin\HCCore.dll" SelfReg="false" NextFile="HCNetSDK.dll"/>
+    <ROW File="HCCoreDevCfg.dll" Component_="HCCoreDevCfg.dll" FileName="HCCORE~1.DLL|HCCoreDevCfg.dll" Attributes="0" SourcePath="eview-client\bin\HCNetSDKCom\HCCoreDevCfg.dll" SelfReg="false" NextFile="HCDisplay.dll"/>
+    <ROW File="HCDisplay.dll" Component_="HCDisplay.dll" FileName="HCDISP~1.DLL|HCDisplay.dll" Attributes="0" SourcePath="eview-client\bin\HCNetSDKCom\HCDisplay.dll" SelfReg="false" NextFile="HCGeneralCfgMgr.dll"/>
+    <ROW File="HCGeneralCfgMgr.dll" Component_="HCGeneralCfgMgr.dll" FileName="HCGENE~1.DLL|HCGeneralCfgMgr.dll" Attributes="0" SourcePath="eview-client\bin\HCNetSDKCom\HCGeneralCfgMgr.dll" SelfReg="false" NextFile="HCIndustry.dll"/>
+    <ROW File="HCIndustry.dll" Component_="HCIndustry.dll" FileName="HCINDU~1.DLL|HCIndustry.dll" Attributes="0" SourcePath="eview-client\bin\HCNetSDKCom\HCIndustry.dll" SelfReg="false" NextFile="HCPlayBack.dll"/>
+    <ROW File="HCNetSDK.dll" Component_="HCNetSDK.dll" FileName="HCNetSDK.dll" Attributes="0" SourcePath="eview-client\bin\HCNetSDK.dll" SelfReg="false" NextFile="AnalyzeData.dll"/>
+    <ROW File="HCPlayBack.dll" Component_="HCPlayBack.dll" FileName="HCPLAY~1.DLL|HCPlayBack.dll" Attributes="0" SourcePath="eview-client\bin\HCNetSDKCom\HCPlayBack.dll" SelfReg="false" NextFile="HCPreview.dll"/>
+    <ROW File="HCPreview.dll" Component_="HCPreview.dll" FileName="HCPREV~1.DLL|HCPreview.dll" Attributes="0" SourcePath="eview-client\bin\HCNetSDKCom\HCPreview.dll" SelfReg="false" NextFile="HCVoiceTalk.dll"/>
+    <ROW File="HCVoiceTalk.dll" Component_="HCVoiceTalk.dll" FileName="HCVOIC~1.DLL|HCVoiceTalk.dll" Attributes="0" SourcePath="eview-client\bin\HCNetSDKCom\HCVoiceTalk.dll" SelfReg="false" NextFile="libiconv2.dll"/>
+    <ROW File="HWDecode.dll" Component_="HWDecode.dll" FileName="HWDecode.dll" Attributes="0" SourcePath="eview-client\bin\HWDecode.dll" SelfReg="false" NextFile="icudtl.dat"/>
+    <ROW File="Infra.dll" Component_="Infra.dll" FileName="Infra.dll" Attributes="0" SourcePath="eview-client\bin\Infra.dll" SelfReg="false" NextFile="IvsDrawer.dll"/>
+    <ROW File="IvsDrawer.dll" Component_="IvsDrawer.dll" FileName="IVSDRA~1.DLL|IvsDrawer.dll" Attributes="0" SourcePath="eview-client\bin\IvsDrawer.dll" SelfReg="false" NextFile="json.dll"/>
+    <ROW File="KedaPlat.dll" Component_="KedaPlat.dll" FileName="KedaPlat.dll" Attributes="0" SourcePath="eview-client\bin\KedaPlat.dll" SelfReg="false" NextFile="langchn.ini"/>
+    <ROW File="LocalSensorAdd.dat" Component_="cef.pak" FileName="LOCALS~1.DAT|LocalSensorAdd.dat" Attributes="0" SourcePath="eview-client\bin\LocalSensorAdd.dat" SelfReg="false" NextFile="mfc120.dll"/>
+    <ROW File="MP_Render.dll" Component_="MP_Render.dll" FileName="MP_REN~1.DLL|MP_Render.dll" Attributes="0" SourcePath="eview-client\bin\MP_Render.dll" SelfReg="false" NextFile="MP_VIE.dll"/>
+    <ROW File="MP_VIE.dll" Component_="MP_VIE.dll" FileName="MP_VIE.dll" Attributes="0" SourcePath="eview-client\bin\MP_VIE.dll" SelfReg="false" NextFile="msvcp120.dll"/>
+    <ROW File="NetFramework.dll" Component_="NetFramework.dll" FileName="NETFRA~1.DLL|NetFramework.dll" Attributes="0" SourcePath="eview-client\bin\NetFramework.dll" SelfReg="false" NextFile="NetSDKDemo.exe"/>
+    <ROW File="NetSDKDemo.exe" Component_="NetSDKDemo.exe" FileName="NETSDK~1.EXE|NetSDKDemo.exe" Attributes="0" SourcePath="eview-client\bin\NetSDKDemo.exe" SelfReg="false" NextFile="nppkvideo.dll" DigSign="true"/>
+    <ROW File="OpenAL32.dll" Component_="OpenAL32.dll" FileName="OpenAL32.dll" Attributes="0" SourcePath="eview-client\bin\HCNetSDKCom\OpenAL32.dll" SelfReg="false" NextFile="StreamTransClient.dll"/>
+    <ROW File="PlayCtrl.dll" Component_="PlayCtrl.dll" FileName="PlayCtrl.dll" Attributes="0" SourcePath="eview-client\bin\PlayCtrl.dll" SelfReg="false" NextFile="postproc.dll"/>
+    <ROW File="Stream.dll" Component_="Stream.dll" FileName="Stream.dll" Attributes="0" SourcePath="eview-client\bin\Stream.dll" SelfReg="false" NextFile="StreamSvr.dll"/>
+    <ROW File="StreamSvr.dll" Component_="StreamSvr.dll" FileName="STREAM~1.DLL|StreamSvr.dll" Attributes="0" SourcePath="eview-client\bin\StreamSvr.dll" SelfReg="false" NextFile="SuperRender.dll"/>
+    <ROW File="StreamTransClient.dll" Component_="StreamTransClient.dll" FileName="STREAM~1.DLL|StreamTransClient.dll" Attributes="0" SourcePath="eview-client\bin\HCNetSDKCom\StreamTransClient.dll" SelfReg="false" NextFile="SystemTransform.dll"/>
+    <ROW File="SuperRender.dll" Component_="SuperRender.dll" FileName="SUPERR~1.DLL|SuperRender.dll" Attributes="0" SourcePath="eview-client\bin\SuperRender.dll" SelfReg="false" NextFile="svac_dec.dll"/>
+    <ROW File="SystemTransform.dll" Component_="SystemTransform.dll" FileName="SYSTEM~1.DLL|SystemTransform.dll" Attributes="0" SourcePath="eview-client\bin\HCNetSDKCom\SystemTransform.dll" SelfReg="false" NextFile="hevcdec.dll"/>
+    <ROW File="VTHStack.dll" Component_="VTHStack.dll" FileName="VTHStack.dll" Attributes="0" SourcePath="eview-client\bin\VTHStack.dll" SelfReg="false" NextFile="wow_helper.exe"/>
+    <ROW File="YUVProcess.dll" Component_="YUVProcess.dll" FileName="YUVPRO~1.DLL|YUVProcess.dll" Attributes="0" SourcePath="eview-client\bin\YUVProcess.dll" SelfReg="false" NextFile="logconfig.xml"/>
+    <ROW File="aacdec.dll" Component_="aacdec.dll" FileName="aacdec.dll" Attributes="0" SourcePath="eview-client\bin\aacdec.dll" SelfReg="false" NextFile="adpcmdec.dll"/>
+    <ROW File="adpcmdec.dll" Component_="adpcmdec.dll" FileName="adpcmdec.dll" Attributes="0" SourcePath="eview-client\bin\adpcmdec.dll" SelfReg="false" NextFile="amrdec.dll"/>
+    <ROW File="amrdec.dll" Component_="amrdec.dll" FileName="amrdec.dll" Attributes="0" SourcePath="eview-client\bin\amrdec.dll" SelfReg="false" NextFile="armenc32.dll"/>
+    <ROW File="armenc32.dll" Component_="armenc32.dll" FileName="armenc32.dll" Attributes="0" SourcePath="eview-client\bin\armenc32.dll" SelfReg="false" NextFile="AudioRender.dll"/>
+    <ROW File="avnetsdk.dll" Component_="avnetsdk.dll" FileName="avnetsdk.dll" Attributes="0" SourcePath="eview-client\bin\avnetsdk.dll" SelfReg="false" NextFile="cef.pak"/>
+    <ROW File="cef.pak" Component_="cef.pak" FileName="cef.pak" Attributes="0" SourcePath="eview-client\bin\cef.pak" SelfReg="false" NextFile="cef_100_percent.pak"/>
+    <ROW File="cef_100_percent.pak" Component_="cef.pak" FileName="CEF_10~1.PAK|cef_100_percent.pak" Attributes="0" SourcePath="eview-client\bin\cef_100_percent.pak" SelfReg="false" NextFile="cef_200_percent.pak"/>
+    <ROW File="cef_200_percent.pak" Component_="cef.pak" FileName="CEF_20~1.PAK|cef_200_percent.pak" Attributes="0" SourcePath="eview-client\bin\cef_200_percent.pak" SelfReg="false" NextFile="ClientDemo.exe"/>
+    <ROW File="cliinit_RegVideo.dll" Component_="cliinit_RegVideo.dll" FileName="CLIINI~1.DLL|cliinit_RegVideo.dll" Attributes="0" SourcePath="eview-client\bin\cliinit_RegVideo.dll" SelfReg="false" NextFile="D3DCompiler_43.dll"/>
+    <ROW File="d3dcompiler_47.dll" Component_="d3dcompiler_47.dll" FileName="D3DCOM~2.DLL|d3dcompiler_47.dll" Attributes="0" SourcePath="eview-client\bin\d3dcompiler_47.dll" SelfReg="false" NextFile="D3DX9_43.dll"/>
+    <ROW File="dbghelp.dll" Component_="dbghelp.dll" FileName="dbghelp.dll" Attributes="0" SourcePath="eview-client\bin\dbghelp.dll" SelfReg="false" NextFile="DemoLocalCfg.json"/>
+    <ROW File="devtools_resources.pak" Component_="cef.pak" FileName="DEVTOO~1.PAK|devtools_resources.pak" Attributes="0" SourcePath="eview-client\bin\devtools_resources.pak" SelfReg="false" NextFile="dhconfigsdk.dll"/>
+    <ROW File="dhconfigsdk.dll" Component_="dhconfigsdk.dll" FileName="DHCONF~1.DLL|dhconfigsdk.dll" Attributes="0" SourcePath="eview-client\bin\dhconfigsdk.dll" SelfReg="false" NextFile="dhlog.dll"/>
+    <ROW File="dhlog.dll" Component_="dhlog.dll" FileName="dhlog.dll" Attributes="0" SourcePath="eview-client\bin\dhlog.dll" SelfReg="false" NextFile="dhnetsdk.dll"/>
+    <ROW File="dhnetsdk.dll" Component_="dhnetsdk.dll" FileName="dhnetsdk.dll" Attributes="0" SourcePath="eview-client\bin\dhnetsdk.dll" SelfReg="false" NextFile="dhplay.dll"/>
+    <ROW File="dhplay.dll" Component_="dhplay.dll" FileName="dhplay.dll" Attributes="0" SourcePath="eview-client\bin\dhplay.dll" SelfReg="false" NextFile="DVRDH.dll"/>
+    <ROW File="doc" Component_="doc" FileName="报警系统使用手册.doc" Attributes="0" SourcePath="eview-client\doc\报警系统使用手册.doc" SelfReg="false" NextFile="doc_1"/>
+    <ROW File="doc_1" Component_="doc_1" FileName="控件使用手册.doc" Attributes="0" SourcePath="eview-client\doc\控件使用手册.doc" SelfReg="false" NextFile="docx"/>
+    <ROW File="docx" Component_="docx" FileName="权限管理用户~1.DOC|权限管理用户手册.docx" Attributes="0" SourcePath="eview-client\doc\权限管理用户手册.docx" SelfReg="false" NextFile="docx_1"/>
+    <ROW File="docx_1" Component_="docx_1" FileName="联动系统用户~1.DOC|联动系统用户手册.docx" Attributes="0" SourcePath="eview-client\doc\联动系统用户手册.docx" SelfReg="false" NextFile="docx_2"/>
+    <ROW File="docx_2" Component_="docx_2" FileName="脚本接口用户~1.DOC|脚本接口用户手册.docx" Attributes="0" SourcePath="eview-client\doc\脚本接口用户手册.docx" SelfReg="false" NextFile="docx_3"/>
+    <ROW File="docx_3" Component_="docx_3" FileName="视频监控系统~1.DOC|视频监控系统用户手册.docx" Attributes="0" SourcePath="eview-client\doc\视频监控系统用户手册.docx" SelfReg="false" NextFile="docx_4"/>
+    <ROW File="docx_4" Component_="docx_4" FileName="设备管理使用~1.DOC|设备管理使用手册.docx" Attributes="0" SourcePath="eview-client\doc\设备管理使用手册.docx" SelfReg="false" NextFile="pkmemdbapi.dll"/>
+    <ROW File="eview.pdf" Component_="eview.pdf" FileName="EVIEW快~1.PDF|eview快速使用指南.pdf" Attributes="0" SourcePath="eview-client\doc\eview快速使用指南.pdf" SelfReg="false" NextFile="doc"/>
+    <ROW File="ffmpegsumo.dll" Component_="ffmpegsumo.dll" FileName="FFMPEG~1.DLL|ffmpegsumo.dll" Attributes="0" SourcePath="eview-client\bin\ffmpegsumo.dll" SelfReg="false" NextFile="g7221dec.dll"/>
+    <ROW File="g7221dec.dll" Component_="g7221dec.dll" FileName="g7221dec.dll" Attributes="0" SourcePath="eview-client\bin\g7221dec.dll" SelfReg="false" NextFile="gdiplus.dll"/>
+    <ROW File="gdiplus.dll" Component_="gdiplus.dll" FileName="gdiplus.dll" Attributes="0" SourcePath="eview-client\bin\gdiplus.dll" SelfReg="false" NextFile="h264dec.dll"/>
+    <ROW File="h264dec.dll" Component_="h264dec.dll" FileName="h264dec.dll" Attributes="0" SourcePath="eview-client\bin\h264dec.dll" SelfReg="false" NextFile="HCCore.dll"/>
+    <ROW File="hevcdec.dll" Component_="hevcdec.dll" FileName="hevcdec.dll" Attributes="0" SourcePath="eview-client\bin\hevcdec.dll" SelfReg="false" NextFile="HWDecode.dll"/>
+    <ROW File="icudtl.dat" Component_="cef.pak" FileName="icudtl.dat" Attributes="0" SourcePath="eview-client\bin\icudtl.dat" SelfReg="false" NextFile="Infra.dll"/>
+    <ROW File="json.dll" Component_="json.dll" FileName="json.dll" Attributes="0" SourcePath="eview-client\bin\json.dll" SelfReg="false" NextFile="KedaPlat.dll"/>
+    <ROW File="langchn.ini" Component_="cef.pak" FileName="langchn.ini" Attributes="0" SourcePath="eview-client\bin\langchn.ini" SelfReg="false" NextFile="libcef.dll"/>
+    <ROW File="libEGL.dll" Component_="libEGL.dll" FileName="libEGL.dll" Attributes="0" SourcePath="eview-client\bin\libEGL.dll" SelfReg="false" NextFile="libGLESv2.dll"/>
+    <ROW File="libGLESv2.dll" Component_="libGLESv2.dll" FileName="LIBGLE~1.DLL|libGLESv2.dll" Attributes="0" SourcePath="eview-client\bin\libGLESv2.dll" SelfReg="false" NextFile="zhCN.pak"/>
+    <ROW File="libcef.dll" Component_="libcef.dll" FileName="libcef.dll" Attributes="0" SourcePath="eview-client\bin\libcef.dll" SelfReg="false" NextFile="libEGL.dll"/>
+    <ROW File="libiconv2.dll" Component_="libiconv2.dll" FileName="LIBICO~1.DLL|libiconv2.dll" Attributes="0" SourcePath="eview-client\bin\HCNetSDKCom\libiconv2.dll" SelfReg="false" NextFile="msvcr90.dll"/>
+    <ROW File="logconfig.xml" Component_="logconfig.xml" FileName="LOGCON~1.XML|logconfig.xml" Attributes="0" SourcePath="eview-client\config\logconfig.xml" SelfReg="false" NextFile="pkclient.ini"/>
+    <ROW File="mfc120.dll" Component_="mfc120.dll" FileName="mfc120.dll" Attributes="0" SourcePath="eview-client\bin\mfc120.dll" SelfReg="false" NextFile="mjpegdec.dll"/>
+    <ROW File="mjpegdec.dll" Component_="mjpegdec.dll" FileName="mjpegdec.dll" Attributes="0" SourcePath="eview-client\bin\mjpegdec.dll" SelfReg="false" NextFile="mp2dec.dll"/>
+    <ROW File="mp2dec.dll" Component_="mp2dec.dll" FileName="mp2dec.dll" Attributes="0" SourcePath="eview-client\bin\mp2dec.dll" SelfReg="false" NextFile="mp3dec.dll"/>
+    <ROW File="mp3dec.dll" Component_="mp3dec.dll" FileName="mp3dec.dll" Attributes="0" SourcePath="eview-client\bin\mp3dec.dll" SelfReg="false" NextFile="mpeg4dec.dll"/>
+    <ROW File="mpeg4dec.dll" Component_="mpeg4dec.dll" FileName="mpeg4dec.dll" Attributes="0" SourcePath="eview-client\bin\mpeg4dec.dll" SelfReg="false" NextFile="mpeg4enc.dll"/>
+    <ROW File="mpeg4enc.dll" Component_="mpeg4enc.dll" FileName="mpeg4enc.dll" Attributes="0" SourcePath="eview-client\bin\mpeg4enc.dll" SelfReg="false" NextFile="MP_Render.dll"/>
+    <ROW File="msvcp120.dll" Component_="msvcp120.dll" FileName="msvcp120.dll" Attributes="0" SourcePath="eview-client\bin\msvcp120.dll" SelfReg="false" NextFile="msvcr120.dll"/>
+    <ROW File="msvcr120.dll" Component_="msvcr120.dll" FileName="msvcr120.dll" Attributes="0" SourcePath="eview-client\bin\msvcr120.dll" SelfReg="false" NextFile="natives_blob.bin"/>
+    <ROW File="msvcr90.dll" Component_="msvcr90.dll" FileName="msvcr90.dll" Attributes="0" SourcePath="eview-client\bin\HCNetSDKCom\msvcr90.dll" SelfReg="false" NextFile="OpenAL32.dll"/>
+    <ROW File="natives_blob.bin" Component_="cef.pak" FileName="NATIVE~1.BIN|natives_blob.bin" Attributes="0" SourcePath="eview-client\bin\natives_blob.bin" SelfReg="false" NextFile="NetFramework.dll"/>
+    <ROW File="nppkvideo.dll" Component_="nppkvideo.dll" FileName="NPPKVI~1.DLL|nppkvideo.dll" Attributes="0" SourcePath="eview-client\bin\nppkvideo.dll" SelfReg="true" NextFile="nppkvideo2.dll"/>
+    <ROW File="nppkvideo2.dll" Component_="nppkvideo2.dll" FileName="NPPKVI~2.DLL|nppkvideo2.dll" Attributes="0" SourcePath="eview-client\bin\nppkvideo2.dll" SelfReg="true" NextFile="nppkvideoui.dll"/>
+    <ROW File="nppkvideoui.dll" Component_="nppkvideoui.dll" FileName="NPPKVI~3.DLL|nppkvideoui.dll" Attributes="0" SourcePath="eview-client\bin\nppkvideoui.dll" SelfReg="false" NextFile="pkce.dll"/>
+    <ROW File="pkTagMonitor.exe" Component_="pkTagMonitor.exe" FileName="PKTAGM~1.EXE|pkTagMonitor.exe" Attributes="0" SourcePath="eview-client\bin\pkTagMonitor.exe" SelfReg="false" NextFile="pkVideoAPI.dll" DigSign="true"/>
+    <ROW File="pkVideoAPI.dll" Component_="pkVideoAPI.dll" FileName="PKVIDE~1.DLL|pkVideoAPI.dll" Attributes="0" SourcePath="eview-client\bin\pkVideoAPI.dll" SelfReg="false" NextFile="pkVideoAX.ocx"/>
+    <ROW File="pkVideoAX.ocx" Component_="pkVideoAX.ocx" FileName="PKVIDE~1.OCX|pkVideoAX.ocx" Attributes="0" SourcePath="eview-client\bin\pkVideoAX.ocx" SelfReg="true" NextFile="PlayCtrl.dll"/>
+    <ROW File="pkce.dll" Component_="pkce.dll" FileName="pkce.dll" Attributes="0" SourcePath="eview-client\bin\pkce.dll" SelfReg="false" NextFile="pkclientconfig.exe"/>
+    <ROW File="pkclient.ini" Component_="logconfig.xml" FileName="pkclient.ini" Attributes="0" SourcePath="eview-client\config\pkclient.ini" SelfReg="false" NextFile="eview.pdf"/>
+    <ROW File="pkclientconfig.exe" Component_="pkclientconfig.exe" FileName="PKCLIE~2.EXE|pkclientconfig.exe" Attributes="0" SourcePath="eview-client\bin\pkclientconfig.exe" SelfReg="false" NextFile="pkclientrun.exe" DigSign="true"/>
+    <ROW File="pkclientrun.exe" Component_="pkclientrun.exe" FileName="PKCLIE~3.EXE|pkclientrun.exe" Attributes="0" SourcePath="eview-client\bin\pkclientrun.exe" SelfReg="false" NextFile="pkcomm.dll" DigSign="true"/>
+    <ROW File="pkcomm.dll" Component_="pkcomm.dll" FileName="pkcomm.dll" Attributes="0" SourcePath="eview-client\bin\pkcomm.dll" SelfReg="false" NextFile="pkdata.dll"/>
+    <ROW File="pkdata.dll" Component_="pkdata.dll" FileName="pkdata.dll" Attributes="0" SourcePath="eview-client\bin\pkdata.dll" SelfReg="false" NextFile="pklog.dll"/>
+    <ROW File="pklog.dll" Component_="pklog.dll" FileName="pklog.dll" Attributes="0" SourcePath="eview-client\bin\pklog.dll" SelfReg="false" NextFile="pkTagMonitor.exe"/>
+    <ROW File="pkmemdbapi.dll" Component_="pkmemdbapi.dll" FileName="PKMEMD~1.DLL|pkmemdbapi.dll" Attributes="0" SourcePath="eview-client\bin\pkmemdbapi.dll" SelfReg="false"/>
+    <ROW File="postproc.dll" Component_="postproc.dll" FileName="postproc.dll" Attributes="0" SourcePath="eview-client\bin\postproc.dll" SelfReg="false" NextFile="snapshot_blob.bin"/>
+    <ROW File="snapshot_blob.bin" Component_="cef.pak" FileName="SNAPSH~1.BIN|snapshot_blob.bin" Attributes="0" SourcePath="eview-client\bin\snapshot_blob.bin" SelfReg="false" NextFile="Stream.dll"/>
+    <ROW File="svac_dec.dll" Component_="svac_dec.dll" FileName="svac_dec.dll" Attributes="0" SourcePath="eview-client\bin\svac_dec.dll" SelfReg="false" NextFile="video2peak.htm"/>
+    <ROW File="video2peak.htm" Component_="cef.pak" FileName="VIDEO2~1.HTM|video2-peak.htm" Attributes="0" SourcePath="eview-client\bin\video2-peak.htm" SelfReg="false" NextFile="VTHStack.dll"/>
+    <ROW File="wow_helper.exe" Component_="wow_helper.exe" FileName="WOW_HE~1.EXE|wow_helper.exe" Attributes="0" SourcePath="eview-client\bin\wow_helper.exe" SelfReg="false" NextFile="YUVProcess.dll" DigSign="true"/>
+    <ROW File="zhCN.pak" Component_="zhCN.pak" FileName="zh-CN.pak" Attributes="0" SourcePath="eview-client\bin\locales\zh-CN.pak" SelfReg="false" NextFile="LocalSensorAdd.dat"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.AiPersistentDataComponent">
+    <ROW PersistentRow="pkclient.ini" Type="0" Condition="1"/>
+    <ROW PersistentRow="logconfig.xml" Type="0" Condition="1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
+    <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFolder="." Languages="zh" InstallationType="2" CabsLocation="1" CompressCabs="false" UseLzma="true" LzmaMethod="2" LzmaCompressionLevel="2" PackageType="1" FilesInsideExe="true" ExtractionFolder="[AppDataFolder][|Manufacturer]\[|ProductName] [|ProductVersion]\install" UseLargeSchema="true" UACExecutionLevel="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_zh.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
+    <ROW Action="AI_AiBackupImmediate" Description="Preparing backup operation" DescriptionLocId="ActionText.Description.AI_AiBackupImmediate" Template="Path: [1]" TemplateLocId="ActionText.Template.AI_AiBackupImmediate"/>
+    <ROW Action="AI_AiBackupRollback" Description="Rollback backup" DescriptionLocId="ActionText.Description.AI_AiBackupRollback" Template="Path: [1]" TemplateLocId="ActionText.Template.AI_AiBackupRollback"/>
+    <ROW Action="AI_AiRestoreDeferred" Description="Executing restore operation" DescriptionLocId="ActionText.Description.AI_AiRestoreDeferred" Template="Path: [1]" TemplateLocId="ActionText.Template.AI_AiRestoreDeferred"/>
+    <ROW Action="AI_AiRestoreDeferredImpersonate" Description="Executing restore operation" DescriptionLocId="ActionText.Description.AI_AiRestoreDeferred" Template="Path: [1]" TemplateLocId="ActionText.Template.AI_AiRestoreDeferred"/>
+    <ROW Action="AI_AiRestoreRollback" Description="Rollback restore" DescriptionLocId="ActionText.Description.AI_AiRestoreRollback" Template="Path: [1]" TemplateLocId="ActionText.Template.AI_AiRestoreRollback"/>
+    <ROW Action="AI_DeleteLzma" Description="正在删除从档案中提取的文件" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_DeleteRLzma" Description="正在删除从档案中提取的文件" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractFiles" Description="正在从档案中提取文件" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractLzma" Description="正在从档案中提取文件" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_CU" Builds="DefaultBuild"/>
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_LM" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="Prereq.dll" SourcePath="&lt;AI_CUSTACTS&gt;Prereq.dll"/>
+    <ROW Name="ResourceCleaner.dll" SourcePath="&lt;AI_CUSTACTS&gt;ResourceCleaner.dll"/>
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+    <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+    <ROW Dialog_="FatalError" Control_="Finish" Event="DoAction" Argument="AI_AiBackupCleanup" Condition="1" Ordering="102"/>
+    <ROW Dialog_="UserExit" Control_="Finish" Event="DoAction" Argument="AI_AiBackupCleanup" Condition="1" Ordering="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
+    <ROW Directory_="log_Dir" Component_="log" ManualDelete="true"/>
+    <ROW Directory_="__Dir" Component_="_" ManualDelete="false"/>
+    <ROW Directory_="__1_Dir" Component_="__1" ManualDelete="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_AiBackupCleanup" Type="1" Source="ResourceCleaner.dll" Target="OnAiBackupCleanup" WithoutSeq="true"/>
+    <ROW Action="AI_AiBackupImmediate" Type="1" Source="ResourceCleaner.dll" Target="OnAiBackupImmediate"/>
+    <ROW Action="AI_AiBackupRollback" Type="11521" Source="ResourceCleaner.dll" Target="OnAiBackupRollback"/>
+    <ROW Action="AI_AiRestoreDeferred" Type="11265" Source="ResourceCleaner.dll" Target="OnAiRestoreDeferred"/>
+    <ROW Action="AI_AiRestoreDeferredImpersonate" Type="9217" Source="ResourceCleaner.dll" Target="OnAiRestoreDeferredImpersonate"/>
+    <ROW Action="AI_AiRestoreRollback" Type="11521" Source="ResourceCleaner.dll" Target="OnAiRestoreRollback" WithoutSeq="true"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH_ORIGINAL" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DATA_SETTER" Type="51" Source="AI_ExtractFiles" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DeleteRCadLzma" Type="51" Source="AI_DeleteRLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteRLzma" Type="1281" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_EstimateExtractFiles" Type="1" Source="Prereq.dll" Target="EstimateExtractFiles"/>
+    <ROW Action="AI_ExtractCadLzma" Type="51" Source="AI_ExtractLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_ExtractFiles" Type="1025" Source="Prereq.dll" Target="ExtractSourceFiles" AdditionalSeq="AI_DATA_SETTER"/>
+    <ROW Action="AI_ExtractLzma" Type="1025" Source="lzmaextractor.dll" Target="ExtractLZMAFiles"/>
+    <ROW Action="AI_FindExeLzma" Type="1" Source="lzmaextractor.dll" Target="FindEXE"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_LaunchApp" Type="1" Source="aicustact.dll" Target="[#pkclientconfig.exe]"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH" Target="[AI_SETUPEXEPATH_ORIGINAL]"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SETMIXINSTLOCATION" Type="1" Source="aicustact.dll" Target="MixedAllUsersInstallLocation"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[disk_c]\[eng_productname]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]" MultiBuildTarget="DefaultBuild:[ProgramMenuFolder][eng_productname]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+    <ROW Action="UninstallPreviousVersions" Type="1" Source="aicustact.dll" Target="UninstallPreviousVersions" Options="1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="favicon.exe" SourcePath="favicon.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1502"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99" Builds="DefaultBuild"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="199" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="198" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="197" Builds="DefaultBuild"/>
+    <ROW Action="AI_FindExeLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="196" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="1549" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="1548" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="6597" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractFiles" Sequence="3998" Builds="DefaultBuild"/>
+    <ROW Action="AI_DATA_SETTER" Sequence="3997"/>
+    <ROW Action="AI_EstimateExtractFiles" Sequence="3999" Builds="DefaultBuild"/>
+    <ROW Action="AI_AiBackupImmediate" Sequence="1401"/>
+    <ROW Action="AI_AiBackupRollback" Sequence="1501"/>
+    <ROW Action="AI_AiRestoreDeferredImpersonate" Sequence="6598"/>
+    <ROW Action="AI_AiRestoreDeferred" Sequence="6599"/>
+    <ROW Action="AI_SETMIXINSTLOCATION" Sequence="748"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101"/>
+    <ROW Action="UninstallPreviousVersions" Sequence="201"/>
+    <ROW Action="AI_SETMIXINSTLOCATION" Sequence="748"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] 无法安装在 [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] 无法安装在 [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT64 OR ((VersionNT &lt;&gt; 501) OR (ServicePackLevel = 3))) AND ((VersionNT &lt;&gt; 502) OR (ServicePackLevel = 2))" Description="[ProductName] 无法安装在 [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="SETUPEXEDIR OR (REMOVE=&quot;ALL&quot;)" Description="This package can only be run from a bootstrapper." DescriptionLocId="AI.LaunchCondition.RequireBootstrapper" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] 无法安装在 [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegLocatorComponent">
+    <ROW Signature_="AI_EXE_PATH_CU" Root="1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+    <ROW Signature_="AI_EXE_PATH_LM" Root="2" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="AI_ExePath" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Value="[AI_SETUPEXEPATH]" Component_="AI_ExePath"/>
+    <ROW Registry="Path" Root="-1" Key="Software\peakinfo\eview-client" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="Version" Root="-1" Key="Software\peakinfo\eview-client" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="_" Directory_="__1_Dir" Name="变量监视程序" Component_="pkTagMonitor.exe" Target="[#pkTagMonitor.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="bin_Dir"/>
+    <ROW Shortcut="__1" Directory_="__Dir" Name="报警系统使用手册" Component_="doc" Target="[#doc]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="doc_Dir"/>
+    <ROW Shortcut="__2" Directory_="__Dir" Name="控件使用手册" Component_="doc_1" Target="[#doc_1]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="doc_Dir"/>
+    <ROW Shortcut="__3" Directory_="__Dir" Name="权限管理用户手册" Component_="docx" Target="[#docx]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="doc_Dir"/>
+    <ROW Shortcut="__4" Directory_="__Dir" Name="联动系统用户手册" Component_="docx_1" Target="[#docx_1]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="doc_Dir"/>
+    <ROW Shortcut="__5" Directory_="__Dir" Name="脚本接口用户手册" Component_="docx_2" Target="[#docx_2]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="doc_Dir"/>
+    <ROW Shortcut="__6" Directory_="__Dir" Name="视频监控系统~1|视频监控系统用户手册" Component_="docx_3" Target="[#docx_3]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="doc_Dir"/>
+    <ROW Shortcut="__7" Directory_="__Dir" Name="设备管理使用手册" Component_="docx_4" Target="[#docx_4]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="doc_Dir"/>
+    <ROW Shortcut="eview" Directory_="SHORTCUTDIR" Name="EVIEW配~1|eview配置客户端" Component_="pkclientconfig.exe" Target="[#pkclientconfig.exe]" Description="eview配置客户端" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="bin_Dir"/>
+    <ROW Shortcut="eview_1" Directory_="DesktopFolder" Name="EVIEW配~1|eview配置客户端" Component_="pkclientconfig.exe" Target="[#pkclientconfig.exe]" Description="eview配置客户端" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="bin_Dir"/>
+    <ROW Shortcut="eview_2" Directory_="SHORTCUTDIR" Name="EVIEW运~1|eview运行客户端" Component_="pkclientrun.exe" Target="[#pkclientrun.exe]" Description="eview运行客户端" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="bin_Dir"/>
+    <ROW Shortcut="eview_3" Directory_="DesktopFolder" Name="EVIEW运~1|eview运行客户端" Component_="pkclientrun.exe" Target="[#pkclientrun.exe]" Description="eview运行客户端" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="bin_Dir"/>
+    <ROW Shortcut="eview_4" Directory_="__Dir" Name="EVIEW快~1|eview快速使用指南" Component_="eview.pdf" Target="[#eview.pdf]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="doc_Dir"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="{357D7321-4D96-3FF7-9F7F-AF8D83C6FFFF}" VersionMax="3.0.0" Language="2052" Attributes="517" ActionProperty="UPGRADE_1"/>
+  </COMPONENT>
+</DOCUMENT>

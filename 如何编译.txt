@@ -1,0 +1,11 @@
+windows下，根据 程序位数+VS版本号%ARCH-VS%，如win32-vs2013）：
+1、执行批处理，复制依赖库并解压： 
+buildtools\windows\prebuild-%ARCH-VS%,作用（从\\192.168.10.1\发布版本\cccomps\%ARCH-VS%和thirdparty中复制依赖库，并解压到根目录）
+
+2、执行生成solution的批处理程序：
+buildtools\windows\%ARCH-VS%-cmake-eview.bat
+
+3、生成的工程目录再eview-server\cmake-%ARCH-VS%下，VS2013/VS2010打开eview.sln，选取RelWithDebug，32/64位进行编译
+
+
+如果VS2013下，编译提示：找不到mfc120.lib，那么需要另外安装，vs2013_vc_mbcsmfc.exe

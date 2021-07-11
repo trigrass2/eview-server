@@ -1,0 +1,19 @@
+﻿生成启动时间为 2021/7/11 10:00:15。
+     1>项目“D:\work_xing\project\eview-server\cmake-temp\common\pkeviewdbapi\pkeviewdbapi.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>CustomBuild:
+         Building Custom Rule D:/work_xing/project/eview-server/source/common/pkeviewdbapi/CMakeLists.txt
+         CMake does not need to re-run because D:\work_xing\project\eview-server\cmake-temp\common\pkeviewdbapi\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"D:\work_xing\project\eview-server\source\common\pkeviewdbapi\include" /I"D:\work_xing\project\eview-server\source\..\include" /Zi /nologo /W3 /WX- /MP /Od /Ob1 /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_WARNINGS /D BOOST_NO_USER_CONFIG /D "CMAKE_INTDIR=\"RelWithDebInfo\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"pkeviewdbapi.dir\RelWithDebInfo\\" /Fd"pkeviewdbapi.dir\RelWithDebInfo\vc120.pdb" /Gd /TP /errorReport:prompt "D:\work_xing\project\eview-server\source\common\pkeviewdbapi\pkeviewdbapi.cpp"
+         pkeviewdbapi.cpp
+     1>D:\work_xing\project\eview-server\source\common\pkeviewdbapi\pkeviewdbapi.cpp(117): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\common\pkeviewdbapi\pkeviewdbapi.cpp(129): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\common\pkeviewdbapi\pkeviewdbapi.cpp(136): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\Lib.exe /OUT:"D:\work_xing\project\eview-server\lib\pkeviewdbapi.lib" /NOLOGO /MACHINE:X64  /machine:x64 /machine:x64 pkeviewdbapi.dir\RelWithDebInfo\pkeviewdbapi.obj
+         pkeviewdbapi.vcxproj -> D:\work_xing\project\eview-server\lib\pkeviewdbapi.lib
+     1>已完成生成项目“D:\work_xing\project\eview-server\cmake-temp\common\pkeviewdbapi\pkeviewdbapi.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.97

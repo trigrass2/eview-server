@@ -1,0 +1,24 @@
+﻿生成启动时间为 2021/7/6 18:08:53。
+     1>项目“D:\work_xing\project\eview-server\cmake-temp\common\exprcalc\exprcalc.vcxproj”在节点 5 上(Rebuild 个目标)。
+     1>CustomBuild:
+         Building Custom Rule D:/work_xing/project/eview-server/source/common/exprcalc/CMakeLists.txt
+         CMake does not need to re-run because D:\work_xing\project\eview-server\cmake-temp\common\exprcalc\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"D:\work_xing\project\eview-server\source\common\exprcalc\include" /I"D:\work_xing\project\eview-server\source\..\include" /Zi /nologo /W3 /WX- /MP /Od /Ob1 /D _CRT_NONSTDC_NO_DEPRECATE /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_WARNINGS /D BOOST_NO_USER_CONFIG /D "CMAKE_INTDIR=\"RelWithDebInfo\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"exprcalc.dir\RelWithDebInfo\\" /Fd"exprcalc.dir\RelWithDebInfo\vc120.pdb" /Gd /TP /errorReport:prompt "D:\work_xing\project\eview-server\source\common\exprcalc\lexer.cpp" "D:\work_xing\project\eview-server\source\common\exprcalc\parser.cpp" "D:\work_xing\project\eview-server\source\common\exprcalc\ExprCalc.cpp"
+         lexer.cpp
+         parser.cpp
+         ExprCalc.cpp
+     1>bison.simple(289): warning C4244: “初始化”: 从“__int64”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\common\exprcalc\parser.cpp)
+     1>D:\work_xing\project\eview-server\source\common\exprcalc\ExprCalc.cpp(320): warning C4267: “=”: 从“size_t”转换到“long”，可能丢失数据
+     1>syntex.y(238): warning C4267: “=”: 从“size_t”转换到“long”，可能丢失数据 (D:\work_xing\project\eview-server\source\common\exprcalc\parser.cpp)
+     1>syntex.y(255): warning C4267: “=”: 从“size_t”转换到“long”，可能丢失数据 (D:\work_xing\project\eview-server\source\common\exprcalc\parser.cpp)
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\Lib.exe /OUT:"D:\work_xing\project\eview-server\lib\exprcalc.lib" /NOLOGO /MACHINE:X64  /machine:x64 /machine:x64 exprcalc.dir\RelWithDebInfo\lexer.obj
+         exprcalc.dir\RelWithDebInfo\parser.obj
+         exprcalc.dir\RelWithDebInfo\ExprCalc.obj
+         exprcalc.vcxproj -> D:\work_xing\project\eview-server\lib\exprcalc.lib
+     1>已完成生成项目“D:\work_xing\project\eview-server\cmake-temp\common\exprcalc\exprcalc.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.72

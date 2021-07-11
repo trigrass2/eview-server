@@ -1,0 +1,11 @@
+; ForwardAccessor.def : Declares the module parameters for the DLL.
+
+LIBRARY      "ForwardAccessor"
+;DESCRIPTION  'ForwardAccessor Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+
+;Initialize			@1
+;ReadAllTagsData		@2
+;UnInitialize		@3

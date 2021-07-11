@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\server\pkhisdataserver\MainTask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\server\pkhisdataserver\PKHisDataServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\server\pkhisdataserver\RecordTimer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\server\pkhisdataserver\RecordTimerTask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\server\pkhisdataserver\TrendTimer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\server\pkhisdataserver\TrendTimerTask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\work_xing\project\eview-server\source\server\pkhisdataserver\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="D:\work_xing\project\eview-server\cmake-temp\server\pkhisdataserver\version.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3BC1D989-3511-3007-963B-F14625AAACDF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

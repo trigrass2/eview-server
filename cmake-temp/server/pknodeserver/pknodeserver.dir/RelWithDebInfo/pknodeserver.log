@@ -1,0 +1,417 @@
+﻿生成启动时间为 2021/7/6 18:08:54。
+     1>项目“D:\work_xing\project\eview-server\cmake-temp\server\pknodeserver\pknodeserver.vcxproj”在节点 3 上(Rebuild 个目标)。
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(357,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+     1>CustomBuild:
+         Building Custom Rule D:/work_xing/project/eview-server/source/server/pknodeserver/CMakeLists.txt
+         CMake does not need to re-run because D:\work_xing\project\eview-server\cmake-temp\server\pknodeserver\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"D:\work_xing\project\eview-server\source\server\pknodeserver\..\..\common\exprcalc\include" /I"D:\work_xing\project\eview-server\source\server\pknodeserver\include" /I"D:\work_xing\project\eview-server\source\..\include" /Zi /nologo /W3 /WX- /MP /Od /Ob1 /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_WARNINGS /D BOOST_NO_USER_CONFIG /D "CMAKE_INTDIR=\"RelWithDebInfo\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"pknodeserver.dir\RelWithDebInfo\\" /Fd"pknodeserver.dir\RelWithDebInfo\vc120.pdb" /Gd /TP /errorReport:prompt "D:\work_xing\project\eview-server\source\server\pknodeserver\Alarm2DBTask.cpp" "D:\work_xing\project\eview-server\source\server\pknodeserver\ByteOrder.cpp" "D:\work_xing\project\eview-server\source\server\pknodeserver\CtrlProcTask.cpp" "D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp" "D:\work_xing\project\eview-server\source\server\pknodeserver\EAProcessor.cpp" "D:\work_xing\project\eview-server\source\server\pknodeserver\EnumProc.cpp" "D:\work_xing\project\eview-server\source\server\pknodeserver\MainTask.cpp" "D:\work_xing\project\eview-server\source\server\pknodeserver\MemTagHandler.cpp" "D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp" "D:\work_xing\project\eview-server\source\server\pknodeserver\PKNodeServer.cpp" "D:\work_xing\project\eview-server\source\server\pknodeserver\PredefTagHandler.cpp" "D:\work_xing\project\eview-server\source\server\pknodeserver\SimTagHandler.cpp" "D:\work_xing\project\eview-server\source\server\pknodeserver\TagExprCalc.cpp" "D:\work_xing\project\eview-server\source\server\pknodeserver\TagProcessTask.cpp" "D:\work_xing\project\eview-server\source\server\pknodeserver\UserAuthTask.cpp" "D:\work_xing\project\eview-server\source\server\pknodeserver\VarCalculator.cpp"
+         Alarm2DBTask.cpp
+         ByteOrder.cpp
+         CtrlProcTask.cpp
+         DataProcTask.cpp
+         EAProcessor.cpp
+         EnumProc.cpp
+         MainTask.cpp
+         MemTagHandler.cpp
+         NodeCommonDef.cpp
+         PKNodeServer.cpp
+         PredefTagHandler.cpp
+         SimTagHandler.cpp
+         TagExprCalc.cpp
+         TagProcessTask.cpp
+         UserAuthTask.cpp
+         VarCalculator.cpp
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\Alarm2DBTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\TagProcessTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\CtrlProcTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\Alarm2DBTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\Alarm2DBTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\Alarm2DBTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\Alarm2DBTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\Alarm2DBTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\Alarm2DBTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\Alarm2DBTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(278) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\Alarm2DBTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\Alarm2DBTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\PredefTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\EAProcessor.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\PredefTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\EAProcessor.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\CtrlProcTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\CtrlProcTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\PKNodeServer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\SimTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\CtrlProcTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\CtrlProcTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\UserAuthTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\VarCalculator.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\CtrlProcTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\MemTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\CtrlProcTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\CtrlProcTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(278) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\PKNodeServer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\SimTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\UserAuthTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\MemTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\VarCalculator.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\CtrlProcTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(278) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(213) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\TagProcessTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(213) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\TagProcessTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\CtrlProcTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\TagProcessTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\TagProcessTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\PredefTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\TagProcessTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\PredefTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\PredefTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\PredefTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\TagProcessTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\TagProcessTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(213) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\PredefTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\EAProcessor.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\PredefTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(213) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\EAProcessor.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\EAProcessor.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\EAProcessor.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\EAProcessor.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\EAProcessor.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(213) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\PredefTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\PredefTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\EAProcessor.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\PKNodeServer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\PKNodeServer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\PKNodeServer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\PKNodeServer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\SimTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\EAProcessor.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\SimTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\UserAuthTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\SimTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\MemTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\UserAuthTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\PKNodeServer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\VarCalculator.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\UserAuthTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\MemTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\SimTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\PKNodeServer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(213) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\VarCalculator.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\MemTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\UserAuthTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\VarCalculator.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\MemTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\VarCalculator.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\SimTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\UserAuthTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\SimTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(213) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\UserAuthTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(213) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\VarCalculator.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\MemTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\VarCalculator.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(213) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\MemTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(213) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\PKNodeServer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\PKNodeServer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\UserAuthTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\SimTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\TagProcessTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\MemTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\VarCalculator.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\UserAuthTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\SimTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\TagProcessTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\MemTagHandler.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\VarCalculator.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\UserAuthTask.cpp(12): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\TagExprCalc.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\TagExprCalc.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\TagExprCalc.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\TagExprCalc.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\TagExprCalc.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\TagExprCalc.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\TagExprCalc.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\TagExprCalc.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(278) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\TagExprCalc.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\TagExprCalc.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\TagExprCalc.cpp(36): warning C4244: “return”: 从“ACE_INT64”转换到“double”，可能丢失数据
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(184): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\Alarm2DBTask.cpp)
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(198): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\Alarm2DBTask.cpp)
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(184): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\EAProcessor.cpp)
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(198): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\EAProcessor.cpp)
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(184): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\CtrlProcTask.cpp)
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(198): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\CtrlProcTask.cpp)
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\EnumProc.cpp(37): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(184): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\MainTask.cpp)
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(184): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\PredefTagHandler.cpp)
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(198): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\MainTask.cpp)
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(198): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\PredefTagHandler.cpp)
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\EnumProc.cpp(259): warning C4996: 'strcmpi': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strcmpi. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(252) : 参见“strcmpi”的声明
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\EnumProc.cpp(262): warning C4996: 'strcmpi': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strcmpi. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(252) : 参见“strcmpi”的声明
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(184): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\TagProcessTask.cpp)
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(198): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\TagProcessTask.cpp)
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(184): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\MemTagHandler.cpp)
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(198): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\MemTagHandler.cpp)
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(184): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\SimTagHandler.cpp)
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(198): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\SimTagHandler.cpp)
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(184): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp)
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(198): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp)
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(184): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp)
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(198): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp)
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(184): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\PKNodeServer.cpp)
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(198): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\PKNodeServer.cpp)
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(184): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\VarCalculator.cpp)
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(198): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\VarCalculator.cpp)
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(184): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\UserAuthTask.cpp)
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(198): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据 (D:\work_xing\project\eview-server\source\server\pknodeserver\UserAuthTask.cpp)
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\Alarm2DBTask.cpp(227): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\Alarm2DBTask.cpp(439): warning C4244: “参数”: 从“time_t”转换到“long”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\Alarm2DBTask.cpp(444): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\Alarm2DBTask.cpp(466): warning C4244: “参数”: 从“time_t”转换到“long”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\Alarm2DBTask.cpp(544): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\Alarm2DBTask.cpp(549): warning C4244: “初始化”: 从“time_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\Alarm2DBTask.cpp(553): warning C4244: “参数”: 从“time_t”转换到“long”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp(27): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp(28): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\UserAuthTask.cpp(66): warning C4244: “参数”: 从“time_t”转换到“long”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp(591): warning C4244: “return”: 从“double”转换到“float”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp(605): warning C4244: “return”: 从“double”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp(612): warning C4244: “return”: 从“double”转换到“ACE_INT64”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp(619): warning C4244: “return”: 从“double”转换到“ACE_UINT64”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp(741): warning C4244: “参数”: 从“ACE_INT64”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp(742): warning C4244: “参数”: 从“ACE_INT64”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp(1170): warning C4244: “=”: 从“double”转换到“ACE_INT64”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp(1171): warning C4244: “=”: 从“double”转换到“ACE_INT64”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp(1175): warning C4244: “=”: 从“double”转换到“ACE_INT64”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\NodeCommonDef.cpp(1176): warning C4244: “=”: 从“double”转换到“ACE_INT64”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\TagProcessTask.cpp(133): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\TagProcessTask.cpp(143): warning C4313: “sprintf”: 格式字符串中的“%d”与“CDataTag *”类型的参数 1 冲突
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\TagProcessTask.cpp(149): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\TagProcessTask.cpp(299): warning C4244: “参数”: 从“__int64”转换到“unsigned int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\TagProcessTask.cpp(334): warning C4244: “参数”: 从“__int64”转换到“unsigned int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\TagProcessTask.cpp(367): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\TagProcessTask.cpp(397): warning C4244: “return”: 从“__int64”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\TagProcessTask.cpp(409): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\TagProcessTask.cpp(515): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\MainTask.cpp(607): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp(101): warning C4244: “参数”: 从“time_t”转换到“long”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp(105): warning C4244: “参数”: 从“time_t”转换到“long”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp(105): warning C4018: “>”: 有符号/无符号不匹配
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp(106): warning C4244: “参数”: 从“time_t”转换到“long”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp(107): warning C4244: “参数”: 从“time_t”转换到“long”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp(107): warning C4018: “>”: 有符号/无符号不匹配
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp(108): warning C4244: “参数”: 从“time_t”转换到“long”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp(112): warning C4244: “参数”: 从“time_t”转换到“long”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp(284): warning C4018: “>”: 有符号/无符号不匹配
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp(398): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp(407): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp(631): warning C4244: “=”: 从“ACE_INT64”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp(640): warning C4244: “=”: 从“ACE_UINT64”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\MainTask.cpp(1849): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp(1103): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\DataProcTask.cpp(1105): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+     1>d:\work_xing\project\eview-server\source\server\pknodeserver\tagprocesstask.cpp(241): warning C4700: 使用了未初始化的局部变量“nCurMSec”
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\CtrlProcTask.cpp(445): warning C4267: “参数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\server\pknodeserver\CtrlProcTask.cpp(500): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_WARNINGS /D BOOST_NO_USER_CONFIG /D "CMAKE_INTDIR=\\\"RelWithDebInfo\\\"" /l"0x0409" /I"D:\work_xing\project\eview-server\source\server\pknodeserver\..\..\common\exprcalc\include" /I"D:\work_xing\project\eview-server\source\server\pknodeserver\include" /I"D:\work_xing\project\eview-server\source\..\include" /nologo /fo"pknodeserver.dir\RelWithDebInfo\version.res" D:\work_xing\project\eview-server\cmake-temp\server\pknodeserver\version.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\eview-server\bin\pknodeserver.exe" /INCREMENTAL /NOLOGO /LIBPATH:"D:/work_xing/project/eview-server/source/../lib" /LIBPATH:"D:/work_xing/project/eview-server/source/../lib/RelWithDebInfo" /LIBPATH:"D:/work_xing/project/eview-server/source/../bin" /LIBPATH:"D:/work_xing/project/eview-server/source/../bin/RelWithDebInfo" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib pkce.lib tinyxml2.lib pkserverbase.lib "D:\work_xing\project\eview-server\lib\pkdrvdatasync.lib" pklog.lib pkcomm.lib "D:\work_xing\project\eview-server\lib\eviewcomm.lib" "D:\work_xing\project\eview-server\lib\rmapi.lib" jsoncpp.lib shmqueue.lib "D:\work_xing\project\eview-server\lib\exprcalc.lib" pkmemdbapi.lib "D:\work_xing\project\eview-server\lib\pkeviewdbapi.lib" pklic.lib pkdbapi.lib cryptlib.lib pkcrashdump.lib psapi.lib exceptionreport.lib dbghelp.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/work_xing/project/eview-server/bin/pknodeserver.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/work_xing/project/eview-server/lib/pknodeserver.lib" /MACHINE:X64  /machine:x64 pknodeserver.dir\RelWithDebInfo\version.res
+         pknodeserver.dir\RelWithDebInfo\Alarm2DBTask.obj
+         pknodeserver.dir\RelWithDebInfo\ByteOrder.obj
+         pknodeserver.dir\RelWithDebInfo\CtrlProcTask.obj
+         pknodeserver.dir\RelWithDebInfo\DataProcTask.obj
+         pknodeserver.dir\RelWithDebInfo\EAProcessor.obj
+         pknodeserver.dir\RelWithDebInfo\EnumProc.obj
+         pknodeserver.dir\RelWithDebInfo\MainTask.obj
+         pknodeserver.dir\RelWithDebInfo\MemTagHandler.obj
+         pknodeserver.dir\RelWithDebInfo\NodeCommonDef.obj
+         pknodeserver.dir\RelWithDebInfo\PKNodeServer.obj
+         pknodeserver.dir\RelWithDebInfo\PredefTagHandler.obj
+         pknodeserver.dir\RelWithDebInfo\SimTagHandler.obj
+         pknodeserver.dir\RelWithDebInfo\TagExprCalc.obj
+         pknodeserver.dir\RelWithDebInfo\TagProcessTask.obj
+         pknodeserver.dir\RelWithDebInfo\UserAuthTask.obj
+         pknodeserver.dir\RelWithDebInfo\VarCalculator.obj
+     1>jsoncpp.lib(json_reader.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“jsoncpp.lib(json_reader.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>jsoncpp.lib(json_value.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“jsoncpp.lib(json_value.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>jsoncpp.lib(json_writer.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“jsoncpp.lib(json_writer.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>shmqueue.lib(ProcessQueue.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“shmqueue.lib(ProcessQueue.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+         pknodeserver.vcxproj -> C:\eview-server\bin\pknodeserver.exe
+     1>已完成生成项目“D:\work_xing\project\eview-server\cmake-temp\server\pknodeserver\pknodeserver.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.51

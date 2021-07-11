@@ -1,0 +1,419 @@
+﻿生成启动时间为 2021/7/5 15:11:30。
+     1>项目“D:\work_xing\project\eview-server\cmake-temp\driversdk\pkdrvcmn\pkdrvcmn.vcxproj”在节点 3 上(Rebuild 个目标)。
+     1>CustomBuild:
+         Building Custom Rule D:/work_xing/project/eview-server/source/driversdk/pkdrvcmn/CMakeLists.txt
+         CMake does not need to re-run because D:\work_xing\project\eview-server\cmake-temp\driversdk\pkdrvcmn\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\..\..\..\include" /I"D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\include" /I"D:\work_xing\project\eview-server\source\..\include" /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /nologo /W3 /WX- /MP /Od /Ob1 /D WIN32 /D _WINDOWS /D DRV_SUPPORT_PYTHON /D _CRT_SECURE_NO_WARNINGS /D BOOST_NO_USER_CONFIG /D "CMAKE_INTDIR=\"RelWithDebInfo\"" /D pkdrvcmn_EXPORTS /D _WINDLL /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"pkdrvcmn.dir\RelWithDebInfo\\" /Fd"pkdrvcmn.dir\RelWithDebInfo\vc120.pdb" /Gd /TP /errorReport:prompt "D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp" "D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp" "D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp" "D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp" "D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp" "D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp" "D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp" "D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp" "D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pythonerr.cpp" "D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp" "D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\globalObj.cpp" "D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\ByteOrder.cpp"
+         dll_main.cpp
+         MainTask.cpp
+         UserTimer.cpp
+         TaskGroup.cpp
+         Driver.cpp
+         Device.cpp
+         drvframework.cpp
+         pkDriverCommon.cpp
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(213) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(213) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(278) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(213) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(213) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(213) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(213) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(213) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(91): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(93): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(95): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(97): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(99): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(101): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(91): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(93): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(95): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(97): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(99): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(101): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp(32): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp(50): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp(67): warning C4244: “参数”: 从“__int64”转换到“unsigned int”，可能丢失数据
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(91): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(93): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(95): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(97): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(99): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(101): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(91): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(93): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(95): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(97): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(99): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(101): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(91): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(93): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(95): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(97): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(91): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(99): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(93): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(101): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(95): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(97): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(99): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(101): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp(107): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp(108): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp(111): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp(322): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp(416): warning C4244: “参数”: 从“time_t”转换到“long”，可能丢失数据
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(91): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(93): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(95): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(97): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(99): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(101): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(91): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(93): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(95): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(97): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(99): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(101): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+         pythonerr.cpp
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp(323): warning C4313: “sprintf”: 格式字符串中的“%d”与“CTaskGroup *”类型的参数 1 冲突
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp(170): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp(424): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp(265): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp(440): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp(729): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp(810): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp(251): warning C4018: “<”: 有符号/无符号不匹配
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp(158): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp(168): warning C4244: “参数”: 从“__int64”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp(233): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp(263): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp(277): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp(291): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp(302): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(218): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(219): warning C4018: “>”: 有符号/无符号不匹配
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp(336): warning C4244: “参数”: 从“__int64”转换到“unsigned int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(373): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(392): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(500): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(505): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(510): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(568): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(593): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(668): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(698): warning C4244: “return”: 从“__int64”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(782): warning C4244: “参数”: 从“__int64”转换到“unsigned int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(818): warning C4244: “参数”: 从“__int64”转换到“unsigned int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(851): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(877): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(969): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(993): warning C4244: “初始化”: 从“time_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(994): warning C4018: “>”: 有符号/无符号不匹配
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(1039): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(1056): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp(1000): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp(1018): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp(1023): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp(1036): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp(1167): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp(1315): warning C4018: “<”: 有符号/无符号不匹配
+     1>D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pythonerr.cpp(48): warning C4244: “初始化”: 从“Py_ssize_t”转换到“int”，可能丢失数据
+         PythonHelper.cpp
+         globalObj.cpp
+         ByteOrder.cpp
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(213) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_string.inl(222): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\globalObj.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdlib.inl(340): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _putenv. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\globalObj.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(941) : 参见“putenv”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(60): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _access. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\globalObj.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(323) : 参见“access”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(131): warning C4996: 'chdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _chdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\globalObj.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(136) : 参见“chdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(158): warning C4996: 'rmdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _rmdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\globalObj.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(141) : 参见“rmdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(409): warning C4996: 'getcwd': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getcwd. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\globalObj.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(130) : 参见“getcwd”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1014): warning C4996: 'swab': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _swab. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\globalObj.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(944) : 参见“swab”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_unistd.inl(1169): warning C4996: 'unlink': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _unlink. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\globalObj.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\io.h(213) : 参见“unlink”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_sys_stat.inl(154): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\globalObj.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\direct.h(140) : 参见“mkdir”的声明
+     1>D:\work_xing\project\eview-server\include\ace/OS_NS_stdio.inl(887): warning C4996: 'tempnam': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _tempnam. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\globalObj.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(709) : 参见“tempnam”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(91): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(93): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(95): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(97): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(99): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+     1>d:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(101): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details. (D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(253) : 参见“stricmp”的声明
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D WIN32 /D _WINDOWS /D DRV_SUPPORT_PYTHON /D _CRT_SECURE_NO_WARNINGS /D BOOST_NO_USER_CONFIG /D "CMAKE_INTDIR=\\\"RelWithDebInfo\\\"" /D pkdrvcmn_EXPORTS /l"0x0409" /I"D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\..\..\..\include" /I"D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\include" /I"D:\work_xing\project\eview-server\source\..\include" /nologo /fo"pkdrvcmn.dir\RelWithDebInfo\version.res" D:\work_xing\project\eview-server\cmake-temp\driversdk\pkdrvcmn\version.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\work_xing\project\eview-server\bin\pkdrvcmn.dll" /INCREMENTAL /NOLOGO /LIBPATH:"D:/work_xing/project/eview-server/source/../lib" /LIBPATH:"D:/work_xing/project/eview-server/source/../lib/RelWithDebInfo" /LIBPATH:"D:/work_xing/project/eview-server/source/../bin" /LIBPATH:"D:/work_xing/project/eview-server/source/../bin/RelWithDebInfo" /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win64" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib pkce.lib tinyxml2.lib "D:\work_xing\project\eview-server\lib\pkdrvdatasync.lib" "D:\work_xing\project\eview-server\lib\rmapi.lib" pklog.lib pkcomm.lib "D:\work_xing\project\eview-server\lib\eviewcomm.lib" jsoncpp.lib pkmemdbapi.lib shmqueue.lib pkprocesscontroller.lib pkcommunicate.lib pkcrashdump.lib "D:\work_xing\project\eview-server\lib\pkeviewdbapi.lib" pkdbapi.lib exceptionreport.lib dbghelp.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/work_xing/project/eview-server/bin/pkdrvcmn.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/work_xing/project/eview-server/lib/pkdrvcmn.lib" /MACHINE:X64  /machine:x64 /DLL pkdrvcmn.dir\RelWithDebInfo\version.res
+         pkdrvcmn.dir\RelWithDebInfo\dll_main.obj
+         pkdrvcmn.dir\RelWithDebInfo\MainTask.obj
+         pkdrvcmn.dir\RelWithDebInfo\UserTimer.obj
+         pkdrvcmn.dir\RelWithDebInfo\TaskGroup.obj
+         pkdrvcmn.dir\RelWithDebInfo\Driver.obj
+         pkdrvcmn.dir\RelWithDebInfo\Device.obj
+         pkdrvcmn.dir\RelWithDebInfo\drvframework.obj
+         pkdrvcmn.dir\RelWithDebInfo\pkDriverCommon.obj
+         pkdrvcmn.dir\RelWithDebInfo\pythonerr.obj
+         pkdrvcmn.dir\RelWithDebInfo\PythonHelper.obj
+         pkdrvcmn.dir\RelWithDebInfo\globalObj.obj
+         pkdrvcmn.dir\RelWithDebInfo\ByteOrder.obj
+            正在创建库 D:/work_xing/project/eview-server/lib/pkdrvcmn.lib 和对象 D:/work_xing/project/eview-server/lib/pkdrvcmn.exp
+     1>tinyxml2.lib(tinyxml2.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“tinyxml2.lib(tinyxml2.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>jsoncpp.lib(json_reader.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“jsoncpp.lib(json_reader.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>jsoncpp.lib(json_value.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“jsoncpp.lib(json_value.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>jsoncpp.lib(json_writer.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“jsoncpp.lib(json_writer.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>shmqueue.lib(ProcessQueue.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“shmqueue.lib(ProcessQueue.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>pkprocesscontroller.lib(pkProcessController.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“pkprocesscontroller.lib(pkProcessController.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>exceptionreport.lib(ExceptionHandler.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“exceptionreport.lib(ExceptionHandler.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>exceptionreport.lib(GetWinVer.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“exceptionreport.lib(GetWinVer.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>exceptionreport.lib(MiniVersion.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“exceptionreport.lib(MiniVersion.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>exceptionreport.lib(RegularDllExceptionAttacher.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“exceptionreport.lib(RegularDllExceptionAttacher.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>exceptionreport.lib(CVZipDumpFile.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“exceptionreport.lib(CVZipDumpFile.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>exceptionreport.lib(XZip.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“exceptionreport.lib(XZip.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>exceptionreport.lib(FormatNumberForLocale.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“exceptionreport.lib(FormatNumberForLocale.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>exceptionreport.lib(CrashHandler.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“exceptionreport.lib(CrashHandler.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>mfcs120.lib(nolib.obj) : warning LNK4099: 未找到 PDB“mfcs120.pdb”(使用“mfcs120.lib(nolib.obj)”或在“D:\work_xing\project\eview-server\bin\mfcs120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>mfcs120.lib(stdafx.obj) : warning LNK4099: 未找到 PDB“mfcs120.pdb”(使用“mfcs120.lib(stdafx.obj)”或在“D:\work_xing\project\eview-server\bin\mfcs120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>mfcs120.lib(rawdllmainproxy.obj) : warning LNK4099: 未找到 PDB“mfcs120.pdb”(使用“mfcs120.lib(rawdllmainproxy.obj)”或在“D:\work_xing\project\eview-server\bin\mfcs120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+         pkdrvcmn.vcxproj -> D:\work_xing\project\eview-server\bin\pkdrvcmn.dll
+     1>已完成生成项目“D:\work_xing\project\eview-server\cmake-temp\driversdk\pkdrvcmn\pkdrvcmn.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:08.88

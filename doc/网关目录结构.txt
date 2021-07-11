@@ -1,0 +1,9 @@
+gateway下文件：
+bin
+config
+www
+netcfgservice
+
+sysetc下文件：
+hostname
+hostid

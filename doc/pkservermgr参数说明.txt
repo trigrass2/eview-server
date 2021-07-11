@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="GB2312"?>
+<Servers desc="AutoRestart;DelaySec(seconds);ShowConsole;ExeName,ExeDir;StartCmd;StopCmd;DelaySec;RestartAt:Day=1/1;Hour=*;Minute=*">
+        <Server Name="Notepad" ExeName="Notepad.exe"  ExeDir="c:\windows\system32" RestartAt="Day=1/1;Hour=*;Minute=*"/>
+        <Server Name="内存数据库服务" ExeName="pkmemdb" StartCmd="start_pkmemdb.bat" DelaySec="0" RestartAt="Day=1/1;Hour=*;Minute=*"/>
+       <Server Name="Web服务" ExeName="java" StartCmd="startWeb.bat" StopCmd="stopWeb.bat" ExeDir="..\..\eview-server-win32-vs2013\web" RestartAt="Day=1/1;Hour=*;Minute=*"/>
+        <!--  <Exclude ExeName="modbustcp"/> -->
+</Servers>
+
+Server参数包括：AutoRestart;DelaySec(seconds);ShowConsole;ExeName,ExeDir;StartCmd;StopCmd;DelaySec;RestartAt:Day=1/1;Hour=*;Minute=*
+AutoRestart:是否关闭后自动启动。值：1或0。1为缺省值，表示如果该进程关闭则自动启动该进程；0表示不启动
+DelaySec：启动前延迟时间（秒）。值：延迟的描述，缺省为0表示不延迟
+ShowConsole：是否显示控制台黑窗口。缺省为0表示不显示，为1表示显示
+ExeName：进程名称，windows下可以带上.exe后缀名或不带，管理器会自动判断并根据需要增加.exe后缀。这个必须是进程名，且和进程中Alive信号量名称一致
+ExeDir：Exe或者StartCmd、StopCmd的命令所在目录。缺省为bin目录。可以使用相对路径，也可以使用绝对路径
+StartCmd：启动命令，通常是脚本文件启动进程需要。如果不为空，优先使用该脚本文件启动而不是ExeName启动进程
+StopCmd：停止命令脚本，通常是通过脚本关闭进程需要
+RestartAt：定时重启进程命令。支持天、时、分，格式：Day=1/2;Hour=0,12;Minute=*。Day为每月内的天，范围：1-31。Hour为一天内小时数，范围：1-24；Minute为1小时的分钟数，范围：1-60。Day/Hour/Minute等号后面的值解释：*表示每天（每时/每分钟）都执行一次重启。 以逗号隔开的数值如1,3,5表示每1、3、5日（时或分）执行一次重启。斜杠号隔开的3/2，前面数字表示起始时间（第3天、第3小时、第三分钟），后面数字表示每多长间隔执行一次重启（这里是每2天、2小时、2分钟）。Day=3/2;Hour=0,12;Minute=*意义：每月的3日开始，每间隔2日（即3,5,7...31日)的0点和12点的每分钟分别执行1次重启任务。
+
+Exclude和Server同级别，不执行Exclude的进程。参数：
+ExeName：不启动该名称的进程

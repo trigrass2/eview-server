@@ -1,0 +1,123 @@
+﻿  Building Custom Rule G:/work/project/eview-server/source/driversdk/pkdrvcmn/CMakeLists.txt
+  dll_main.cpp
+  MainTask.cpp
+  UserTimer.cpp
+  TaskGroup.cpp
+  Driver.cpp
+  Device.cpp
+  drvframework.cpp
+  pkDriverCommon.cpp
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(91,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(93,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(95,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(97,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(99,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(101,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp(32,50): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp(50,32): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp(67,48): warning C4244: “参数”: 从“__int64”转换到“unsigned int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(91,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(93,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(95,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(97,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(99,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(101,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(91,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(93,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(95,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(97,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(99,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(101,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(91,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(93,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(95,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(97,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(99,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(101,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(91,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(93,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(95,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(97,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(99,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(101,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(91,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(93,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(95,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(97,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(99,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(101,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(91,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(93,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(95,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(97,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(99,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(101,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(91,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(93,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(95,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(97,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(99,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(101,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp(107,21): warning C4309: “初始化”: 截断常量值
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp(108,5): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp(111,5): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp(322,14): warning C4996: 'putenv': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _putenv. See online help for details.
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp(416,19): warning C4244: “参数”: 从“time_t”转换到“long”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp(323,20): warning C4477: “sprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“CTaskGroup *”
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp(323,20): warning C4313: “sprintf”: 格式字符串中的“%d”与“CTaskGroup *”类型的参数 1 冲突
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp(424,112): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp(440,57): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp(251,26): warning C4018: “<”: 有符号/无符号不匹配
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp(170,37): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp(265,22): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp(729,37): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp(810,34): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  pythonerr.cpp
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp(1000,16): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp(1018,40): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp(1023,48): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp(1036,40): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp(1167,45): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp(1315,27): warning C4018: “<”: 有符号/无符号不匹配
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp(158,41): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp(168,80): warning C4244: “参数”: 从“__int64”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(218,34): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(219,34): warning C4018: “>”: 有符号/无符号不匹配
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(373,56): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(392,48): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(500,38): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(505,38): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(510,45): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(568,36): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(593,41): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp(233,110): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(668,33): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(698,18): warning C4244: “return”: 从“__int64”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp(261,92): warning C4474: sprintf: 格式字符串中传递的参数太多
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp(261,92): message : 占位符和其参数预计 3 可变参数，但提供的却是 4 参数
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp(263,110): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp(277,104): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp(291,104): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp(302,46): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp(336,43): warning C4244: “参数”: 从“__int64”转换到“unsigned int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(782,63): warning C4244: “参数”: 从“__int64”转换到“unsigned int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(818,59): warning C4244: “参数”: 从“__int64”转换到“unsigned int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(851,127): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(877,146): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(969,48): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(993,35): warning C4244: “初始化”: 从“time_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(994,35): warning C4018: “>”: 有符号/无符号不匹配
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(1039,48): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp(1056,54): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+  PythonHelper.cpp
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\pythonerr.cpp(48,21): warning C4244: “初始化”: 从“Py_ssize_t”转换到“int”，可能丢失数据
+  globalObj.cpp
+  ByteOrder.cpp
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(91,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(93,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(95,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(97,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(99,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\drvframework.h(101,6): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details. (编译源文件 G:\work\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp)
+G:\work\project\eview-server\source\driversdk\pkdrvcmn\build\version.rc(8): fatal error RC1015: cannot open include file 'afxres.h'.
+  

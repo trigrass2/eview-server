@@ -1,0 +1,77 @@
+Exception handler called in UnhandledExceptionInfo.
+Error occurred at 12/5/2019 16:12:52.
+E:\eview-server\bin\drivers\modbustcp\modbustcp.exe, run by Administrator.
+Operating system:  unknown Windows version (6.1.7601).
+4 processor(s), type 8664.
+65% memory in use.
+4096 MBytes physical memory.
+1421 MBytes physical memory free.
+6144 MBytes paging file.
+2647 MBytes paging file free.
+8388608 MBytes user address space.
+8388266 MBytes user address space free.
+Write to location 134b0000 caused an access violation.
+
+Context:
+Module 1
+C:\Windows\system32\python27.dll
+Image Base: 0x1e000000  Image Size: 0x002f0000
+Checksum:   0x002e0cd3  Time Stamp: 0x53b1ee00
+File Size:  3009536     File Time:  6/30/2014 16:08:50
+Version Information:
+   Company:    Python Software Foundation
+   Product:    Python
+   FileDesc:   Python Core
+   FileVer:    2.7.8150.1013
+   ProdVer:    2.7.8150.1013
+
+Module 2
+C:\Windows\WinSxS\amd64_microsoft.vc90.crt_1fc8b3b9a1e18e3b_9.0.30729.7523_none_08e1eaf5a83f8ea2\MSVCR90.dll
+Image Base: 0x73ec0000  Image Size: 0x000a3000
+Checksum:   0x000ab014  Time Stamp: 0x516f78f6
+File Size:  642192      File Time:  6/1/2019 23:12:38
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Visual Studio? 2008
+   FileDesc:   Microsoft? C Runtime Library
+   FileVer:    9.0.30729.7523
+   ProdVer:    9.0.30729.7523
+
+Module 3
+C:\Windows\system32\USER32.dll
+Image Base: 0x77230000  Image Size: 0x000fa000
+Checksum:   0x00105bd9  Time Stamp: 0x4ce7c9f1
+File Size:  1008128     File Time:  11/21/2010 11:24:12
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   多用户 Windows 用户 API 客户端 DLL
+   FileVer:    6.1.7601.17514
+   ProdVer:    6.1.7601.17514
+
+Module 4
+C:\Windows\system32\kernel32.dll
+Image Base: 0x77330000  Image Size: 0x0011f000
+Checksum:   0x00127a43  Time Stamp: 0x4ce7c78b
+File Size:  1161216     File Time:  11/21/2010 11:24:12
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows NT 基本 API 客户端 DLL
+   FileVer:    6.1.7601.17514
+   ProdVer:    6.1.7601.17514
+
+Module 5
+C:\Windows\SYSTEM32\ntdll.dll
+Image Base: 0x77450000  Image Size: 0x001a9000
+Checksum:   0x001b55ea  Time Stamp: 0x4ce7c8f9
+File Size:  1731936     File Time:  11/21/2010 11:24:04
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   NT 层 DLL
+   FileVer:    6.1.7601.17514
+   ProdVer:    6.1.7601.17514
+
+
+===== [end of ERRORLOG.TXT] =====

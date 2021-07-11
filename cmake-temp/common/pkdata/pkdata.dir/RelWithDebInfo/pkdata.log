@@ -1,0 +1,41 @@
+﻿生成启动时间为 2021/7/11 10:00:15。
+     1>项目“D:\work_xing\project\eview-server\cmake-temp\common\pkdata\pkdata.vcxproj”在节点 3 上(Rebuild 个目标)。
+     1>CustomBuild:
+         Building Custom Rule D:/work_xing/project/eview-server/source/common/pkdata/CMakeLists.txt
+         CMake does not need to re-run because D:\work_xing\project\eview-server\cmake-temp\common\pkdata\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"D:\work_xing\project\eview-server\source\common\pkdata\include" /I"D:\work_xing\project\eview-server\source\..\include" /Zi /nologo /W3 /WX- /MP /Od /Ob1 /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_WARNINGS /D BOOST_NO_USER_CONFIG /D "CMAKE_INTDIR=\"RelWithDebInfo\"" /D pkdata_EXPORTS /D _WINDLL /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"pkdata.dir\RelWithDebInfo\\" /Fd"pkdata.dir\RelWithDebInfo\vc120.pdb" /Gd /TP /errorReport:prompt "D:\work_xing\project\eview-server\source\common\pkdata\pkdata.cpp"
+         pkdata.cpp
+     1>D:\work_xing\project\eview-server\include\pkdata/pkdata.h(51): warning C4018: “<=”: 有符号/无符号不匹配
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(184): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\include\pkmemdbapi/pkmemdbapi.h(198): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\common\pkdata\pkdata.cpp(199): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\common\pkdata\pkdata.cpp(228): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\common\pkdata\pkdata.cpp(317): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+     1>D:\work_xing\project\eview-server\source\common\pkdata\pkdata.cpp(351): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_WARNINGS /D BOOST_NO_USER_CONFIG /D "CMAKE_INTDIR=\\\"RelWithDebInfo\\\"" /D pkdata_EXPORTS /l"0x0409" /I"D:\work_xing\project\eview-server\source\common\pkdata\include" /I"D:\work_xing\project\eview-server\source\..\include" /nologo /fo"pkdata.dir\RelWithDebInfo\version.res" D:\work_xing\project\eview-server\cmake-temp\common\pkdata\version.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\work_xing\project\eview-server\bin\pkdata.dll" /INCREMENTAL /NOLOGO /LIBPATH:"D:/work_xing/project/eview-server/source/../lib" /LIBPATH:"D:/work_xing/project/eview-server/source/../lib/RelWithDebInfo" /LIBPATH:"D:/work_xing/project/eview-server/source/../bin" /LIBPATH:"D:/work_xing/project/eview-server/source/../bin/RelWithDebInfo" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib pkce.lib pklog.lib pkcomm.lib jsoncpp.lib pkmemdbapi.lib pkcrashdump.lib exceptionreport.lib dbghelp.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/work_xing/project/eview-server/bin/pkdata.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/work_xing/project/eview-server/lib/pkdata.lib" /MACHINE:X64  /machine:x64 /DLL pkdata.dir\RelWithDebInfo\version.res
+         pkdata.dir\RelWithDebInfo\pkdata.obj
+            正在创建库 D:/work_xing/project/eview-server/lib/pkdata.lib 和对象 D:/work_xing/project/eview-server/lib/pkdata.exp
+     1>jsoncpp.lib(json_reader.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“jsoncpp.lib(json_reader.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>jsoncpp.lib(json_value.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“jsoncpp.lib(json_value.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>jsoncpp.lib(json_writer.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“jsoncpp.lib(json_writer.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>exceptionreport.lib(ExceptionHandler.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“exceptionreport.lib(ExceptionHandler.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>exceptionreport.lib(GetWinVer.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“exceptionreport.lib(GetWinVer.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>exceptionreport.lib(MiniVersion.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“exceptionreport.lib(MiniVersion.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>exceptionreport.lib(RegularDllExceptionAttacher.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“exceptionreport.lib(RegularDllExceptionAttacher.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>exceptionreport.lib(CVZipDumpFile.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“exceptionreport.lib(CVZipDumpFile.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>exceptionreport.lib(XZip.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“exceptionreport.lib(XZip.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>exceptionreport.lib(FormatNumberForLocale.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“exceptionreport.lib(FormatNumberForLocale.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>exceptionreport.lib(CrashHandler.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“exceptionreport.lib(CrashHandler.obj)”或在“D:\work_xing\project\eview-server\bin\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>mfcs120.lib(nolib.obj) : warning LNK4099: 未找到 PDB“mfcs120.pdb”(使用“mfcs120.lib(nolib.obj)”或在“D:\work_xing\project\eview-server\bin\mfcs120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>mfcs120.lib(stdafx.obj) : warning LNK4099: 未找到 PDB“mfcs120.pdb”(使用“mfcs120.lib(stdafx.obj)”或在“D:\work_xing\project\eview-server\bin\mfcs120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>mfcs120.lib(rawdllmainproxy.obj) : warning LNK4099: 未找到 PDB“mfcs120.pdb”(使用“mfcs120.lib(rawdllmainproxy.obj)”或在“D:\work_xing\project\eview-server\bin\mfcs120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+         pkdata.vcxproj -> D:\work_xing\project\eview-server\bin\pkdata.dll
+     1>已完成生成项目“D:\work_xing\project\eview-server\cmake-temp\common\pkdata\pkdata.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.02

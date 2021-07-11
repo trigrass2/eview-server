@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\server\pkmodserver\pkmodbustcplib\functions\mbfunccoils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\server\pkmodserver\pkmodbustcplib\functions\mbfuncdiag.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\server\pkmodserver\pkmodbustcplib\functions\mbfuncdisc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\server\pkmodserver\pkmodbustcplib\functions\mbfuncholding.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\server\pkmodserver\pkmodbustcplib\functions\mbfuncinput.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\server\pkmodserver\pkmodbustcplib\functions\mbfuncother.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\server\pkmodserver\pkmodbustcplib\functions\mbutils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\server\pkmodserver\pkmodbustcplib\tcp\mbtcp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\work_xing\project\eview-server\source\server\pkmodserver\pkmodbustcplib\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3BC1D989-3511-3007-963B-F14625AAACDF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

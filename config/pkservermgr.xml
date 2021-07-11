@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GB2312" standalone="yes" ?>
+<Servers desc="AutoRestart;DelaySec(seconds);ShowConsole;ExeName,ExeDir;StartCmd;StopCmd;DelaySec;Exclude;RestartAt:Day=1/1;Hour=*;Minute=*">
+    <Server Name="MQTT服务" ExeName="pkmqtt" ExeDir="" StartCmd="start_pkmqtt.bat" StopCmd="" DelaySec="0" RestartAt="" ShowConsole="0" AutoRestart="1" Enable="0" />
+    <Server Name="MQTT转发服务" ExeName="pkmqttforwardserver" ExeDir="" StartCmd="" StopCmd="" DelaySec="0" RestartAt="" ShowConsole="0" AutoRestart="1" Enable="0" />
+    <Server Name="视频服务" ExeName="pkvideoserver" ExeDir="" StartCmd="" StopCmd="" DelaySec="0" RestartAt="" ShowConsole="0" AutoRestart="1" Enable="0" />
+    <Server Name="Web服务" ExeName="" ExeDir="" StartCmd="..\web\startWeb.bat" StopCmd="..\web\stopWeb.bat" DelaySec="0" RestartAt="" ShowConsole="0" AutoRestart="0" Enable="0" />
+    <Server Name="omronfinsdrv" ExeName="omronfinsdrv" ExeDir="drivers\omronfinsdrv" StartCmd="" StopCmd="" DelaySec="0" RestartAt="" ShowConsole="0" AutoRestart="1" Enable="0" />
+    <Server Name="emergencybroadcastdrv" ExeName="emergencybroadcastdrv" ExeDir="drivers\emergencybroadcastdrv" StartCmd="" StopCmd="" DelaySec="0" RestartAt="" ShowConsole="0" AutoRestart="1" Enable="0" />
+    <Server Name="gwmqttdrv" ExeName="gwmqttdrv" ExeDir="drivers\gwmqttdrv" StartCmd="" StopCmd="" DelaySec="0" RestartAt="" ShowConsole="0" AutoRestart="1" Enable="0" />
+    <Server Name="内存数据库服务" ExeName="pkmemdb" ExeDir="" StartCmd="start_pkmemdb.bat" StopCmd="" DelaySec="0" RestartAt="" ShowConsole="0" AutoRestart="1" Enable="1" auto_generate="1" />
+    <Server Name="本地节点处理服务" ExeName="pknodeserver" ExeDir="" StartCmd="" StopCmd="" DelaySec="2" RestartAt="" ShowConsole="0" AutoRestart="1" Enable="1" auto_generate="1" />
+    <Server Name="历史数据库服务" ExeName="pkhisdb" ExeDir="" StartCmd="start_pkhisdb.bat" StopCmd="" DelaySec="0" RestartAt="" ShowConsole="0" AutoRestart="1" Enable="1" auto_generate="1" />
+    <Server Name="历史存储服务" ExeName="pkhisdataserver" ExeDir="" StartCmd="" StopCmd="" DelaySec="0" RestartAt="" ShowConsole="0" AutoRestart="1" Enable="1" auto_generate="1" />
+    <Server Name="关系数据库转储服务" ExeName="pkdbtransferserver" ExeDir="" StartCmd="" StopCmd="" DelaySec="0" RestartAt="" ShowConsole="0" AutoRestart="1" Enable="1" auto_generate="1" />
+    <Server Name="Modbus发布服务" ExeName="pkmodserver" ExeDir="" StartCmd="" StopCmd="" DelaySec="0" RestartAt="" ShowConsole="0" AutoRestart="1" Enable="1" auto_generate="1" />
+    <Server Name="modbustcp" ExeName="modbustcp" ExeDir="drivers\modbustcp" StartCmd="" StopCmd="" DelaySec="0" RestartAt="" ShowConsole="0" AutoRestart="1" Enable="1" auto_generate="1" />
+</Servers>

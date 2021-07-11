@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<license>
+    <product>
+        <productname>凌峰综合监控平台</productname>
+        <productcode>eview</productcode>
+        <productversion>3</productversion>
+        <distributor>上海凌峰信息技术有限公司</distributor>
+        <customer>ts</customer>
+        <project>ts</project>
+        <startdate>2019-11-27</startdate>
+        <expiredate>2049-11-19</expiredate>
+        <os>all</os>
+        <ionum>-</ionum>
+        <clientnum>-</clientnum>
+        <hostid>06:EB:33:A1:43:22</hostid>
+        <signdate>2019-11-27</signdate>
+        <signature>75C2F2EFB1209B33B001BFB96BBBD770846767E54F4224DBD9EBC1598ECB779B828290C4AE4CAEE8</signature>
+    </product>
+</license>

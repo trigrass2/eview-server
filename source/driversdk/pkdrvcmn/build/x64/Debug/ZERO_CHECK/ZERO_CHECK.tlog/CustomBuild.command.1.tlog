@@ -1,0 +1,10 @@
+^G:\WORK\PROJECT\EVIEW-SERVER\SOURCE\DRIVERSDK\PKDRVCMN\BUILD\CMAKEFILES\C9F4F10D12A5525F81A81835193C2575\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SG:/work/project/eview-server/source/driversdk/pkdrvcmn -BG:/work/project/eview-server/source/driversdk/pkdrvcmn/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file G:/work/project/eview-server/source/driversdk/pkdrvcmn/build/pkdrvcmn.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

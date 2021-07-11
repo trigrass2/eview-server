@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{52DB8AEE-3627-3D08-856F-368B70DA26CE}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\work_xing\project\eview-server\source\server\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/work_xing/project/eview-server/source/server/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\work_xing\project\eview-server\setup\cmake\bin\cmake.exe -HD:/work_xing/project/eview-server/source -BD:/work_xing/project/eview-server/cmake-temp --check-stamp-file D:\work_xing\project\eview-server\cmake-temp\server\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/work_xing/project/eview-server/source/server/CMakeLists.txt;D:\work_xing\project\eview-server\source\server\CMakeLists.txt;D:\work_xing\project\eview-server\source\server\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\work_xing\project\eview-server\cmake-temp\server\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/work_xing/project/eview-server/source/server/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\work_xing\project\eview-server\setup\cmake\bin\cmake.exe -HD:/work_xing/project/eview-server/source -BD:/work_xing/project/eview-server/cmake-temp --check-stamp-file D:\work_xing\project\eview-server\cmake-temp\server\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/work_xing/project/eview-server/source/server/CMakeLists.txt;D:\work_xing\project\eview-server\source\server\CMakeLists.txt;D:\work_xing\project\eview-server\source\server\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\work_xing\project\eview-server\cmake-temp\server\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/work_xing/project/eview-server/source/server/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\work_xing\project\eview-server\setup\cmake\bin\cmake.exe -HD:/work_xing/project/eview-server/source -BD:/work_xing/project/eview-server/cmake-temp --check-stamp-file D:\work_xing\project\eview-server\cmake-temp\server\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/work_xing/project/eview-server/source/server/CMakeLists.txt;D:\work_xing\project\eview-server\source\server\CMakeLists.txt;D:\work_xing\project\eview-server\source\server\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\work_xing\project\eview-server\cmake-temp\server\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/work_xing/project/eview-server/source/server/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\work_xing\project\eview-server\setup\cmake\bin\cmake.exe -HD:/work_xing/project/eview-server/source -BD:/work_xing/project/eview-server/cmake-temp --check-stamp-file D:\work_xing\project\eview-server\cmake-temp\server\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/work_xing/project/eview-server/source/server/CMakeLists.txt;D:\work_xing\project\eview-server\source\server\CMakeLists.txt;D:\work_xing\project\eview-server\source\server\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\work_xing\project\eview-server\cmake-temp\server\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/ZERO_CHECK.vcxproj">
+      <Project>5BBE97DB-A465-305A-80DA-71D0CB0AEB9D</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/server/pkdbtoeviewserver/pkdbtoeviewserver.vcxproj">
+      <Project>30B29902-E6E8-35CB-BFE9-A9E186C80A24</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/server/pkdbtransferserver/pkdbtransferserver.vcxproj">
+      <Project>216790E8-90C7-3FDF-A13B-6C3834F8CA7F</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/server/pkhisdataserver/pkhisdataserver.vcxproj">
+      <Project>64E9948C-C47A-34B9-9C7A-DCA645712744</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/server/pkHostService/pkhostservice.vcxproj">
+      <Project>8C9A6C54-7C65-3CD7-9BA3-EF79FEB516A9</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/server/link/pklinkact_poppage/pklinkact_poppage.vcxproj">
+      <Project>C77ED2E0-4792-387E-8201-C16F59E7DA4C</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/server/link/pklinkact_writetag_inturn/pklinkact_writetag_inturn.vcxproj">
+      <Project>E30ACF9A-7234-3D76-9BA8-26C54995437C</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/server/link/pklinkact_writetag_multiple/pklinkact_writetag_multiple.vcxproj">
+      <Project>94B02838-C57B-3864-9C2A-80B37BB9C4CC</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/server/link/pklinkact_writetag_single/pklinkact_writetag_single.vcxproj">
+      <Project>86E56C90-756A-3754-890E-EEA5E7060533</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/server/link/pklinkevt_alarm/pklinkevt_alarm.vcxproj">
+      <Project>AC78B208-4386-3084-9FAB-0CA697951155</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/server/link/pklinkserver/pklinkserver.vcxproj">
+      <Project>5803E484-F81C-39CE-A09D-8B3B6B3F5674</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/server/pkmodserver/pkmodbusdata_eview/pkmodbusdata.vcxproj">
+      <Project>40F23099-A451-37A5-8D62-1C79308D57CD</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/server/pkmodserver/pkmodbusdata_sim/pkmodbusdata_sim.vcxproj">
+      <Project>DCE17B3A-94DF-35F7-B4EC-4D5C2ABCE805</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/server/pkmodserver/pkmodbustcplib/pkmodbustcplib.vcxproj">
+      <Project>ACACAFF8-F9D7-3048-9863-F1F9339B1761</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/server/pkmodserver/pkmodserver/pkmodserver.vcxproj">
+      <Project>96A995FF-7218-37B4-809A-917B28F6C350</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/server/pkmqttforwardserver/pkmqttforwardserver.vcxproj">
+      <Project>726CBE80-C06D-38E1-994E-6B6DF66EE8EF</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/server/pknodeserver/pknodeserver.vcxproj">
+      <Project>822154A0-C023-3D91-B5BC-F17D75CF1682</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/server/link/pkpyalarm/pkpyalarm.vcxproj">
+      <Project>7200826E-8564-360B-8B09-87CBE0EEEB0A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/server/pksync2uppernodeserver/pksync2uppernodeserver.vcxproj">
+      <Project>7C12277F-1D85-348B-B852-F16729ECC602</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/server/pkuppernodeserver/pkuppernodeserver.vcxproj">
+      <Project>6DA823FB-C2AD-3A90-B5BE-A5F43FDF9663</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

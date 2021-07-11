@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\dll_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\MainTask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\UserTimer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\TaskGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Driver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\Device.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\drvframework.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pkDriverCommon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\pythonerr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\PythonHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\globalObj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\ByteOrder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\work_xing\project\eview-server\source\driversdk\pkdrvcmn\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="D:\work_xing\project\eview-server\cmake-temp\driversdk\pkdrvcmn\version.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3BC1D989-3511-3007-963B-F14625AAACDF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

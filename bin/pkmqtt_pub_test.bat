@@ -1,0 +1,1 @@
+pkmqtt_pub -t peak/realdata/device1 -m '{"id":"AABBCCDDEEFF","t":"2173234544223","data":[{"tag1":{"v":"1","t":"2173234554223","q":0}}]}'

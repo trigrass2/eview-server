@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="G:\work\project\eview-server\source\server\pkdbtransferserver\HourTimer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\work\project\eview-server\source\server\pkdbtransferserver\MainTask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\work\project\eview-server\source\server\pkdbtransferserver\RuleTimer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\work\project\eview-server\source\server\pkdbtransferserver\TimerTask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\work\project\eview-server\source\server\pkdbtransferserver\dbtransferserver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\work\project\eview-server\source\server\pkdbtransferserver\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="G:\work\project\eview-server\source\server\pkdbtransferserver\build\version.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CAE20827-B364-3DCF-9666-0F83C1E9F17A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

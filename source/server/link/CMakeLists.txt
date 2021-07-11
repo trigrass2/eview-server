@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 2.6)
+PROJECT(link)
+#SUBDIRS(pklinkserver pklinkevt_alarm pklinkact_poppage pklinkact_writetag pklinkact_cyclewritetag)     
+SUBDIRS(pklinkserver pklinkact_poppage pklinkact_writetag_single pklinkact_writetag_inturn pklinkact_writetag_multiple pklinkevt_alarm)                     
+IF(${CMAKE_SYSTEM_NAME} MATCHES Windows)
+    SUBDIRS(pkpyalarm)
+	#SUBDIRS(crsapi/crsapiut crsdblibrary/crsdblibraryut crservice/crserviceut )
+ELSE(${CMAKE_SYSTEM_NAME} MATCHES Windows)
+
+ENDIF(${CMAKE_SYSTEM_NAME} MATCHES Windows)

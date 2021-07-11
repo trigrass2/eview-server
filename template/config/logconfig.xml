@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="gb2312"?>
+<LogConf ChkCfgMdfyPeriod="5">
+  <!-- ChkCfgMdfyPeriod表示每隔多长时间检查一下配置文件的更改，不设置时默认10s -->
+  <!-- 日志级别由高到低分别为：CRITICAL ERROR WARNING INFO DEBUG -->
+  <!-- 日志名称与日志文件名同步，大小写敏感 -->
+  <General CurrentLogLV = "INFO|COMM" SaveDays="5" FileMaxKb="1000" FileMaxNo = "3" LogOnMonitor="1" />
+  <!--SaveDays表示按天保存日志文件，并保存多少天, 当设置SaveDays>0时，FileMaxKb与FileMaxNo失效-->
+</LogConf>

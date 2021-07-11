@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{65AFC019-928F-48B2-A8D6-71A79F8C3380}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>testcaexprlib</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\VOB\iCentroView\iCV-Server5\executable\unittest\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">testcaexprlib.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">testcaexprlib</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\VOB\iCentroView\iCV-Server5\executable\unittest\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">testcaexprlib.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">testcaexprlib</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\VOB\iCentroView\iCV-Server5\executable\unittest\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">testcaexprlib.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">testcaexprlib</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\VOB\iCentroView\iCV-Server5\executable\unittest\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">testcaexprlib.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">testcaexprlib</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:/VOB/iCentroView/iCV-Server5/Source//ext/commonheaders/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvcomm/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cppsqlite/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cviobuffer/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvlog/include;D:/VOB/iCentroView/iCV-Server5/Source//common/epass2lite/include;D:/VOB/iCentroView/iCV-Server5/Source//common/exceptionreport/include;D:/VOB/iCentroView/iCV-Server5/Source//common/libexpr/include;D:/VOB/iCentroView/iCV-Server5/Source//common/licverify/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvrpc/include;D:/VOB/iCentroView/iCV-Server5/Source//common/servicebase/include;D:/VOB/iCentroView/iCV-Server5/Source//common/sqlitepersist/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cppunit;D:/VOB/iCentroView/iCV-Server5/Source//ext/lzma/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/tinyxml/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/tinyxml/include/tinyxml;D:/VOB/iCentroView/iCV-Server5/Source//common/procmngr/cvprocessmgr/include;D:/VOB/iCentroView/iCV-Server5/Source//common/procmngr/pmrapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/redundancy/rmapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/rmdatasync/rmdsapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/shmqueue/include;D:/VOB/iCentroView/iCV-Server5/Source//authority/amsvrlib/include;D:/VOB/iCentroView/iCV-Server5/Source//configcenter/ccservice/ccbaselib/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/commdrvcfgloader/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvdrvcfgloader/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvsock/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvcommunicate/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvtcp/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvudp/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/drvbase/devicebase/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/iodatasync/iodatasync/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/iodrvtempl/iodrvt/include;D:/VOB/iCentroView/iCV-Server5/Source//eventalarm/eaacceptor/include;D:/VOB/iCentroView/iCV-Server5/Source//eventalarm/easervice/eaapi/include;D:/VOB/iCentroView/iCV-Server5/Source//htd/htdapi/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/dwservice/dwapi/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/led/ledbaselib/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/videoservice/videodblibrary/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/dwdrv/saijing/sunkingdriver/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/drvctrl/drvctrlrapi/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/rdalib/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbcommon/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbinner/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbbase/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/cvrda/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pbschema/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbengine/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/lrda/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/caexprlib/include;D:/VOB/iCentroView/iCV-Server5/Source//response/crsapi/include;D:/VOB/iCentroView/iCV-Server5/Source//response/crsdblibrary/include;D:/VOB/iCentroView/iCV-Server5/Source//response/plugins/include;D:/VOB/iCentroView/iCV-Server5/Source//transfer/sqltransferframe/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/netqueue/include;D:/VOB/iCentroView/iCV-Server5/Source//../include;D:/VOB/iCentroView/iCV-Server5/Source//../include/common;D:/VOB/iCentroView/iCV-Server5/Source//../include/sqlite;D:/VOB/iCentroView/iCV-Server5/Source/pdb/pbscanner/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;LIC_VERIFY_NO_CV_LICENSE;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Debug</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>D:/VOB/iCentroView/iCV-Server5/executable/unittest/testcaexprlib.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;LIC_VERIFY_NO_CV_LICENSE;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:/VOB/iCentroView/iCV-Server5/Source//ext/commonheaders/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvcomm/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cppsqlite/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cviobuffer/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvlog/include;D:/VOB/iCentroView/iCV-Server5/Source//common/epass2lite/include;D:/VOB/iCentroView/iCV-Server5/Source//common/exceptionreport/include;D:/VOB/iCentroView/iCV-Server5/Source//common/libexpr/include;D:/VOB/iCentroView/iCV-Server5/Source//common/licverify/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvrpc/include;D:/VOB/iCentroView/iCV-Server5/Source//common/servicebase/include;D:/VOB/iCentroView/iCV-Server5/Source//common/sqlitepersist/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cppunit;D:/VOB/iCentroView/iCV-Server5/Source//ext/lzma/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/tinyxml/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/tinyxml/include/tinyxml;D:/VOB/iCentroView/iCV-Server5/Source//common/procmngr/cvprocessmgr/include;D:/VOB/iCentroView/iCV-Server5/Source//common/procmngr/pmrapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/redundancy/rmapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/rmdatasync/rmdsapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/shmqueue/include;D:/VOB/iCentroView/iCV-Server5/Source//authority/amsvrlib/include;D:/VOB/iCentroView/iCV-Server5/Source//configcenter/ccservice/ccbaselib/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/commdrvcfgloader/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvdrvcfgloader/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvsock/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvcommunicate/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvtcp/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvudp/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/drvbase/devicebase/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/iodatasync/iodatasync/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/iodrvtempl/iodrvt/include;D:/VOB/iCentroView/iCV-Server5/Source//eventalarm/eaacceptor/include;D:/VOB/iCentroView/iCV-Server5/Source//eventalarm/easervice/eaapi/include;D:/VOB/iCentroView/iCV-Server5/Source//htd/htdapi/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/dwservice/dwapi/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/led/ledbaselib/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/videoservice/videodblibrary/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/dwdrv/saijing/sunkingdriver/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/drvctrl/drvctrlrapi/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/rdalib/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbcommon/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbinner/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbbase/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/cvrda/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pbschema/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbengine/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/lrda/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/caexprlib/include;D:/VOB/iCentroView/iCV-Server5/Source//response/crsapi/include;D:/VOB/iCentroView/iCV-Server5/Source//response/crsdblibrary/include;D:/VOB/iCentroView/iCV-Server5/Source//response/plugins/include;D:/VOB/iCentroView/iCV-Server5/Source//transfer/sqltransferframe/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/netqueue/include;D:/VOB/iCentroView/iCV-Server5/Source//../include;D:/VOB/iCentroView/iCV-Server5/Source//../include/common;D:/VOB/iCentroView/iCV-Server5/Source//../include/sqlite;D:/VOB/iCentroView/iCV-Server5/Source/pdb/pbscanner/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:/VOB/iCentroView/iCV-Server5/Source//ext/commonheaders/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvcomm/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cppsqlite/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cviobuffer/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvlog/include;D:/VOB/iCentroView/iCV-Server5/Source//common/epass2lite/include;D:/VOB/iCentroView/iCV-Server5/Source//common/exceptionreport/include;D:/VOB/iCentroView/iCV-Server5/Source//common/libexpr/include;D:/VOB/iCentroView/iCV-Server5/Source//common/licverify/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvrpc/include;D:/VOB/iCentroView/iCV-Server5/Source//common/servicebase/include;D:/VOB/iCentroView/iCV-Server5/Source//common/sqlitepersist/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cppunit;D:/VOB/iCentroView/iCV-Server5/Source//ext/lzma/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/tinyxml/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/tinyxml/include/tinyxml;D:/VOB/iCentroView/iCV-Server5/Source//common/procmngr/cvprocessmgr/include;D:/VOB/iCentroView/iCV-Server5/Source//common/procmngr/pmrapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/redundancy/rmapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/rmdatasync/rmdsapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/shmqueue/include;D:/VOB/iCentroView/iCV-Server5/Source//authority/amsvrlib/include;D:/VOB/iCentroView/iCV-Server5/Source//configcenter/ccservice/ccbaselib/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/commdrvcfgloader/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvdrvcfgloader/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvsock/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvcommunicate/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvtcp/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvudp/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/drvbase/devicebase/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/iodatasync/iodatasync/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/iodrvtempl/iodrvt/include;D:/VOB/iCentroView/iCV-Server5/Source//eventalarm/eaacceptor/include;D:/VOB/iCentroView/iCV-Server5/Source//eventalarm/easervice/eaapi/include;D:/VOB/iCentroView/iCV-Server5/Source//htd/htdapi/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/dwservice/dwapi/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/led/ledbaselib/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/videoservice/videodblibrary/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/dwdrv/saijing/sunkingdriver/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/drvctrl/drvctrlrapi/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/rdalib/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbcommon/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbinner/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbbase/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/cvrda/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pbschema/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbengine/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/lrda/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/caexprlib/include;D:/VOB/iCentroView/iCV-Server5/Source//response/crsapi/include;D:/VOB/iCentroView/iCV-Server5/Source//response/crsdblibrary/include;D:/VOB/iCentroView/iCV-Server5/Source//response/plugins/include;D:/VOB/iCentroView/iCV-Server5/Source//transfer/sqltransferframe/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/netqueue/include;D:/VOB/iCentroView/iCV-Server5/Source//../include;D:/VOB/iCentroView/iCV-Server5/Source//../include/common;D:/VOB/iCentroView/iCV-Server5/Source//../include/sqlite;D:/VOB/iCentroView/iCV-Server5/Source/pdb/pbscanner/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;CVCppUT.lib;cppunit.lib;CAExprLib.lib;D:\VOB\iCentroView\iCV-Server5\library\libexpr.lib;CVComm.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/VOB/iCentroView/iCV-Server5/Source/../Library;D:/VOB/iCentroView/iCV-Server5/Source/../Library/$(Configuration);;D:/VOB/iCentroView/iCV-Server5/Source/../Executable;D:/VOB/iCentroView/iCV-Server5/Source/../Executable/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <ImportLibrary>D:/VOB/iCentroView/iCV-Server5/library/unittest/testcaexprlib.lib</ImportLibrary>
+      <LinkIncremental>true</LinkIncremental>
+      <ProgramDataBaseFileName>D:/VOB/iCentroView/iCV-Server5/executable/unittest/testcaexprlib.pdb</ProgramDataBaseFileName>
+      <StackReserveSize>10000000</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:/VOB/iCentroView/iCV-Server5/Source//ext/commonheaders/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvcomm/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cppsqlite/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cviobuffer/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvlog/include;D:/VOB/iCentroView/iCV-Server5/Source//common/epass2lite/include;D:/VOB/iCentroView/iCV-Server5/Source//common/exceptionreport/include;D:/VOB/iCentroView/iCV-Server5/Source//common/libexpr/include;D:/VOB/iCentroView/iCV-Server5/Source//common/licverify/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvrpc/include;D:/VOB/iCentroView/iCV-Server5/Source//common/servicebase/include;D:/VOB/iCentroView/iCV-Server5/Source//common/sqlitepersist/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cppunit;D:/VOB/iCentroView/iCV-Server5/Source//ext/lzma/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/tinyxml/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/tinyxml/include/tinyxml;D:/VOB/iCentroView/iCV-Server5/Source//common/procmngr/cvprocessmgr/include;D:/VOB/iCentroView/iCV-Server5/Source//common/procmngr/pmrapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/redundancy/rmapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/rmdatasync/rmdsapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/shmqueue/include;D:/VOB/iCentroView/iCV-Server5/Source//authority/amsvrlib/include;D:/VOB/iCentroView/iCV-Server5/Source//configcenter/ccservice/ccbaselib/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/commdrvcfgloader/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvdrvcfgloader/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvsock/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvcommunicate/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvtcp/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvudp/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/drvbase/devicebase/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/iodatasync/iodatasync/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/iodrvtempl/iodrvt/include;D:/VOB/iCentroView/iCV-Server5/Source//eventalarm/eaacceptor/include;D:/VOB/iCentroView/iCV-Server5/Source//eventalarm/easervice/eaapi/include;D:/VOB/iCentroView/iCV-Server5/Source//htd/htdapi/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/dwservice/dwapi/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/led/ledbaselib/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/videoservice/videodblibrary/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/dwdrv/saijing/sunkingdriver/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/drvctrl/drvctrlrapi/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/rdalib/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbcommon/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbinner/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbbase/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/cvrda/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pbschema/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbengine/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/lrda/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/caexprlib/include;D:/VOB/iCentroView/iCV-Server5/Source//response/crsapi/include;D:/VOB/iCentroView/iCV-Server5/Source//response/crsdblibrary/include;D:/VOB/iCentroView/iCV-Server5/Source//response/plugins/include;D:/VOB/iCentroView/iCV-Server5/Source//transfer/sqltransferframe/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/netqueue/include;D:/VOB/iCentroView/iCV-Server5/Source//../include;D:/VOB/iCentroView/iCV-Server5/Source//../include/common;D:/VOB/iCentroView/iCV-Server5/Source//../include/sqlite;D:/VOB/iCentroView/iCV-Server5/Source/pdb/pbscanner/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;LIC_VERIFY_NO_CV_LICENSE;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Release</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>D:/VOB/iCentroView/iCV-Server5/executable/unittest/testcaexprlib.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;LIC_VERIFY_NO_CV_LICENSE;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:/VOB/iCentroView/iCV-Server5/Source//ext/commonheaders/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvcomm/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cppsqlite/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cviobuffer/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvlog/include;D:/VOB/iCentroView/iCV-Server5/Source//common/epass2lite/include;D:/VOB/iCentroView/iCV-Server5/Source//common/exceptionreport/include;D:/VOB/iCentroView/iCV-Server5/Source//common/libexpr/include;D:/VOB/iCentroView/iCV-Server5/Source//common/licverify/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvrpc/include;D:/VOB/iCentroView/iCV-Server5/Source//common/servicebase/include;D:/VOB/iCentroView/iCV-Server5/Source//common/sqlitepersist/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cppunit;D:/VOB/iCentroView/iCV-Server5/Source//ext/lzma/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/tinyxml/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/tinyxml/include/tinyxml;D:/VOB/iCentroView/iCV-Server5/Source//common/procmngr/cvprocessmgr/include;D:/VOB/iCentroView/iCV-Server5/Source//common/procmngr/pmrapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/redundancy/rmapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/rmdatasync/rmdsapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/shmqueue/include;D:/VOB/iCentroView/iCV-Server5/Source//authority/amsvrlib/include;D:/VOB/iCentroView/iCV-Server5/Source//configcenter/ccservice/ccbaselib/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/commdrvcfgloader/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvdrvcfgloader/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvsock/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvcommunicate/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvtcp/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvudp/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/drvbase/devicebase/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/iodatasync/iodatasync/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/iodrvtempl/iodrvt/include;D:/VOB/iCentroView/iCV-Server5/Source//eventalarm/eaacceptor/include;D:/VOB/iCentroView/iCV-Server5/Source//eventalarm/easervice/eaapi/include;D:/VOB/iCentroView/iCV-Server5/Source//htd/htdapi/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/dwservice/dwapi/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/led/ledbaselib/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/videoservice/videodblibrary/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/dwdrv/saijing/sunkingdriver/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/drvctrl/drvctrlrapi/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/rdalib/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbcommon/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbinner/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbbase/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/cvrda/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pbschema/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbengine/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/lrda/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/caexprlib/include;D:/VOB/iCentroView/iCV-Server5/Source//response/crsapi/include;D:/VOB/iCentroView/iCV-Server5/Source//response/crsdblibrary/include;D:/VOB/iCentroView/iCV-Server5/Source//response/plugins/include;D:/VOB/iCentroView/iCV-Server5/Source//transfer/sqltransferframe/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/netqueue/include;D:/VOB/iCentroView/iCV-Server5/Source//../include;D:/VOB/iCentroView/iCV-Server5/Source//../include/common;D:/VOB/iCentroView/iCV-Server5/Source//../include/sqlite;D:/VOB/iCentroView/iCV-Server5/Source/pdb/pbscanner/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:/VOB/iCentroView/iCV-Server5/Source//ext/commonheaders/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvcomm/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cppsqlite/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cviobuffer/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvlog/include;D:/VOB/iCentroView/iCV-Server5/Source//common/epass2lite/include;D:/VOB/iCentroView/iCV-Server5/Source//common/exceptionreport/include;D:/VOB/iCentroView/iCV-Server5/Source//common/libexpr/include;D:/VOB/iCentroView/iCV-Server5/Source//common/licverify/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvrpc/include;D:/VOB/iCentroView/iCV-Server5/Source//common/servicebase/include;D:/VOB/iCentroView/iCV-Server5/Source//common/sqlitepersist/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cppunit;D:/VOB/iCentroView/iCV-Server5/Source//ext/lzma/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/tinyxml/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/tinyxml/include/tinyxml;D:/VOB/iCentroView/iCV-Server5/Source//common/procmngr/cvprocessmgr/include;D:/VOB/iCentroView/iCV-Server5/Source//common/procmngr/pmrapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/redundancy/rmapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/rmdatasync/rmdsapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/shmqueue/include;D:/VOB/iCentroView/iCV-Server5/Source//authority/amsvrlib/include;D:/VOB/iCentroView/iCV-Server5/Source//configcenter/ccservice/ccbaselib/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/commdrvcfgloader/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvdrvcfgloader/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvsock/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvcommunicate/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvtcp/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvudp/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/drvbase/devicebase/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/iodatasync/iodatasync/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/iodrvtempl/iodrvt/include;D:/VOB/iCentroView/iCV-Server5/Source//eventalarm/eaacceptor/include;D:/VOB/iCentroView/iCV-Server5/Source//eventalarm/easervice/eaapi/include;D:/VOB/iCentroView/iCV-Server5/Source//htd/htdapi/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/dwservice/dwapi/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/led/ledbaselib/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/videoservice/videodblibrary/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/dwdrv/saijing/sunkingdriver/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/drvctrl/drvctrlrapi/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/rdalib/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbcommon/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbinner/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbbase/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/cvrda/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pbschema/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbengine/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/lrda/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/caexprlib/include;D:/VOB/iCentroView/iCV-Server5/Source//response/crsapi/include;D:/VOB/iCentroView/iCV-Server5/Source//response/crsdblibrary/include;D:/VOB/iCentroView/iCV-Server5/Source//response/plugins/include;D:/VOB/iCentroView/iCV-Server5/Source//transfer/sqltransferframe/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/netqueue/include;D:/VOB/iCentroView/iCV-Server5/Source//../include;D:/VOB/iCentroView/iCV-Server5/Source//../include/common;D:/VOB/iCentroView/iCV-Server5/Source//../include/sqlite;D:/VOB/iCentroView/iCV-Server5/Source/pdb/pbscanner/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;CVCppUT.lib;cppunit.lib;CAExprLib.lib;D:\VOB\iCentroView\iCV-Server5\library\libexpr.lib;CVComm.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/VOB/iCentroView/iCV-Server5/Source/../Library;D:/VOB/iCentroView/iCV-Server5/Source/../Library/$(Configuration);;D:/VOB/iCentroView/iCV-Server5/Source/../Executable;D:/VOB/iCentroView/iCV-Server5/Source/../Executable/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <ImportLibrary>D:/VOB/iCentroView/iCV-Server5/library/unittest/testcaexprlib.lib</ImportLibrary>
+      <ProgramDataBaseFileName>D:/VOB/iCentroView/iCV-Server5/executable/unittest/testcaexprlib.pdb</ProgramDataBaseFileName>
+      <StackReserveSize>10000000</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:/VOB/iCentroView/iCV-Server5/Source//ext/commonheaders/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvcomm/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cppsqlite/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cviobuffer/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvlog/include;D:/VOB/iCentroView/iCV-Server5/Source//common/epass2lite/include;D:/VOB/iCentroView/iCV-Server5/Source//common/exceptionreport/include;D:/VOB/iCentroView/iCV-Server5/Source//common/libexpr/include;D:/VOB/iCentroView/iCV-Server5/Source//common/licverify/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvrpc/include;D:/VOB/iCentroView/iCV-Server5/Source//common/servicebase/include;D:/VOB/iCentroView/iCV-Server5/Source//common/sqlitepersist/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cppunit;D:/VOB/iCentroView/iCV-Server5/Source//ext/lzma/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/tinyxml/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/tinyxml/include/tinyxml;D:/VOB/iCentroView/iCV-Server5/Source//common/procmngr/cvprocessmgr/include;D:/VOB/iCentroView/iCV-Server5/Source//common/procmngr/pmrapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/redundancy/rmapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/rmdatasync/rmdsapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/shmqueue/include;D:/VOB/iCentroView/iCV-Server5/Source//authority/amsvrlib/include;D:/VOB/iCentroView/iCV-Server5/Source//configcenter/ccservice/ccbaselib/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/commdrvcfgloader/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvdrvcfgloader/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvsock/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvcommunicate/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvtcp/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvudp/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/drvbase/devicebase/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/iodatasync/iodatasync/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/iodrvtempl/iodrvt/include;D:/VOB/iCentroView/iCV-Server5/Source//eventalarm/eaacceptor/include;D:/VOB/iCentroView/iCV-Server5/Source//eventalarm/easervice/eaapi/include;D:/VOB/iCentroView/iCV-Server5/Source//htd/htdapi/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/dwservice/dwapi/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/led/ledbaselib/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/videoservice/videodblibrary/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/dwdrv/saijing/sunkingdriver/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/drvctrl/drvctrlrapi/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/rdalib/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbcommon/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbinner/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbbase/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/cvrda/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pbschema/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbengine/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/lrda/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/caexprlib/include;D:/VOB/iCentroView/iCV-Server5/Source//response/crsapi/include;D:/VOB/iCentroView/iCV-Server5/Source//response/crsdblibrary/include;D:/VOB/iCentroView/iCV-Server5/Source//response/plugins/include;D:/VOB/iCentroView/iCV-Server5/Source//transfer/sqltransferframe/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/netqueue/include;D:/VOB/iCentroView/iCV-Server5/Source//../include;D:/VOB/iCentroView/iCV-Server5/Source//../include/common;D:/VOB/iCentroView/iCV-Server5/Source//../include/sqlite;D:/VOB/iCentroView/iCV-Server5/Source/pdb/pbscanner/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;LIC_VERIFY_NO_CV_LICENSE;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>MinSizeRel</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>D:/VOB/iCentroView/iCV-Server5/executable/unittest/testcaexprlib.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;LIC_VERIFY_NO_CV_LICENSE;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:/VOB/iCentroView/iCV-Server5/Source//ext/commonheaders/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvcomm/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cppsqlite/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cviobuffer/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvlog/include;D:/VOB/iCentroView/iCV-Server5/Source//common/epass2lite/include;D:/VOB/iCentroView/iCV-Server5/Source//common/exceptionreport/include;D:/VOB/iCentroView/iCV-Server5/Source//common/libexpr/include;D:/VOB/iCentroView/iCV-Server5/Source//common/licverify/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvrpc/include;D:/VOB/iCentroView/iCV-Server5/Source//common/servicebase/include;D:/VOB/iCentroView/iCV-Server5/Source//common/sqlitepersist/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cppunit;D:/VOB/iCentroView/iCV-Server5/Source//ext/lzma/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/tinyxml/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/tinyxml/include/tinyxml;D:/VOB/iCentroView/iCV-Server5/Source//common/procmngr/cvprocessmgr/include;D:/VOB/iCentroView/iCV-Server5/Source//common/procmngr/pmrapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/redundancy/rmapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/rmdatasync/rmdsapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/shmqueue/include;D:/VOB/iCentroView/iCV-Server5/Source//authority/amsvrlib/include;D:/VOB/iCentroView/iCV-Server5/Source//configcenter/ccservice/ccbaselib/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/commdrvcfgloader/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvdrvcfgloader/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvsock/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvcommunicate/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvtcp/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvudp/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/drvbase/devicebase/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/iodatasync/iodatasync/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/iodrvtempl/iodrvt/include;D:/VOB/iCentroView/iCV-Server5/Source//eventalarm/eaacceptor/include;D:/VOB/iCentroView/iCV-Server5/Source//eventalarm/easervice/eaapi/include;D:/VOB/iCentroView/iCV-Server5/Source//htd/htdapi/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/dwservice/dwapi/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/led/ledbaselib/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/videoservice/videodblibrary/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/dwdrv/saijing/sunkingdriver/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/drvctrl/drvctrlrapi/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/rdalib/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbcommon/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbinner/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbbase/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/cvrda/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pbschema/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbengine/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/lrda/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/caexprlib/include;D:/VOB/iCentroView/iCV-Server5/Source//response/crsapi/include;D:/VOB/iCentroView/iCV-Server5/Source//response/crsdblibrary/include;D:/VOB/iCentroView/iCV-Server5/Source//response/plugins/include;D:/VOB/iCentroView/iCV-Server5/Source//transfer/sqltransferframe/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/netqueue/include;D:/VOB/iCentroView/iCV-Server5/Source//../include;D:/VOB/iCentroView/iCV-Server5/Source//../include/common;D:/VOB/iCentroView/iCV-Server5/Source//../include/sqlite;D:/VOB/iCentroView/iCV-Server5/Source/pdb/pbscanner/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:/VOB/iCentroView/iCV-Server5/Source//ext/commonheaders/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvcomm/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cppsqlite/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cviobuffer/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvlog/include;D:/VOB/iCentroView/iCV-Server5/Source//common/epass2lite/include;D:/VOB/iCentroView/iCV-Server5/Source//common/exceptionreport/include;D:/VOB/iCentroView/iCV-Server5/Source//common/libexpr/include;D:/VOB/iCentroView/iCV-Server5/Source//common/licverify/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvrpc/include;D:/VOB/iCentroView/iCV-Server5/Source//common/servicebase/include;D:/VOB/iCentroView/iCV-Server5/Source//common/sqlitepersist/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cppunit;D:/VOB/iCentroView/iCV-Server5/Source//ext/lzma/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/tinyxml/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/tinyxml/include/tinyxml;D:/VOB/iCentroView/iCV-Server5/Source//common/procmngr/cvprocessmgr/include;D:/VOB/iCentroView/iCV-Server5/Source//common/procmngr/pmrapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/redundancy/rmapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/rmdatasync/rmdsapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/shmqueue/include;D:/VOB/iCentroView/iCV-Server5/Source//authority/amsvrlib/include;D:/VOB/iCentroView/iCV-Server5/Source//configcenter/ccservice/ccbaselib/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/commdrvcfgloader/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvdrvcfgloader/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvsock/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvcommunicate/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvtcp/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvudp/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/drvbase/devicebase/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/iodatasync/iodatasync/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/iodrvtempl/iodrvt/include;D:/VOB/iCentroView/iCV-Server5/Source//eventalarm/eaacceptor/include;D:/VOB/iCentroView/iCV-Server5/Source//eventalarm/easervice/eaapi/include;D:/VOB/iCentroView/iCV-Server5/Source//htd/htdapi/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/dwservice/dwapi/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/led/ledbaselib/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/videoservice/videodblibrary/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/dwdrv/saijing/sunkingdriver/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/drvctrl/drvctrlrapi/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/rdalib/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbcommon/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbinner/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbbase/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/cvrda/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pbschema/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbengine/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/lrda/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/caexprlib/include;D:/VOB/iCentroView/iCV-Server5/Source//response/crsapi/include;D:/VOB/iCentroView/iCV-Server5/Source//response/crsdblibrary/include;D:/VOB/iCentroView/iCV-Server5/Source//response/plugins/include;D:/VOB/iCentroView/iCV-Server5/Source//transfer/sqltransferframe/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/netqueue/include;D:/VOB/iCentroView/iCV-Server5/Source//../include;D:/VOB/iCentroView/iCV-Server5/Source//../include/common;D:/VOB/iCentroView/iCV-Server5/Source//../include/sqlite;D:/VOB/iCentroView/iCV-Server5/Source/pdb/pbscanner/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;CVCppUT.lib;cppunit.lib;CAExprLib.lib;D:\VOB\iCentroView\iCV-Server5\library\libexpr.lib;CVComm.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/VOB/iCentroView/iCV-Server5/Source/../Library;D:/VOB/iCentroView/iCV-Server5/Source/../Library/$(Configuration);;D:/VOB/iCentroView/iCV-Server5/Source/../Executable;D:/VOB/iCentroView/iCV-Server5/Source/../Executable/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <ImportLibrary>D:/VOB/iCentroView/iCV-Server5/library/unittest/testcaexprlib.lib</ImportLibrary>
+      <ProgramDataBaseFileName>D:/VOB/iCentroView/iCV-Server5/executable/unittest/testcaexprlib.pdb</ProgramDataBaseFileName>
+      <StackReserveSize>10000000</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>..\..\common\exprcalc\include;..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;LIC_VERIFY_NO_CV_LICENSE;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>RelWithDebInfo</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>D:/VOB/iCentroView/iCV-Server5/executable/unittest/testcaexprlib.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;LIC_VERIFY_NO_CV_LICENSE;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:/VOB/iCentroView/iCV-Server5/Source//ext/commonheaders/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvcomm/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cppsqlite/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cviobuffer/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvlog/include;D:/VOB/iCentroView/iCV-Server5/Source//common/epass2lite/include;D:/VOB/iCentroView/iCV-Server5/Source//common/exceptionreport/include;D:/VOB/iCentroView/iCV-Server5/Source//common/libexpr/include;D:/VOB/iCentroView/iCV-Server5/Source//common/licverify/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cvrpc/include;D:/VOB/iCentroView/iCV-Server5/Source//common/servicebase/include;D:/VOB/iCentroView/iCV-Server5/Source//common/sqlitepersist/include;D:/VOB/iCentroView/iCV-Server5/Source//common/cppunit;D:/VOB/iCentroView/iCV-Server5/Source//ext/lzma/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/tinyxml/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/tinyxml/include/tinyxml;D:/VOB/iCentroView/iCV-Server5/Source//common/procmngr/cvprocessmgr/include;D:/VOB/iCentroView/iCV-Server5/Source//common/procmngr/pmrapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/redundancy/rmapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/rmdatasync/rmdsapi/include;D:/VOB/iCentroView/iCV-Server5/Source//common/shmqueue/include;D:/VOB/iCentroView/iCV-Server5/Source//authority/amsvrlib/include;D:/VOB/iCentroView/iCV-Server5/Source//configcenter/ccservice/ccbaselib/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/commdrvcfgloader/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvdrvcfgloader/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvsock/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvcommunicate/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvtcp/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/cvudp/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/drvbase/devicebase/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/iodatasync/iodatasync/include;D:/VOB/iCentroView/iCV-Server5/Source//driversdk/iodrvtempl/iodrvt/include;D:/VOB/iCentroView/iCV-Server5/Source//eventalarm/eaacceptor/include;D:/VOB/iCentroView/iCV-Server5/Source//eventalarm/easervice/eaapi/include;D:/VOB/iCentroView/iCV-Server5/Source//htd/htdapi/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/dwservice/dwapi/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/led/ledbaselib/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/videoservice/videodblibrary/include;D:/VOB/iCentroView/iCV-Server5/Source//multimedia/dwdrv/saijing/sunkingdriver/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/drvctrl/drvctrlrapi/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/rdalib/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbcommon/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbinner/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbbase/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/cvrda/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pbschema/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/pdbengine/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/lrda/include;D:/VOB/iCentroView/iCV-Server5/Source//pdb/pbscanner/caexprlib/include;D:/VOB/iCentroView/iCV-Server5/Source//response/crsapi/include;D:/VOB/iCentroView/iCV-Server5/Source//response/crsdblibrary/include;D:/VOB/iCentroView/iCV-Server5/Source//response/plugins/include;D:/VOB/iCentroView/iCV-Server5/Source//transfer/sqltransferframe/include;D:/VOB/iCentroView/iCV-Server5/Source//ext/netqueue/include;D:/VOB/iCentroView/iCV-Server5/Source//../include;D:/VOB/iCentroView/iCV-Server5/Source//../include/common;D:/VOB/iCentroView/iCV-Server5/Source//../include/sqlite;D:/VOB/iCentroView/iCV-Server5/Source/pdb/pbscanner/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;exprcalc.lib;PKComm.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\lib;..\..\lib</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <ImportLibrary>
+      </ImportLibrary>
+      <LinkIncremental>true</LinkIncremental>
+      <ProgramDataBaseFileName>D:/VOB/iCentroView/iCV-Server5/executable/unittest/testcaexprlib.pdb</ProgramDataBaseFileName>
+      <StackReserveSize>10000000</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:/VOB/iCentroView/iCV-Server5/Source/ZERO_CHECK.vcxproj">
+      <Project>872C0152-F41F-4EB9-AD1E-C275A07C1349</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/VOB/iCentroView/iCV-Server5/Source/common/libexpr/libexpr.vcxproj">
+      <Project>0544C178-B8BC-4599-9A80-F8B6E1A6DC52</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="testexprcalc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="version.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

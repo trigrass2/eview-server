@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="G:\work\project\eview-server\source\server\pkdbtransferserver\build\CMakeFiles\5940543ccf99b4271ffba53cfbe9beb5\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{6B113B86-E582-3BAF-AB2E-E495AD02C00B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GB2312" standalone="yes"?>
+<driver name="opcdrv">
+    <device name="omromdrv" conntype="other" connparam="KEPware.KEPServerEx.V4@127.0.0.1" conntimeout="3000" taskno="" description="测试设备" param1="" param2="" param3="" param4="">
+        <tag name="actiontype" address="Channel_1.Device_1.Tag_1" pollrate="" datatype="string" datalen="" byteorder="" description="" param=""/>
+        <tag name="devicenum" address="Channel_1.Device_1.Tag_2" pollrate="" datatype="string" datalen="" byteorder="" description="" param=""/>
+        <tag name="starttime" address="Channel_1.Device_2.Bool_0" pollrate="" datatype="string" datalen="" byteorder="" description="" param=""/>
+    </device>
+</driver>

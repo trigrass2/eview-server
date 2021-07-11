@@ -1,0 +1,1 @@
+pkmqtt_sub -t peak/realdata/+

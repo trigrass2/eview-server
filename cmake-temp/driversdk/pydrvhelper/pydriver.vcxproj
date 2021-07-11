@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{8822421F-E9F4-3A2A-A633-0CA52461D946}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>pydriver</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\work_xing\project\eview-server\bin\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pydriver.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pydriver</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\work_xing\project\eview-server\bin\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pydriver.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pydriver</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\work_xing\project\eview-server\bin\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">pydriver.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">pydriver</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\work_xing\project\eview-server\bin\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">pydriver.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">pydriver</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\..\..\..\include\python2.7;D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\include;D:\work_xing\project\eview-server\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;DRV_SUPPORT_PYTHON;_CRT_SECURE_NO_WARNINGS;BOOST_NO_USER_CONFIG;CMAKE_INTDIR="Debug";pydriver_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;DRV_SUPPORT_PYTHON;_CRT_SECURE_NO_WARNINGS;BOOST_NO_USER_CONFIG;CMAKE_INTDIR=\"Debug\";pydriver_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\..\..\..\include\python2.7;D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\include;D:\work_xing\project\eview-server\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\..\..\..\include\python2.7;D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\include;D:\work_xing\project\eview-server\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;pkce.lib;pkcomm.lib;D:\work_xing\project\eview-server\lib\pkdrvcmn.lib;pklog.lib;exceptionreport.lib;dbghelp.lib;pkce.lib;tinyxml2.lib;pkcomm.lib;pklog.lib;D:\work_xing\project\eview-server\lib\pkdrvdatasync.lib;D:\work_xing\project\eview-server\lib\rmapi.lib;D:\work_xing\project\eview-server\lib\eviewcomm.lib;jsoncpp.lib;pkmemdbapi.lib;shmqueue.lib;pkprocesscontroller.lib;pkcommunicate.lib;pkcrashdump.lib;D:\work_xing\project\eview-server\lib\pkeviewdbapi.lib;pkdbapi.lib;exceptionreport.lib;dbghelp.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/work_xing/project/eview-server/source/../lib;D:/work_xing/project/eview-server/source/../lib/$(Configuration);D:/work_xing/project/eview-server/source/../bin;D:/work_xing/project/eview-server/source/../bin/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/work_xing/project/eview-server/lib/pydriver.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/work_xing/project/eview-server/bin/pydriver.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\..\..\..\include\python2.7;D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\include;D:\work_xing\project\eview-server\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DRV_SUPPORT_PYTHON;_CRT_SECURE_NO_WARNINGS;BOOST_NO_USER_CONFIG;CMAKE_INTDIR="Release";pydriver_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DRV_SUPPORT_PYTHON;_CRT_SECURE_NO_WARNINGS;BOOST_NO_USER_CONFIG;CMAKE_INTDIR=\"Release\";pydriver_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\..\..\..\include\python2.7;D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\include;D:\work_xing\project\eview-server\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\..\..\..\include\python2.7;D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\include;D:\work_xing\project\eview-server\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;pkce.lib;pkcomm.lib;D:\work_xing\project\eview-server\lib\pkdrvcmn.lib;pklog.lib;exceptionreport.lib;dbghelp.lib;pkce.lib;tinyxml2.lib;pkcomm.lib;pklog.lib;D:\work_xing\project\eview-server\lib\pkdrvdatasync.lib;D:\work_xing\project\eview-server\lib\rmapi.lib;D:\work_xing\project\eview-server\lib\eviewcomm.lib;jsoncpp.lib;pkmemdbapi.lib;shmqueue.lib;pkprocesscontroller.lib;pkcommunicate.lib;pkcrashdump.lib;D:\work_xing\project\eview-server\lib\pkeviewdbapi.lib;pkdbapi.lib;exceptionreport.lib;dbghelp.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/work_xing/project/eview-server/source/../lib;D:/work_xing/project/eview-server/source/../lib/$(Configuration);D:/work_xing/project/eview-server/source/../bin;D:/work_xing/project/eview-server/source/../bin/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/work_xing/project/eview-server/lib/pydriver.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/work_xing/project/eview-server/bin/pydriver.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\..\..\..\include\python2.7;D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\include;D:\work_xing\project\eview-server\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DRV_SUPPORT_PYTHON;_CRT_SECURE_NO_WARNINGS;BOOST_NO_USER_CONFIG;CMAKE_INTDIR="MinSizeRel";pydriver_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DRV_SUPPORT_PYTHON;_CRT_SECURE_NO_WARNINGS;BOOST_NO_USER_CONFIG;CMAKE_INTDIR=\"MinSizeRel\";pydriver_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\..\..\..\include\python2.7;D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\include;D:\work_xing\project\eview-server\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\..\..\..\include\python2.7;D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\include;D:\work_xing\project\eview-server\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;pkce.lib;pkcomm.lib;D:\work_xing\project\eview-server\lib\pkdrvcmn.lib;pklog.lib;exceptionreport.lib;dbghelp.lib;pkce.lib;tinyxml2.lib;pkcomm.lib;pklog.lib;D:\work_xing\project\eview-server\lib\pkdrvdatasync.lib;D:\work_xing\project\eview-server\lib\rmapi.lib;D:\work_xing\project\eview-server\lib\eviewcomm.lib;jsoncpp.lib;pkmemdbapi.lib;shmqueue.lib;pkprocesscontroller.lib;pkcommunicate.lib;pkcrashdump.lib;D:\work_xing\project\eview-server\lib\pkeviewdbapi.lib;pkdbapi.lib;exceptionreport.lib;dbghelp.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/work_xing/project/eview-server/source/../lib;D:/work_xing/project/eview-server/source/../lib/$(Configuration);D:/work_xing/project/eview-server/source/../bin;D:/work_xing/project/eview-server/source/../bin/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/work_xing/project/eview-server/lib/pydriver.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/work_xing/project/eview-server/bin/pydriver.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\..\..\..\include\python2.7;D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\include;D:\work_xing\project\eview-server\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;DRV_SUPPORT_PYTHON;_CRT_SECURE_NO_WARNINGS;BOOST_NO_USER_CONFIG;CMAKE_INTDIR="RelWithDebInfo";pydriver_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;DRV_SUPPORT_PYTHON;_CRT_SECURE_NO_WARNINGS;BOOST_NO_USER_CONFIG;CMAKE_INTDIR=\"RelWithDebInfo\";pydriver_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\..\..\..\include\python2.7;D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\include;D:\work_xing\project\eview-server\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\..\..\..\include\python2.7;D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\include;D:\work_xing\project\eview-server\source\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;pkce.lib;pkcomm.lib;D:\work_xing\project\eview-server\lib\pkdrvcmn.lib;pklog.lib;exceptionreport.lib;dbghelp.lib;pkce.lib;tinyxml2.lib;pkcomm.lib;pklog.lib;D:\work_xing\project\eview-server\lib\pkdrvdatasync.lib;D:\work_xing\project\eview-server\lib\rmapi.lib;D:\work_xing\project\eview-server\lib\eviewcomm.lib;jsoncpp.lib;pkmemdbapi.lib;shmqueue.lib;pkprocesscontroller.lib;pkcommunicate.lib;pkcrashdump.lib;D:\work_xing\project\eview-server\lib\pkeviewdbapi.lib;pkdbapi.lib;exceptionreport.lib;dbghelp.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/work_xing/project/eview-server/source/../lib;D:/work_xing/project/eview-server/source/../lib/$(Configuration);D:/work_xing/project/eview-server/source/../bin;D:/work_xing/project/eview-server/source/../bin/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/work_xing/project/eview-server/lib/pydriver.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/work_xing/project/eview-server/bin/pydriver.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/work_xing/project/eview-server/source/driversdk/pydrvhelper/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\work_xing\project\eview-server\setup\cmake\bin\cmake.exe -HD:/work_xing/project/eview-server/source -BD:/work_xing/project/eview-server/cmake-temp --check-stamp-file D:\work_xing\project\eview-server\cmake-temp\driversdk\pydrvhelper\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/work_xing/project/eview-server/source/driversdk/pydrvhelper/CMakeLists.txt;D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\CMakeLists.txt;D:\work_xing\project\eview-server\source\CMakeCommonLib;D:\work_xing\project\eview-server\source\AddVersionResource;D:\work_xing\project\eview-server\source\CMakeCommon;D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\work_xing\project\eview-server\cmake-temp\driversdk\pydrvhelper\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/work_xing/project/eview-server/source/driversdk/pydrvhelper/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\work_xing\project\eview-server\setup\cmake\bin\cmake.exe -HD:/work_xing/project/eview-server/source -BD:/work_xing/project/eview-server/cmake-temp --check-stamp-file D:\work_xing\project\eview-server\cmake-temp\driversdk\pydrvhelper\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/work_xing/project/eview-server/source/driversdk/pydrvhelper/CMakeLists.txt;D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\CMakeLists.txt;D:\work_xing\project\eview-server\source\CMakeCommonLib;D:\work_xing\project\eview-server\source\AddVersionResource;D:\work_xing\project\eview-server\source\CMakeCommon;D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\work_xing\project\eview-server\cmake-temp\driversdk\pydrvhelper\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/work_xing/project/eview-server/source/driversdk/pydrvhelper/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\work_xing\project\eview-server\setup\cmake\bin\cmake.exe -HD:/work_xing/project/eview-server/source -BD:/work_xing/project/eview-server/cmake-temp --check-stamp-file D:\work_xing\project\eview-server\cmake-temp\driversdk\pydrvhelper\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/work_xing/project/eview-server/source/driversdk/pydrvhelper/CMakeLists.txt;D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\CMakeLists.txt;D:\work_xing\project\eview-server\source\CMakeCommonLib;D:\work_xing\project\eview-server\source\AddVersionResource;D:\work_xing\project\eview-server\source\CMakeCommon;D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\work_xing\project\eview-server\cmake-temp\driversdk\pydrvhelper\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/work_xing/project/eview-server/source/driversdk/pydrvhelper/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\work_xing\project\eview-server\setup\cmake\bin\cmake.exe -HD:/work_xing/project/eview-server/source -BD:/work_xing/project/eview-server/cmake-temp --check-stamp-file D:\work_xing\project\eview-server\cmake-temp\driversdk\pydrvhelper\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/work_xing/project/eview-server/source/driversdk/pydrvhelper/CMakeLists.txt;D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\CMakeLists.txt;D:\work_xing\project\eview-server\source\CMakeCommonLib;D:\work_xing\project\eview-server\source\AddVersionResource;D:\work_xing\project\eview-server\source\CMakeCommon;D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\work_xing\project\eview-server\cmake-temp\driversdk\pydrvhelper\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\work_xing\project\eview-server\source\driversdk\pydrvhelper\DrvHelperPy.cpp"  />
+    <ResourceCompile Include="D:\work_xing\project\eview-server\cmake-temp\driversdk\pydrvhelper\version.rc"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/ZERO_CHECK.vcxproj">
+      <Project>5BBE97DB-A465-305A-80DA-71D0CB0AEB9D</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/common/eviewcomm/eviewcomm.vcxproj">
+      <Project>4EF9BDEE-8290-3DCE-836A-ACE51EEA06EF</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/driversdk/pkdrvcmn/pkdrvcmn.vcxproj">
+      <Project>5B78DEAE-837A-3A91-A837-EDC3FD413109</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/driversdk/iodatasync/iodatasyncimp/pkdrvdatasync.vcxproj">
+      <Project>07AD548D-A8AC-3B25-BA87-A32EA565A6F4</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/common/pkeviewdbapi/pkeviewdbapi.vcxproj">
+      <Project>A6DD77C8-9C6C-365C-91CF-8FCCED9A8E0A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/work_xing/project/eview-server/cmake-temp/common/redundancy/rmapi/rmapi.vcxproj">
+      <Project>31CA801B-04FC-3993-A362-8D75EC565EF1</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

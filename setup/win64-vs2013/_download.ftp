@@ -1,0 +1,12 @@
+open ftp.peakinfo.cn 
+user peak peak 
+binary 
+literal pasv 
+prompt off 
+lcd ../../thirdparty 
+cd /release/cccomps/win64-vs2013 
+mget cmake.rar mfc120.rar vcruntime120.rar vcruntime100.rar boost1.66.rar cppredis.rar cryptlib.rar exceptionreport.rar jsoncpp.rar libdes.rar libmodbus.rar pkce.rar pkcomm.rar pkcrashdump.rar sqlapi.rar  
+mget pkdbapi.rar pkinifile.rar pklog.rar pklic.rar pkmemdbapi.rar pkmqtt.rar pknetque.rar pkserverbase.rar redisproxy.rar shmqueue.rar snmp_pp.rar sqlite3.rar 
+mget tinyxml2.rar python2.7.rar mongoclient.rar pksock.rar libmysql.rar pkhisdb.rar pkmemdb.rar pkservermgr.rar pkcommunicate.rar pkcommforward.rar pkprocesscontroller.rar 
+close 
+bye 

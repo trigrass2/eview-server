@@ -1,0 +1,3 @@
+G:/work/project/eview-server/source/server/pkdbtransferserver/build/CMakeFiles/pkdbtransferserver.dir
+G:/work/project/eview-server/source/server/pkdbtransferserver/build/CMakeFiles/ALL_BUILD.dir
+G:/work/project/eview-server/source/server/pkdbtransferserver/build/CMakeFiles/ZERO_CHECK.dir

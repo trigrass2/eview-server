@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<forwardservice>
+	<modbus name="as you like"  port="502">
+	    <addrmap blocktype="AO"  startaddr="1"  length="100"  blockname="modbus:device0:AO" />
+	    <addrmap blocktype="AI"  startaddr="1"  length="100"  blockname="modbus:device0:AI" />
+	    <addrmap blocktype="DI"  startaddr="1"  length="100"  blockname="modbus:device0:DI" />
+	    <addrmap blocktype="DO"  startaddr="1"  length="100"  blockname="modbus:device0:DO" />
+
+	    <addrmap blocktype="AO"  startaddr="101"  length="100"  blockname="modbus:device0:AO2" />
+	    <addrmap blocktype="AI"  startaddr="101"  length="100"  blockname="modbus:device0:AI2" />
+	    <addrmap blocktype="DI"  startaddr="101"  length="100"  blockname="modbus:device0:DI2" />
+	    <addrmap blocktype="DO"  startaddr="101"  length="100"  blockname="modbus:device0:DO2" />
+	</modbus>
+</forwardservice>
