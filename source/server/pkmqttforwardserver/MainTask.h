@@ -131,8 +131,9 @@ private:
 
 	int	PublishRealTagData2Topic(vector<TAGINFO>, vector<string>, bool bEvent = false);	//发送实时数据到Mqtt订阅端;
 	int	UpdateAllTagsConf(bool bConfVersion = false);//发送所有配置数据;
-	int getCodeAndState(vector<TAGINFO> &vecTagsName, vector<string> &vecTagsValue, int &code, int &state); //获取当前tag点的状态信息;
-	int getEventJsonValue(Json::Value &curEventData, int code, int state);  //获取事件Json串;
+	//int getCodeAndState(vector<TAGINFO> &vecTagsName, vector<string> &vecTagsValue, int &code, int &state); //获取当前tag点的状态信息;
+	int getCodeAndState(TAGINFO &TagsCode, TAGINFO &TagsState, string &vecTagsValueCode, string &vecTagsValueState, int &code, int &state);
+	int getEventJsonValue(Json::Value &curDevice, int deviceID, int code, int state);  //获取事件Json串;
 	int getCommonJsonValue(vector<string> &vecTagsValue, vector<TAGINFO> &vecTagsName, Json::Value &deviceInfo); //获取常规数据Json串;
 };
 // 保存tag点的所有相关信息,供记录日志是使用;

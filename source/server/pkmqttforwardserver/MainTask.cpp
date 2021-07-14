@@ -23,6 +23,8 @@
 #include "MainTask.h"
 #include "mosquitto/mosquitto.h"
 #include "eviewcomm/eviewcomm.h"
+#include <iomanip>
+#include <sstream>
 using namespace std;
 
 extern CPKLog g_logger;
@@ -39,9 +41,10 @@ string  g_strTopicConfig = "";
 
 const string strSqlEvent = "select device, code, name, action, classes, protect_type,source from t_device_event;";
 const string strSqlDeviceCommon = "select id, name from t_device_list where name!= 'eventDev' and enable<>0 or enable is null;";
-const string strSqlDeviceEvent = "select id, name from t_device_list where name == 'eventDev' and enable<>0 or enable is null;";
+const string strSqlDeviceEvent = "select id, name from t_device_list where driver_id =20000 and enable<>0 or enable is null;";
 const string strSqlTag = "select name, show_type,output_type, calc_value, device_id, precision from t_device_tag where device_id>0;";
 string getTime();
+string getRound(float src, int bits);
 
 //************************************
 // Method:    my_connect_callback
@@ -207,66 +210,84 @@ int CMainTask::svc()
 		time(&tmNow);
 		long nTimeSpanSec = labs(tmNow - tmLastAllData);
 		//first time
-		if (nTimeSpanSec >= 10) // 每10秒发送1次全量数据
+		if (nTimeSpanSec >= 10) // 每10秒发送1次全量数据;
 		{
 			nRet = PublishRealTagData2Topic(m_vecTagsInfo, vecTagsValue, false);
 			if (nRet == 0)
-			{
 				tmLastAllData = tmNow;
-			}
 		}
-		else //数据发生改变发送;
+		else //数据发生改变发送，接收到事件信息;
 		{
-			vector<TAGINFO> vecUpdateInfo;
-			vector<string> vecUpdateValues;
-			bool bStateChanged = false;
-			bool bCodeChanged = false;
+			vector<TAGINFO> vecEventTag; //存储事件相关的点位信息;
+			vector<string> vecEventTagValues;//存储事件相关点位的值;
+			vector<TAGINFO> vUpdateTag;	//存储数据发生变化的点位信息;
+			vector<string> vUpdateValue;  //存储发生变化点位的值;
+			map<string, int> mState;
+			map<string, int> mCode;
 
-			for (int i = 0; i < m_vecTagsInfo.size(); i++)	//将每个符合要求的数据上传到Mqtt服务订阅端;
+			for (int i = 0; i < m_vecTagsInfo.size(); i++)//将事件点位和状态改变情况筛选出来;
 			{
-				if (m_vecTagsInfo[i].strTagName == "eventCode")  //先将数据放入待上传容器，如果两个数值均未改变，则取消上传;
+				if ((m_vecTagsInfo[i].strTagName.find("eventCode") != m_vecTagsInfo[i].strTagName.npos) || (m_vecTagsInfo[i].strTagName.find("eventState") != m_vecTagsInfo[i].strTagName.npos))
 				{
-					vecUpdateInfo.push_back(m_vecTagsInfo[i]);
-					vecUpdateValues.push_back(m_pkAllTagDatas[i].szData);
-				}
+					//将事件相关数据先预先存放在vector中;
+					vecEventTag.push_back(m_vecTagsInfo[i]);
+					vecEventTagValues.push_back(m_pkAllTagDatas[i].szData);
 
-				if (m_vecTagsInfo[i].strTagName == "eventState")
-				{
-					vecUpdateInfo.push_back(m_vecTagsInfo[i]);
-					vecUpdateValues.push_back(m_pkAllTagDatas[i].szData);
-				}
-
-				map<string, string>::iterator it = m_mapTagsName2UpdateTime.find(m_vecTagsInfo[i].strTagName);
-				if (it != m_mapTagsName2UpdateTime.end())
-				{//取数据进行比较,不能使用Json串直接进行比较;
-					Json::Value rootPre;
-					Json::Value rootCur;
-					Json::Reader jsonReader;
-					if (jsonReader.parse(vecTagsValue[i], rootPre, false) && jsonReader.parse(it->second, rootCur, false))
+					map<string, string>::iterator it = m_mapTagsName2UpdateTime.find(m_vecTagsInfo[i].strTagName);
+					if (it != m_mapTagsName2UpdateTime.end())
 					{
-						if (rootPre["v"] != rootCur["v"])
+						Json::Value rootPre;
+						Json::Value rootCur;
+						Json::Reader jsonReader;
+						if (jsonReader.parse(vecTagsValue[i], rootPre, false) && jsonReader.parse(it->second, rootCur, false))
 						{
-							if (m_vecTagsInfo[i].strTagName == "eventCode")
+							if ((m_vecTagsInfo[i].strTagName.find("eventCode") != m_vecTagsInfo[i].strTagName.npos))
 							{
-								bCodeChanged = true;
+								if (rootPre["v"] != rootCur["v"])//code 数值改变;
+									mCode[m_vecTagsInfo[i].strTagName] = 1;
+								else
+									mCode[m_vecTagsInfo[i].strTagName] = 0;
 							}
-							else if (m_vecTagsInfo[i].strTagName == "eventState")
+							else
 							{
-								bStateChanged = true;
+								if (rootPre["v"] != rootCur["v"])//state 数值改变;
+									mState[m_vecTagsInfo[i].strTagName] = 1;
+								else
+									mState[m_vecTagsInfo[i].strTagName] = 0;
 							}
 						}
 					}
 				}
 			}
-			if (!(bStateChanged || bCodeChanged)) //两者中任意一个发生变化,则同时更新两个数据;
+
+			//将数据排序,与map中的状态点对应;
+			if (mCode.size() != mState.size() || vecEventTag.size() != vecEventTagValues.size())
+				g_logger.LogMessage(PK_LOGLEVEL_ERROR, "状态点与设备点位不匹配，请检查点位配置");
+			else
 			{
-				vecUpdateInfo.clear();
-				vecUpdateValues.clear();
+				map<string, int>::iterator iterState = mState.begin();
+				map<string, int>::iterator iterCode = mCode.begin();
+				int nCurLocation = 0;
+				//获取实际状态发生改变的点位信息;
+				for (; iterState != mState.end(), iterCode != mCode.end(); iterState++, iterCode++)
+				{
+					if (iterCode->second != 0 || iterState->second != 0)
+					{
+						vUpdateTag.push_back(vecEventTag[nCurLocation]);
+						vUpdateValue.push_back(vecEventTagValues[nCurLocation]);
+						nCurLocation++;
+						vUpdateTag.push_back(vecEventTag[nCurLocation]);
+						vUpdateValue.push_back(vecEventTagValues[nCurLocation]);
+						nCurLocation++;
+					}
+					else
+						nCurLocation += 2;
+				}
 			}
 
-			if (vecUpdateInfo.size() > 0)
+			if (vUpdateTag.size() > 0)
 			{
-				nRet = PublishRealTagData2Topic(vecUpdateInfo, vecUpdateValues, true);
+				nRet = PublishRealTagData2Topic(vUpdateTag, vUpdateValue, true);
 				if (nRet == 0)
 				{
 					g_logger.LogMessage(PK_LOGLEVEL_INFO, "gateway:%s, send increment data success", g_strGateWayId.c_str());
@@ -275,9 +296,12 @@ int CMainTask::svc()
 				{
 					g_logger.LogMessage(PK_LOGLEVEL_ERROR, "gateway:%s, send increment data failed", g_strGateWayId.c_str());
 				}
-				vecUpdateInfo.clear();
-				vecUpdateValues.clear();
 			}
+			//清空所有容器;
+			vUpdateTag.clear();
+			vUpdateValue.clear();
+			vecEventTag.clear();
+			vecEventTagValues.clear();
 		}
 		ACE_OS::sleep(tv);
 	}
@@ -566,13 +590,13 @@ int CMainTask::GetGateWayId()
 int CMainTask::PublishRealTagData2Topic(vector<TAGINFO> vecTagsName, vector<string> vecTagsValue, bool bEvent)
 {
 	if (vecTagsName.size() != vecTagsValue.size())
+	{
+		g_logger.LogMessage(PK_LOGLEVEL_ERROR, "TAG点数量与数值数量不匹配，无法进行Json组包，请检查配置。");
 		return -1;
+	}
 	//第一层数据信息;
-	Json::Value jsonTagVTQ;
 	Json::Value deviceInfo;
-	Json::Value subArray;
 	Json::Value root;
-	Json::Reader jsonReader;
 	Json::FastWriter writer;
 	//第二层数据信息;
 	Json::Value curDevice;
@@ -586,17 +610,31 @@ int CMainTask::PublishRealTagData2Topic(vector<TAGINFO> vecTagsName, vector<stri
 	//事件信息;
 	if (bEvent)
 	{
-		curDevice["gather_time"] = getTime();					//采集数据时间;
-		curDevice["device_path"] = m_deviceEvent[0].strName;	//设备路径;
-		curDevice["device_id"] = m_deviceEvent[0].strName;	//设备名称;
-		curDevice["state"] = 0;
+		for (int i = 0; i < vecTagsName.size(); i += 2)
+		{
+			curDevice["gather_time"] = getTime();//采集数据时间;
+			curDevice["state"] = 0;
+			//获取设备名称;
+			int curDeviceId;
+			for (int j = 0; j < m_deviceEvent.size(); j++)
+			{
+				if (vecTagsName[i].deviceID == m_deviceEvent[j].deviceID)
+				{
+					curDevice["device_path"] = m_deviceEvent[j].strName;//设备路径;
+					curDevice["device_id"] = m_deviceEvent[j].strName;	//设备名称;
+					curDeviceId = m_deviceEvent[j].deviceID;
+				}
+			}
+			//获取事件状态和代码;
+			int nCodeNum, nState;
+			getCodeAndState(vecTagsName[i], vecTagsName[i + 1], vecTagsValue[i], vecTagsValue[i + 1], nCodeNum, nState);
+			//获取事件相关信息;
+			getEventJsonValue(curDevice, curDeviceId, nCodeNum, nState);
+			deviceInfo.append(curDevice);
+			//清空当前设备;
+			curDevice.clear();
+		}
 
-		//获取事件状态和代码;
-		int nCodeNum, nState;
-		getCodeAndState(vecTagsName, vecTagsValue, nCodeNum, nState);
-		//获取事件相关信息;
-		getEventJsonValue(curDevice, nCodeNum, nState);
-		deviceInfo.append(curDevice);
 	}
 	else //数据信息;
 	{
@@ -606,6 +644,10 @@ int CMainTask::PublishRealTagData2Topic(vector<TAGINFO> vecTagsName, vector<stri
 	root["upload_time"] = getTime();	//消息上传时间;
 	root["device_info"] = deviceInfo;
 	string strSengMsg = writer.write(root);
+
+	//清空;
+	deviceInfo.clear();
+	root.clear();
 
 	//记录消息,保存到日志;
 	int nRet = m_pMqttObj->mqttClient_Pub((char*)g_strTopicRealData.c_str(), NULL, strSengMsg.length(), strSengMsg.c_str());
@@ -635,36 +677,39 @@ int CMainTask::SendControlMsg2LocalNodeServer(string strCtrlMsg, Json::Value &js
 	return 0;
 }
 
-int CMainTask::getCodeAndState(vector<TAGINFO> &vecTagsName, vector<string> &vecTagsValue, int &code, int &state)
+int CMainTask::getCodeAndState(TAGINFO &TagsCode, TAGINFO &TagsState, string &vecTagsValueCode, string &vecTagsValueState, int &code, int &state)
 {
-	Json::Value jsonTagVTQ;
+	Json::Value jsonTagCode;
+	Json::Value jsonTagState;
 	Json::Reader jsonReader;
 
-	for (int j = 0; j < vecTagsName.size(); j++)
-	{
-		string &strTagValue = vecTagsValue[j];
-		m_mapTagsName2UpdateTime[vecTagsName[j].strTagName] = strTagValue;
-		jsonReader.parse(strTagValue, jsonTagVTQ, false);
-		if (jsonTagVTQ["v"].asString() == "*" || jsonTagVTQ["v"].asString() == "**" || jsonTagVTQ["v"].asString() == "***")	//如果未获取到数据，则进入下一个循环;
-			continue;
+	string &strTagValueCode = vecTagsValueCode;
+	string &strTagValueState = vecTagsValueState;
 
-		if (vecTagsName[j].strTagName == "eventCode")			//获取Code代码;
-		{
-			code = atoi(jsonTagVTQ["v"].asString().c_str());
-		}
-		else if (vecTagsName[j].strTagName == "eventState")   //获取事件状态;
-		{
-			state = atoi(jsonTagVTQ["v"].asString().c_str());
-		}
+	//更新数据;
+	m_mapTagsName2UpdateTime[TagsCode.strTagName] = strTagValueCode;
+	m_mapTagsName2UpdateTime[TagsState.strTagName] = strTagValueState;
+
+	jsonReader.parse(strTagValueCode, jsonTagCode, false);
+	jsonReader.parse(strTagValueState, jsonTagState, false);
+
+	if ((jsonTagCode["v"].asString() == "*" || jsonTagCode["v"].asString() == "**" || jsonTagCode["v"].asString() == "***") ||
+		(jsonTagState["v"].asString() == "*" || jsonTagState["v"].asString() == "**" || jsonTagState["v"].asString() == "***"))
+	{
+		code = 0;
+		state = 0;
 	}
+
+	code = atoi(jsonTagCode["v"].asString().c_str());
+	state = atoi(jsonTagState["v"].asString().c_str());
 	return 0;
 }
 
-int CMainTask::getEventJsonValue(Json::Value &curDevice, int code, int state)
+int CMainTask::getEventJsonValue(Json::Value &curDevice, int deviceID, int code, int state)
 {
 	Json::Value curEventData;
 	EVENTINFO eventInfo;
-	eventInfo.deviceID = m_deviceEvent[0].deviceID;
+	eventInfo.deviceID = deviceID;
 	eventInfo.code = code;
 
 	curEventData["evt_time"] = getTime();//此处时间为开始组装数据包的时间;
@@ -684,7 +729,14 @@ int CMainTask::getEventJsonValue(Json::Value &curDevice, int code, int state)
 		}
 		else
 		{
-			curEventData["evt_name"] = it->name;
+			if (state == 1)
+			{
+				curEventData["evt_name"] = it->name;
+			}
+			else
+			{
+				curEventData["evt_name"] = it->name + "恢复";
+			}
 		}
 		curEventData["evt_class"] = it->classes;
 		curEventData["evt_action"] = it->action;
@@ -708,26 +760,36 @@ int CMainTask::getCommonJsonValue(vector<string> &vecTagsValue, vector<TAGINFO> 
 {
 	Json::Value jsonTagVTQ;
 	Json::Reader jsonReader;
-	Json::Value curDevice;	//设备基本信息;
+	Json::Value curDevice;//设备基本信息;
 	Json::Value curMeterData;
 	Json::Value curEptStatData;
 	Json::Value curEnvMeasureData;
-
-	curDevice["gather_time"] = getTime();	//开始组装数据包的时间，也就是从内存数据库获取数据的时间;
 	for (int i = 0; i < m_deviceCommon.size(); i++)
 	{
-		curDevice["device_path"] = m_deviceCommon[i].strName;									//设备路径，格式 网关1编号/网关2编号;
-		curDevice["device_id"] = m_deviceCommon[i].strName;									//设备名称;
-		string strDeviceStatus = "device." + m_deviceCommon[i].strName + ".connstatus"; 		//获取设备状态;
+		//如果是事件设备,则跳过不做处理;
+		if ((m_deviceCommon[i].strName.find("eventDevice") != m_deviceCommon[i].strName.npos))
+		{
+			continue;
+		}
+
+		curDevice.clear();
+		curMeterData.clear();
+		curEptStatData.clear();
+		curEnvMeasureData.clear();
+
+		curDevice["gather_time"] = getTime();					//开始组装数据包的时间，也就是从内存数据库获取数据的时间;
+		curDevice["device_path"] = m_deviceCommon[i].strName;	//设备路径，格式 网关1编号/网关2编号;
+		curDevice["device_id"] = m_deviceCommon[i].strName;		//设备名称;
 		for (int j = 0; j < vecTagsName.size(); j++)
 		{
+			string strDeviceStatus = "device." + m_deviceCommon[i].strName + ".connstatus"; //获取设备状态;
 			if (m_deviceCommon[i].deviceID == vecTagsName[j].deviceID)
 			{//当前设备的信息;
 				string &strTagName = vecTagsName[j].strTagName;
 				string &strTagValue = vecTagsValue[j];
-				m_mapTagsName2UpdateTime[strTagName] = strTagValue;	//更新上传时间点的数据;
+				m_mapTagsName2UpdateTime[strTagName] = strTagValue;							//更新上传时间点的数据;
 
-				if ((vecTagsName[j].strTagName == "eventCode") || (vecTagsName[j].strTagName == "eventState")) //事件不做统一上传，需要单独处理;
+				if ((vecTagsName[j].strTagName.find("eventCode") != vecTagsName[j].strTagName.npos) || (vecTagsName[j].strTagName.find("eventState") != vecTagsName[j].strTagName.npos)) //事件不做统一上传，需要单独处理;
 					continue;
 
 				string strVal; //存储获取到的数值;
@@ -753,7 +815,16 @@ int CMainTask::getCommonJsonValue(vector<string> &vecTagsValue, vector<TAGINFO> 
 				strTagName = strTagName.substr(nLoc + 1, -1);
 				if (vecTagsName[j].outputType == "int")
 				{
-					int nOut = atoi(strVal.c_str()) * vecTagsName[j].calcValue;
+					long nOut;
+					if (vecTagsName[j].calcValue == 0)
+					{
+						nOut = atoi(strVal.c_str());
+					}
+					else
+					{
+						nOut = atoi(strVal.c_str()) * vecTagsName[j].calcValue;
+					}
+
 					if (vecTagsName[j].showType == "electric_meter")
 					{
 						curMeterData[strTagName] = nOut;
@@ -769,25 +840,34 @@ int CMainTask::getCommonJsonValue(vector<string> &vecTagsValue, vector<TAGINFO> 
 				}
 				else if ((vecTagsName[j].outputType == "float"))
 				{
-					double fOut = atoi(strVal.c_str()) * vecTagsName[j].calcValue;
-					char szTEMP[32] = { 0 };
-					sprintf(szTEMP, "%.2f", fOut);
+					float fVal;
+					if (vecTagsName[j].calcValue == 0)
+					{
+						fVal = atof(strVal.c_str());
+					}
+					else
+					{
+						fVal = atof(strVal.c_str()) * vecTagsName[j].calcValue;
+					}
+					string strPrecision = getRound(fVal, vecTagsName[j].precision);
+
+					//long fResult = fVal * pow(10, vecTagsName[j].precision);
+					//float fRet = fResult*1.0 / pow(10, vecTagsName[j].precision);
 					if (vecTagsName[j].showType == "electric_meter")
 					{
-						curMeterData[strTagName] = szTEMP;
+						curMeterData[strTagName] = strPrecision.c_str();
 					}
 					else if (vecTagsName[j].showType == "ept_stat")
 					{
-						curEptStatData[strTagName] = szTEMP;
+						curEptStatData[strTagName] = strPrecision.c_str();
 					}
 					else if (vecTagsName[j].showType == "env_measure")
 					{
-						curEnvMeasureData[strTagName] = szTEMP;
+						curEnvMeasureData[strTagName] = strPrecision.c_str();
 					}
 				}
 			}
 		}
-
 		//如果统计结果非空则将数据添加到Json中;
 		if (!curMeterData.isNull())
 		{
@@ -808,9 +888,32 @@ int CMainTask::getCommonJsonValue(vector<string> &vecTagsValue, vector<TAGINFO> 
 
 string getTime()
 {
-	char szBaseTime[32] = {0};
+	char szBaseTime[32] = { 0 };
 	unsigned int nMSec = 0;
 	int nSec = PKTimeHelper::GetHighResTime(&nMSec);
 	PKTimeHelper::HighResTime2String(szBaseTime, sizeof(szBaseTime), nSec, nMSec);
 	return szBaseTime;
+}
+
+string getRound(float src, int bits)
+{
+	char szValue[32] = { 0 };
+	if (bits == 1)
+	{
+		sprintf(szValue, "%.1f", src);
+	}
+	else if (bits == 2)
+	{
+		sprintf(szValue, "%.2f", src);
+	}
+	else if (bits == 3)
+	{
+		sprintf(szValue, "%.3f", src);
+	}
+	else if (bits == 4)
+	{
+		sprintf(szValue, "%.4f", src);
+	}
+	string strRtn = szValue;
+	return strRtn;
 }

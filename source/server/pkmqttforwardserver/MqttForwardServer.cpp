@@ -50,11 +50,6 @@ int CMqttForwardServer::OnStart( int argc, ACE_TCHAR* args[] )
 	//获取运行时数据目录;
 	string strRunTimePath = PKComm::GetRunTimeDataPath();
     // 创建接受驱动数据的共享队列;
-
-	// 初始记为正常启动;
-	//UpdateServerStatus(0, "started");
-	//UpdateServerStartTime();
-
 	int nErr = MAIN_TASK->Start();
 	return nErr;
 }
