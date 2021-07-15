@@ -1,8 +1,8 @@
-/**************************************************************
+ï»¿/**************************************************************
 *  Filename:    MainTask.cpp
 *  Copyright:   XinHong Software Co., Ltd.
 *
-*  Description: Maintask
+*  Description: mqtt read redis and publish to topic.
 *
 *  @author:     xingxing
 *  @version     2021/07/08 Initial Version
@@ -12,9 +12,12 @@
 #include "math.h"
 #ifdef _WIN32
 #include "windows.h"
+#include <Rpc.h>
+#pragma  comment(lib, "Rpcrt4.lib")
 #else
 #include "unistd.h"
 #include "stdlib.h"
+#include <uuid/uuid.h>
 #endif
 #include <iomanip>
 #include "pklog/pklog.h"
@@ -25,6 +28,7 @@
 #include "eviewcomm/eviewcomm.h"
 #include <iomanip>
 #include <sstream>
+
 using namespace std;
 
 extern CPKLog g_logger;
@@ -33,33 +37,36 @@ string	g_strTopicRealData = "";
 string	g_strTopicControl = "";
 string  g_strTopicConfig = "";
 
-#define TOPIC_REALDATA_PREFIX			"topic001"				// ÊµÊ±Êı¾İ·¢ËÍÍ¨µÀ;
-#define TOPIC_CONFIG_PREFIX				"peak/config"			// ÅäÖÃÍ¨µÀ;
-#define TOPIC_CONTROL_PREFIX			"electric_command"		// ¿ØÖÆÍ¨µÀ;
+#define TOPIC_REALDATA_PREFIX	"topic001"				// å®æ—¶æ•°æ®å‘é€é€šé“;
+#define TOPIC_CONFIG_PREFIX		"config"				// é…ç½®é€šé“;
+#define TOPIC_CONTROL_PREFIX	"electric_command"		// æ§åˆ¶é€šé“;
 #define NULLASSTRING(x) x == NULL ? "" : x
 #define SLEEP_MSEC	500
 
-const string strSqlEvent = "select device, code, name, action, classes, protect_type,source from t_device_event;";
-const string strSqlDeviceCommon = "select id, name from t_device_list where name!= 'eventDev' and enable<>0 or enable is null;";
-const string strSqlDeviceEvent = "select id, name from t_device_list where driver_id =20000 and enable<>0 or enable is null;";
+const string strSqlDeviceCommon = "select id, name,gatewayname,driver_id,subobject from t_device_list where driver_id!= 20000 and enable<>0 or enable is null;";
+const string strSqlDeviceEvent = "select id, name, gatewayname,driver_id from t_device_list where driver_id =20000 and enable<>0 or enable is null;";
 const string strSqlTag = "select name, show_type,output_type, calc_value, device_id, precision from t_device_tag where device_id>0;";
 string getTime();
 string getRound(float src, int bits);
 
+ //å­—ç¬¦ä¸²è½¬æ¢ç›¸å…³;
+wstring MultiChartoWideChar(std::string str);
+string WideChartoMultiChar(std::wstring wstr);
+string stringToUTF8string(std::string str);
+string GenerateUUID();//ç”Ÿæˆuuid
+
 //************************************
 // Method:    my_connect_callback
-// FullName:  my_connect_callback
-// Access:    public 
 // Returns:   void
-// Qualifier:/* »Ø¸´ÖØÁ¬Ê±µ÷Èë£¬ÔÚÕâÀï½«×ö»Ö¸´ÖØÁ¬µÄÊÂÇé
-//1¡¢·¢ËÍÈ«Á¿Êı¾İ
+// Qualifier:/* å›å¤é‡è¿æ—¶è°ƒå…¥ï¼Œåœ¨è¿™é‡Œå°†åšæ¢å¤é‡è¿çš„äº‹æƒ…
+//1ã€å‘é€å…¨é‡æ•°æ®
 // Parameter: struct mosquitto * mosq
-// Parameter: void * obj  CMqttImpl* ÓÉ newÒ»¸ömosquittoÊ±´«Èë
+// Parameter: void * obj  CMqttImpl* ç”± newä¸€ä¸ªmosquittoæ—¶ä¼ å…¥
 // Parameter: int rc
 //************************************
 void my_connect_callback(struct mosquitto *mosq, void *obj, int rc)
 {
-	//»Ö¸´ÖØÁ¬£¬ĞèÒª½«Ö®Ç°µÄÊı¾İ·¢ËÍ;
+	//æ¢å¤é‡è¿ï¼Œéœ€è¦å°†ä¹‹å‰çš„æ•°æ®å‘é€;
 	CMainTask* mainTask = (CMainTask*)obj;
 	mainTask->m_bconnected = true;
 	mainTask->m_pMqttObj->m_bConnected = true;
@@ -69,26 +76,24 @@ void my_connect_callback(struct mosquitto *mosq, void *obj, int rc)
 	int nRet = mainTask->m_pMqttObj->mqttClient_Sub((char *)g_strTopicControl.c_str(), &nMid);
 	if (nRet != 0)
 	{
-		g_logger.LogMessage(PK_LOGLEVEL_ERROR, "mqtt:¶©ÔÄÍ¨µÀ:½ÓÊÕ¿ØÖÆÃüÁîÖ÷Ìâ:%s Ê§°Ü, retcode:%d", g_strTopicControl.c_str(), nRet);
+		g_logger.LogMessage(PK_LOGLEVEL_ERROR, "mqtt:è®¢é˜…é€šé“:æ¥æ”¶æ§åˆ¶å‘½ä»¤ä¸»é¢˜:%s å¤±è´¥, retcode:%d", g_strTopicControl.c_str(), nRet);
 	}
 	else
-		g_logger.LogMessage(PK_LOGLEVEL_INFO, "mqtt:¶©ÔÄÍ¨µÀ:½ÓÊÕ¿ØÖÆÃüÁîÖ÷Ìâ:%s ³É¹¦", g_strTopicControl.c_str());
+		g_logger.LogMessage(PK_LOGLEVEL_INFO, "mqtt:è®¢é˜…é€šé“:æ¥æ”¶æ§åˆ¶å‘½ä»¤ä¸»é¢˜:%s æˆåŠŸ", g_strTopicControl.c_str());
 }
 
 //************************************
-//¶Ï¿ªÁ¬½Ó»Øµ÷;
+//æ–­å¼€è¿æ¥å›è°ƒ;
 // Method:    my_disconnect_callback
-// FullName:  my_disconnect_callback
-// Access:    public 
 // Returns:   void
 // Qualifier:
 // Parameter: struct mosquitto * mosq
-// Parameter: void * obj  CMqttImpl* ÓÉ newÒ»¸ömosquittoÊ±´«Èë
+// Parameter: void * obj  CMqttImpl* ç”± newä¸€ä¸ªmosquittoæ—¶ä¼ å…¥
 // Parameter: int result
 //************************************
 void my_disconnect_callback(struct mosquitto *mosq, void *obj, int result)
 {
-	//¶Ï¿ªÁ¬½Ó£¬±íÊ¾ĞèÒª¿ªÊ¼±£´æÒÔºó·¢ËÍµÄÊı¾İ;
+	//æ–­å¼€è¿æ¥ï¼Œè¡¨ç¤ºéœ€è¦å¼€å§‹ä¿å­˜ä»¥åå‘é€çš„æ•°æ®;
 	CMainTask* mainTask = (CMainTask*)obj;
 	mainTask->m_bconnected = false;
 	mainTask->m_pMqttObj->m_bConnected = false;
@@ -96,10 +101,8 @@ void my_disconnect_callback(struct mosquitto *mosq, void *obj, int result)
 }
 
 //************************************
-//·¢²¼»Øµ÷ Ö»ÓĞ·¢²¼³É¹¦²Å»á½øÈëÕâÀï£¬¶Ï¿ªÁ¬½ÓÖ®ºó²»»á½øÈëÕâÀï;
+//å‘å¸ƒå›è°ƒ åªæœ‰å‘å¸ƒæˆåŠŸæ‰ä¼šè¿›å…¥è¿™é‡Œï¼Œæ–­å¼€è¿æ¥ä¹‹åä¸ä¼šè¿›å…¥è¿™é‡Œ;
 // Method:    my_publish_callback
-// FullName:  my_publish_callback
-// Access:    public 
 // Returns:   void
 // Qualifier:
 // Parameter: struct mosquitto * mosq
@@ -114,10 +117,8 @@ void my_publish_callback(struct mosquitto *mosq, void *obj, int mid)
 
 //************************************
 // Method:    my_message_callback
-// FullName:  my_message_callback
-// Access:    public 
 // Returns:   void
-// Qualifier: ¶©ÔÄÏûÏ¢»Øµ÷£¬½ÓÊÕÀ´×ÔÔÆ¶ËµÄ¿ØÖÆÏûÏ¢;
+// Qualifier: è®¢é˜…æ¶ˆæ¯å›è°ƒï¼Œæ¥æ”¶æ¥è‡ªäº‘ç«¯çš„æ§åˆ¶æ¶ˆæ¯;
 // Parameter: struct mosquitto * mosq
 // Parameter: void * obj
 // Parameter: const struct mosquitto_message * msg MSGID:MSG
@@ -128,7 +129,7 @@ void my_message_callback(struct mosquitto *mosq, void *obj, const struct mosquit
 	string strMessage = (char *)msg->payload;
 	g_logger.LogMessage(PK_LOGLEVEL_INFO, "recv a message of topic:%s, content:%s", msg->topic, strMessage.c_str());
 
-	//Èç¹ûÊÇ½ÓÊÕµ½ÔÆ¶Ë·¢¹ıÀ´µÄ¿ØÖÆÍ¨µÀµÄÏûÏ¢;
+	//å¦‚æœæ˜¯æ¥æ”¶åˆ°äº‘ç«¯å‘è¿‡æ¥çš„æ§åˆ¶é€šé“çš„æ¶ˆæ¯;
 	if (g_strTopicControl.compare(msg->topic) != 0)
 	{
 		g_logger.LogMessage(PK_LOGLEVEL_ERROR, "recv a message of topic:%s, content:%s, not control topic:%s!", msg->topic, strMessage.c_str(), g_strTopicControl.c_str());
@@ -150,7 +151,7 @@ void my_message_callback(struct mosquitto *mosq, void *obj, const struct mosquit
 	{
 		mainTask->SendControlMsg2LocalNodeServer(strMessage, jsonMsg);
 	}
-	else if (strAction.compare("allrealdata") == 0) //ÇëÇóÈ«Á¿ĞÅÏ¢, Î´ÑéÖ¤
+	else if (strAction.compare("allrealdata") == 0) //è¯·æ±‚å…¨é‡ä¿¡æ¯, æœªéªŒè¯
 	{
 		mainTask->UpdateAllTags2Topic();
 	}
@@ -182,7 +183,7 @@ int CMainTask::svc()
 	bool bFirst = true;
 	ACE_Time_Value tv;
 	tv.set_msec(SLEEP_MSEC);
-	time_t tmLastAllData = 0; // ÉÏ´Î·¢ËÍÈ«Á¿Êı¾İµÄÊ±¼ä;
+	time_t tmLastAllData = 0; // ä¸Šæ¬¡å‘é€å…¨é‡æ•°æ®çš„æ—¶é—´;
 	while (!m_bStop)
 	{
 		vector<string> vecTagsValue;
@@ -197,7 +198,7 @@ int CMainTask::svc()
 				vecTagsValue.push_back(TAG_QUALITY_UNKNOWN_REASON_STRING);
 		}
 
-		if (bFirst)	//³õÊ¼ÉèÖÃÊı¾İ;
+		if (bFirst)	//åˆå§‹è®¾ç½®æ•°æ®;
 		{
 			for (int i = 0; i < nTagNum; i++)
 			{
@@ -210,65 +211,33 @@ int CMainTask::svc()
 		time(&tmNow);
 		long nTimeSpanSec = labs(tmNow - tmLastAllData);
 		//first time
-		if (nTimeSpanSec >= 10) // Ã¿10Ãë·¢ËÍ1´ÎÈ«Á¿Êı¾İ;
+		if (nTimeSpanSec >= 5) // æ¯60ç§’å‘é€1æ¬¡å…¨é‡æ•°æ®;
 		{
 			nRet = PublishRealTagData2Topic(m_vecTagsInfo, vecTagsValue, false);
 			if (nRet == 0)
 				tmLastAllData = tmNow;
 		}
-		else //Êı¾İ·¢Éú¸Ä±ä·¢ËÍ£¬½ÓÊÕµ½ÊÂ¼şĞÅÏ¢;
+		else //æ•°æ®å‘ç”Ÿæ”¹å˜å‘é€ï¼Œæ¥æ”¶åˆ°äº‹ä»¶ä¿¡æ¯;
 		{
-			vector<TAGINFO> vecEventTag; //´æ´¢ÊÂ¼şÏà¹ØµÄµãÎ»ĞÅÏ¢;
-			vector<string> vecEventTagValues;//´æ´¢ÊÂ¼şÏà¹ØµãÎ»µÄÖµ;
-			vector<TAGINFO> vUpdateTag;	//´æ´¢Êı¾İ·¢Éú±ä»¯µÄµãÎ»ĞÅÏ¢;
-			vector<string> vUpdateValue;  //´æ´¢·¢Éú±ä»¯µãÎ»µÄÖµ;
-			map<string, int> mState;
-			map<string, int> mCode;
+			vector<TAGINFO> vecEventTag;		//äº‹ä»¶ç›¸å…³çš„ç‚¹ä½ä¿¡æ¯;
+			vector<string> vecEventTagValues;	//äº‹ä»¶ç›¸å…³ç‚¹ä½çš„å€¼;
+			vector<TAGINFO> vUpdateTag;			//æ•°æ®å‘ç”Ÿå˜åŒ–çš„ç‚¹ä½ä¿¡æ¯;
+			vector<string> vUpdateValue;		//å‘ç”Ÿå˜åŒ–ç‚¹ä½çš„å€¼;
+			map<string, int> mState;			//å„äº‹ä»¶Stateæ”¹å˜æƒ…å†µ
+			map<string, int> mCode;				//å„äº‹ä»¶Codeæ”¹å˜æƒ…å†µ
 
-			for (int i = 0; i < m_vecTagsInfo.size(); i++)//½«ÊÂ¼şµãÎ»ºÍ×´Ì¬¸Ä±äÇé¿öÉ¸Ñ¡³öÀ´;
-			{
-				if ((m_vecTagsInfo[i].strTagName.find("eventCode") != m_vecTagsInfo[i].strTagName.npos) || (m_vecTagsInfo[i].strTagName.find("eventState") != m_vecTagsInfo[i].strTagName.npos))
-				{
-					//½«ÊÂ¼şÏà¹ØÊı¾İÏÈÔ¤ÏÈ´æ·ÅÔÚvectorÖĞ;
-					vecEventTag.push_back(m_vecTagsInfo[i]);
-					vecEventTagValues.push_back(m_pkAllTagDatas[i].szData);
-
-					map<string, string>::iterator it = m_mapTagsName2UpdateTime.find(m_vecTagsInfo[i].strTagName);
-					if (it != m_mapTagsName2UpdateTime.end())
-					{
-						Json::Value rootPre;
-						Json::Value rootCur;
-						Json::Reader jsonReader;
-						if (jsonReader.parse(vecTagsValue[i], rootPre, false) && jsonReader.parse(it->second, rootCur, false))
-						{
-							if ((m_vecTagsInfo[i].strTagName.find("eventCode") != m_vecTagsInfo[i].strTagName.npos))
-							{
-								if (rootPre["v"] != rootCur["v"])//code ÊıÖµ¸Ä±ä;
-									mCode[m_vecTagsInfo[i].strTagName] = 1;
-								else
-									mCode[m_vecTagsInfo[i].strTagName] = 0;
-							}
-							else
-							{
-								if (rootPre["v"] != rootCur["v"])//state ÊıÖµ¸Ä±ä;
-									mState[m_vecTagsInfo[i].strTagName] = 1;
-								else
-									mState[m_vecTagsInfo[i].strTagName] = 0;
-							}
-						}
-					}
-				}
-			}
-
-			//½«Êı¾İÅÅĞò,ÓëmapÖĞµÄ×´Ì¬µã¶ÔÓ¦;
+			GetEventDetails(vecEventTag, vecEventTagValues, mState, mCode, vecTagsValue); //è·å–äº‹ä»¶ç›¸å…³çš„è¯¦ç»†ä¿¡æ¯;
+			//å°†æ•°æ®æ’åº,ä¸mapä¸­çš„çŠ¶æ€ç‚¹å¯¹åº”;
 			if (mCode.size() != mState.size() || vecEventTag.size() != vecEventTagValues.size())
-				g_logger.LogMessage(PK_LOGLEVEL_ERROR, "×´Ì¬µãÓëÉè±¸µãÎ»²»Æ¥Åä£¬Çë¼ì²éµãÎ»ÅäÖÃ");
+			{
+				g_logger.LogMessage(PK_LOGLEVEL_ERROR, "çŠ¶æ€ç‚¹ä¸è®¾å¤‡ç‚¹ä½ä¸åŒ¹é…ï¼Œè¯·æ£€æŸ¥ç‚¹ä½é…ç½®");
+			}
 			else
 			{
 				map<string, int>::iterator iterState = mState.begin();
 				map<string, int>::iterator iterCode = mCode.begin();
 				int nCurLocation = 0;
-				//»ñÈ¡Êµ¼Ê×´Ì¬·¢Éú¸Ä±äµÄµãÎ»ĞÅÏ¢;
+				//è·å–å®é™…çŠ¶æ€å‘ç”Ÿæ”¹å˜çš„ç‚¹ä½ä¿¡æ¯;
 				for (; iterState != mState.end(), iterCode != mCode.end(); iterState++, iterCode++)
 				{
 					if (iterCode->second != 0 || iterState->second != 0)
@@ -297,7 +266,7 @@ int CMainTask::svc()
 					g_logger.LogMessage(PK_LOGLEVEL_ERROR, "gateway:%s, send increment data failed", g_strGateWayId.c_str());
 				}
 			}
-			//Çå¿ÕËùÓĞÈİÆ÷;
+			//æ¸…ç©ºæ‰€æœ‰å®¹å™¨;
 			vUpdateTag.clear();
 			vUpdateValue.clear();
 			vecEventTag.clear();
@@ -371,7 +340,7 @@ int CMainTask::UpdateAllTags2Topic()
 	vector<string> vecTagsValue;
 	if (m_vecTagsInfo.size() <= 0)
 	{
-		g_logger.LogMessage(PK_LOGLEVEL_ERROR, "config info is NULL, wait for config to upload first. ÅäÖÃĞÅÏ¢Îª¿Õ£¬µÈ´ıÉÏ´«ÅäÖÃĞÅÏ¢Ö®ºóÔÙÉÏ´«µãÖµĞÅÏ¢");
+		g_logger.LogMessage(PK_LOGLEVEL_ERROR, "config info is NULL, wait for config to upload first. é…ç½®ä¿¡æ¯ä¸ºç©ºï¼Œç­‰å¾…ä¸Šä¼ é…ç½®ä¿¡æ¯ä¹‹åå†ä¸Šä¼ ç‚¹å€¼ä¿¡æ¯");
 		return -1;
 	}
 
@@ -395,7 +364,7 @@ int CMainTask::ReadAllTags()
 	vector<vector<string> > vecRows;
 	int nRet = 0;
 
-	//»ñÈ¡tagµãĞÅÏ¢;
+	//è·å–tagç‚¹ä¿¡æ¯;
 	TAGINFO tagInfo;
 	string strError;
 	nRet = m_dbEview.SQLExecute(strSqlTag.c_str(), vecRows, &strError);
@@ -415,7 +384,7 @@ int CMainTask::ReadAllTags()
 		vecRows.clear();
 	}
 
-	// Éè±¸×´Ì¬Êı¾İ»ñÈ¡;
+	// è®¾å¤‡çŠ¶æ€æ•°æ®è·å–;
 	TAGINFO devStatus;
 	nRet = m_dbEview.SQLExecute("select name, id from t_device_list where (enable is null or enable <> 0 )", vecRows, &strError);
 	if (nRet == 0)
@@ -432,27 +401,7 @@ int CMainTask::ReadAllTags()
 		vecRows.clear();
 	}
 
-	//»ñÈ¡ÊÂ¼şĞÅÏ¢;
-	EVENTINFO evnetCount;
-	nRet = m_dbEview.SQLExecute(strSqlEvent.c_str(), vecRows, &strError);
-	if (nRet == 0)
-	{
-		for (int i = 0; i < vecRows.size(); i++)
-		{
-			evnetCount.deviceID = atoi(vecRows[i][0].c_str());
-			evnetCount.code = atoi(vecRows[i][1].c_str());
-			evnetCount.name = vecRows[i][2].c_str();
-			evnetCount.action = vecRows[i][3].c_str();
-			evnetCount.classes = vecRows[i][4].c_str();
-			evnetCount.protecttype = vecRows[i][5].c_str();
-			evnetCount.source = vecRows[i][6].c_str();
-			m_eventInfo.push_back(evnetCount);
-			vecRows[i].clear();
-		}
-		vecRows.clear();
-	}
-
-	//Éè±¸ĞÅÏ¢(Õı³£Êı¾İ);
+	//è®¾å¤‡ä¿¡æ¯(é€šç”¨æ•°æ®);
 	DEVICEINFO deviceInfo;
 	nRet = m_dbEview.SQLExecute(strSqlDeviceCommon.c_str(), vecRows, &strError);
 	if (nRet == 0)
@@ -461,13 +410,16 @@ int CMainTask::ReadAllTags()
 		{
 			deviceInfo.deviceID = atoi(vecRows[i][0].c_str());
 			deviceInfo.strName = vecRows[i][1].c_str();
+			deviceInfo.strGatewayName = vecRows[i][2].c_str();
+			deviceInfo.driverID = atoi(vecRows[i][3].c_str());
+			deviceInfo.strSubObjectName = vecRows[i][4].c_str();
 			m_deviceCommon.push_back(deviceInfo);
 			vecRows[i].clear();
 		}
 		vecRows.clear();
 	}
 
-	//Éè±¸ĞÅÏ¢(ÊÂ¼şÊı¾İ);
+	//è®¾å¤‡ä¿¡æ¯(äº‹ä»¶æ•°æ®);
 	nRet = m_dbEview.SQLExecute(strSqlDeviceEvent.c_str(), vecRows, &strError);
 	if (nRet == 0)
 	{
@@ -475,14 +427,42 @@ int CMainTask::ReadAllTags()
 		{
 			deviceInfo.deviceID = atoi(vecRows[i][0].c_str());
 			deviceInfo.strName = vecRows[i][1].c_str();
+			deviceInfo.strGatewayName = vecRows[i][2].c_str();
+			deviceInfo.driverID = atoi(vecRows[i][3].c_str());
 			m_deviceEvent.push_back(deviceInfo);
 			vecRows[i].clear();
 		}
 		vecRows.clear();
 	}
 
+	//è·å–äº‹ä»¶ä¿¡æ¯;
+	EVENTINFO evnetCount;
+	for (int i = 0; i < m_deviceEvent.size(); i++)	//æ ¹æ®äº‹ä»¶è®¾å¤‡æ•°é‡å®šä¹‰äº‹ä»¶codeæ•°æ®é›†;
+	{
+		char szSqlEvent[256] = { 0 };
+		sprintf(szSqlEvent, "select device, code, name, action, classes, protect_type,source from t_device_event where device = %d;", m_deviceEvent[i].deviceID);
+		nRet = m_dbEview.SQLExecute(szSqlEvent, vecRows, &strError);
+		if (nRet == 0)
+		{
+			for (int i = 0; i < vecRows.size(); i++)
+			{
+				evnetCount.deviceID = atoi(vecRows[i][0].c_str());
+				evnetCount.code = atoi(vecRows[i][1].c_str());
+				evnetCount.name = vecRows[i][2].c_str();
+				evnetCount.action = vecRows[i][3].c_str();
+				evnetCount.classes = vecRows[i][4].c_str();
+				evnetCount.protecttype = vecRows[i][5].c_str();
+				evnetCount.source = vecRows[i][6].c_str();
+				m_eventInfo.push_back(evnetCount);
+				vecRows[i].clear();
+			}
+			vecRows.clear();
+		}
+		memset(szSqlEvent, 0x0, sizeof(szSqlEvent));
+	}
+
 	size_t nTagNum = m_vecTagsInfo.size();
-	g_logger.LogMessage(PK_LOGLEVEL_NOTICE, "Òª×ª·¢µÄ×ÜµãÊıÎª:%d", m_vecTagsInfo.size());
+	g_logger.LogMessage(PK_LOGLEVEL_NOTICE, "è¦è½¬å‘çš„æ€»ç‚¹æ•°ä¸º:%d", m_vecTagsInfo.size());
 	m_pkAllTagDatas = new PKDATA[nTagNum]();
 	for (int i = 0; i < m_vecTagsInfo.size(); i++)
 	{
@@ -490,7 +470,7 @@ int CMainTask::ReadAllTags()
 		strcpy(m_pkAllTagDatas[i].szFieldName, "");
 	}
 
-	// ³õÊ¼»¯ÄÚ´æÊı¾İ¿â;
+	// åˆå§‹åŒ–å†…å­˜æ•°æ®åº“;
 	if (m_hPkData == NULL)
 	{
 		m_hPkData = pkInit("127.0.0.1", NULL, NULL);
@@ -511,19 +491,19 @@ int CMainTask::LoadConfig()
 	int nRet = m_dbEview.SQLExecute(szSql, vecRows, &strError);
 	if (nRet != 0)
 	{
-		g_logger.LogMessage(PK_LOGLEVEL_CRITICAL, "!!!ÑÏÖØ´íÎó!!!£ºÍø¹ØÅäÖÃ±í t_forward_list±í ÖĞ²éÑ¯Òì³££ºsql£º%s, error:%s", szSql, strError.c_str());
+		g_logger.LogMessage(PK_LOGLEVEL_CRITICAL, "ç½‘å…³é…ç½®è¡¨ t_forward_listè¡¨ ä¸­æŸ¥è¯¢å¼‚å¸¸ï¼šsqlï¼š%s, error:%s", szSql, strError.c_str());
 		return -1;
 	}
 
-	//±íÊ¾Ã»ÓĞ²éÑ¯µ½
+	//è¡¨ç¤ºæ²¡æœ‰æŸ¥è¯¢åˆ°;
 	if (vecRows.size() <= 0)
 	{
-		g_logger.LogMessage(PK_LOGLEVEL_CRITICAL, "!!!ÑÏÖØ´íÎó!!!£ºÃ»ÓĞÔÚÍø¹ØÅäÖÃ±í t_forward_list±í ÖĞ²éÑ¯µ½Êı¾İ£ºsql£º%s", szSql);
+		g_logger.LogMessage(PK_LOGLEVEL_CRITICAL, "æ²¡æœ‰åœ¨ç½‘å…³é…ç½®è¡¨ t_forward_listè¡¨ ä¸­æŸ¥è¯¢åˆ°æ•°æ®ï¼šsqlï¼š%s", szSql);
 		return -1;
 	}
 	else if (vecRows.size() > 1)
 	{
-		g_logger.LogMessage(PK_LOGLEVEL_ERROR, "!´íÎó!£ºÔÚÍø¹ØÅäÖÃ±í t_forward_list±í ÖĞ²éÑ¯µ½¶àÌõÊı¾İ£ºsql£º%s,Ö»È¡µÚÒ»ĞĞ", szSql);
+		g_logger.LogMessage(PK_LOGLEVEL_ERROR, "åœ¨ç½‘å…³é…ç½®è¡¨ t_forward_listè¡¨ ä¸­æŸ¥è¯¢åˆ°å¤šæ¡æ•°æ®ï¼šsqlï¼š%s,åªå–ç¬¬ä¸€è¡Œ", szSql);
 	}
 
 	vector<string> vecRow = vecRows[0];
@@ -550,7 +530,6 @@ int CMainTask::LoadConfig()
 	vecRows.clear();
 
 	vector<string> vecConnParam = PKStringHelper::StriSplit(m_gateWayConf.m_strConnParam, ":"); // ip:port
-
 	m_gateWayConf.m_strMqqtIP = vecConnParam[0];
 	if (vecConnParam.size() > 1)
 		m_gateWayConf.m_strPort = vecConnParam[1];
@@ -565,7 +544,7 @@ int CMainTask::LoadConfig()
 int CMainTask::GetGateWayId()
 {
 	ACE_OS::macaddr_node_t macaddress;
-	int result = ACE_OS::getmacaddress(&macaddress); // ÔÚwindowsÏÂÊÇµÚÒ»¸öÍø¿Ú£¬¿ÉÄÜÊÇĞéÄâÍø¿¨µÄmacµØÖ·;
+	int result = ACE_OS::getmacaddress(&macaddress); // åœ¨windowsä¸‹æ˜¯ç¬¬ä¸€ä¸ªç½‘å£ï¼Œå¯èƒ½æ˜¯è™šæ‹Ÿç½‘å¡çš„macåœ°å€;
 	if (result != -1)
 	{
 		char szMacAddr[32] = { 0 };
@@ -582,7 +561,7 @@ int CMainTask::GetGateWayId()
 	else
 	{
 		g_strGateWayId = "";
-		g_logger.LogMessage(PK_LOGLEVEL_CRITICAL, "GetGatewayId failed! Please Check!!!!!!");
+		g_logger.LogMessage(PK_LOGLEVEL_CRITICAL, "GetGateWayId failed! Please Check!!!!!!");
 		return -100;
 	}
 }
@@ -591,70 +570,71 @@ int CMainTask::PublishRealTagData2Topic(vector<TAGINFO> vecTagsName, vector<stri
 {
 	if (vecTagsName.size() != vecTagsValue.size())
 	{
-		g_logger.LogMessage(PK_LOGLEVEL_ERROR, "TAGµãÊıÁ¿ÓëÊıÖµÊıÁ¿²»Æ¥Åä£¬ÎŞ·¨½øĞĞJson×é°ü£¬Çë¼ì²éÅäÖÃ¡£");
+		g_logger.LogMessage(PK_LOGLEVEL_ERROR, "TAGç‚¹æ•°é‡ä¸æ•°å€¼æ•°é‡ä¸åŒ¹é…ï¼Œæ— æ³•è¿›è¡ŒJsonç»„åŒ…ï¼Œè¯·æ£€æŸ¥é…ç½®ã€‚");
 		return -1;
 	}
-	//µÚÒ»²ãÊı¾İĞÅÏ¢;
+	//ç¬¬ä¸€å±‚æ•°æ®ä¿¡æ¯;
 	Json::Value deviceInfo;
 	Json::Value root;
 	Json::FastWriter writer;
-	//µÚ¶ş²ãÊı¾İĞÅÏ¢;
+	//ç¬¬äºŒå±‚æ•°æ®ä¿¡æ¯;
 	Json::Value curDevice;
-	Json::Value curEventData;
 
-	root["msg_id"] = "e29d3101-a02e-495b-a2d3-40ebeab2104a";	 //ÏûÏ¢Î¨Ò»±àºÅ£¬GUID
-	root["tenant_id"] = 17;										 //¹«Ë¾±àºÅ;
-	root["prj_id"] = 1;											 //ÏîÄ¿±àºÅ;
-	root["server_id"] = "XH-SRV-01";							 //±ßÔµ·şÎñÆ÷±àºÅ;
+	root["msg_id"] = GenerateUUID();							 //æ¶ˆæ¯å”¯ä¸€ç¼–å·ï¼ŒGUID
+	root["tenant_id"] = 17;										 //å…¬å¸ç¼–å·;
+	root["prj_id"] = 1;											 //é¡¹ç›®ç¼–å·;
+	root["server_id"] = "XH-SRV-01";							 //è¾¹ç¼˜æœåŠ¡å™¨ç¼–å·;
 
-	//ÊÂ¼şĞÅÏ¢;
-	if (bEvent)
+
+	if (bEvent)		//äº‹ä»¶ä¿¡æ¯;
 	{
 		for (int i = 0; i < vecTagsName.size(); i += 2)
 		{
-			curDevice["gather_time"] = getTime();//²É¼¯Êı¾İÊ±¼ä;
+			curDevice["gather_time"] = getTime();	//é‡‡é›†æ•°æ®æ—¶é—´;
 			curDevice["state"] = 0;
-			//»ñÈ¡Éè±¸Ãû³Æ;
-			int curDeviceId;
+
+			int curDeviceId;	//è·å–è®¾å¤‡åç§°;
 			for (int j = 0; j < m_deviceEvent.size(); j++)
 			{
 				if (vecTagsName[i].deviceID == m_deviceEvent[j].deviceID)
 				{
-					curDevice["device_path"] = m_deviceEvent[j].strName;//Éè±¸Â·¾¶;
-					curDevice["device_id"] = m_deviceEvent[j].strName;	//Éè±¸Ãû³Æ;
+					curDevice["device_path"] = m_deviceEvent[j].strGatewayName;		//ç½‘å…³åç§°;
+					curDevice["device_id"] = m_deviceEvent[j].strName;				//è®¾å¤‡åç§°;
 					curDeviceId = m_deviceEvent[j].deviceID;
 				}
 			}
-			//»ñÈ¡ÊÂ¼ş×´Ì¬ºÍ´úÂë;
+			//è·å–äº‹ä»¶çŠ¶æ€å’Œä»£ç ;
 			int nCodeNum, nState;
-			getCodeAndState(vecTagsName[i], vecTagsName[i + 1], vecTagsValue[i], vecTagsValue[i + 1], nCodeNum, nState);
-			//»ñÈ¡ÊÂ¼şÏà¹ØĞÅÏ¢;
-			getEventJsonValue(curDevice, curDeviceId, nCodeNum, nState);
+			GetCodeAndState(vecTagsName[i], vecTagsName[i + 1], vecTagsValue[i], vecTagsValue[i + 1], nCodeNum, nState);
+			//è·å–äº‹ä»¶ç›¸å…³ä¿¡æ¯;
+			GetEventJsonValue(curDevice, curDeviceId, nCodeNum, nState);
 			deviceInfo.append(curDevice);
-			//Çå¿Õµ±Ç°Éè±¸;
+			//æ¸…ç©ºå½“å‰è®¾å¤‡;
 			curDevice.clear();
 		}
-
 	}
-	else //Êı¾İĞÅÏ¢;
+	else //åŸºç¡€æ•°æ®ä¿¡æ¯;
 	{
-		getCommonJsonValue(vecTagsValue, vecTagsName, deviceInfo);
+		GetCommonJsonValue(vecTagsValue, vecTagsName, deviceInfo);
 	}
-	//Ìí¼ÓÉè±¸½Úµã,ÏòÔÆ¶ËÉÏ´«Êı¾İ;
-	root["upload_time"] = getTime();	//ÏûÏ¢ÉÏ´«Ê±¼ä;
+
+	root["upload_time"] = getTime();		//æ·»åŠ è®¾å¤‡èŠ‚ç‚¹,å‘äº‘ç«¯ä¸Šä¼ æ•°æ®;
 	root["device_info"] = deviceInfo;
 	string strSengMsg = writer.write(root);
 
-	//Çå¿Õ;
-	deviceInfo.clear();
-	root.clear();
-
-	//¼ÇÂ¼ÏûÏ¢,±£´æµ½ÈÕÖ¾;
+	//è®°å½•æ¶ˆæ¯,ä¿å­˜åˆ°æ—¥å¿—;
 	int nRet = m_pMqttObj->mqttClient_Pub((char*)g_strTopicRealData.c_str(), NULL, strSengMsg.length(), strSengMsg.c_str());
 	if (nRet == PK_SUCCESS)
-		g_logger.LogMessage(PK_LOGLEVEL_INFO, "succesful to publish realdata to mqtt(%s),tagnum:%d,bytes:%d. Context: %s", m_gateWayConf.m_strMqqtIP.c_str(), vecTagsName.size(), strSengMsg.length(), strSengMsg.c_str());
+	{
+		g_logger.LogMessage(PK_LOGLEVEL_INFO, "succesful to publish realdata to mqtt(%s),tagnum:%d,bytes:%d.", m_gateWayConf.m_strMqqtIP.c_str(), vecTagsName.size(), strSengMsg.length());
+		Json::StyledWriter styled_writer;
+		std::cout << "Context : " << endl;
+		std::cout<<styled_writer.write(root) << std::endl;
+	}
 	else
+	{
 		g_logger.LogMessage(PK_LOGLEVEL_ERROR, "fail to publish realdata to mqtt(%s),tagnum:%d,bytes:%d, ret:%d", m_gateWayConf.m_strMqqtIP.c_str(), vecTagsName.size(), strSengMsg.length(), nRet);
+	}
 	return nRet;
 }
 
@@ -662,7 +642,7 @@ int CMainTask::SendControlMsg2LocalNodeServer(string strCtrlMsg, Json::Value &js
 {
 	if (jsonMsg["name"].isNull() || jsonMsg["value"].isNull())
 	{
-		g_logger.LogMessage(PK_LOGLEVEL_ERROR, "½ÓÊÕµ½µÄ¿ØÖÆÃüÁî:%s, ²»°üº¬nameºÍvalue, ·Ç·¨!", strCtrlMsg.c_str());
+		g_logger.LogMessage(PK_LOGLEVEL_ERROR, "æ¥æ”¶åˆ°çš„æ§åˆ¶å‘½ä»¤:%s, ä¸åŒ…å«nameå’Œvalue, éæ³•!", strCtrlMsg.c_str());
 		return -1;
 	}
 
@@ -671,13 +651,13 @@ int CMainTask::SendControlMsg2LocalNodeServer(string strCtrlMsg, Json::Value &js
 
 	int nRet = pkControl(m_hPkData, strTagName.c_str(), "v", strTagValue.c_str());
 	if (nRet == 0)
-		g_logger.LogMessage(PK_LOGLEVEL_ERROR, "½ÓÊÕµ½¿ØÖÆÃüÁî:%s, ÒÑÏÂ·¢¿ØÖÆ(v)³É¹¦!", strCtrlMsg.c_str());
+		g_logger.LogMessage(PK_LOGLEVEL_ERROR, "æ¥æ”¶åˆ°æ§åˆ¶å‘½ä»¤:%s, å·²ä¸‹å‘æ§åˆ¶(v)æˆåŠŸ!", strCtrlMsg.c_str());
 	else
-		g_logger.LogMessage(PK_LOGLEVEL_ERROR, "½ÓÊÕµ½¿ØÖÆÃüÁî:%s, ÏÂ·¢¿ØÖÆ(v)Ê§°Ü,ret:%d!", strCtrlMsg.c_str(), nRet);
+		g_logger.LogMessage(PK_LOGLEVEL_ERROR, "æ¥æ”¶åˆ°æ§åˆ¶å‘½ä»¤:%s, ä¸‹å‘æ§åˆ¶(v)å¤±è´¥,ret:%d!", strCtrlMsg.c_str(), nRet);
 	return 0;
 }
 
-int CMainTask::getCodeAndState(TAGINFO &TagsCode, TAGINFO &TagsState, string &vecTagsValueCode, string &vecTagsValueState, int &code, int &state)
+int CMainTask::GetCodeAndState(TAGINFO &TagsCode, TAGINFO &TagsState, string &vecTagsValueCode, string &vecTagsValueState, int &code, int &state)
 {
 	Json::Value jsonTagCode;
 	Json::Value jsonTagState;
@@ -686,7 +666,7 @@ int CMainTask::getCodeAndState(TAGINFO &TagsCode, TAGINFO &TagsState, string &ve
 	string &strTagValueCode = vecTagsValueCode;
 	string &strTagValueState = vecTagsValueState;
 
-	//¸üĞÂÊı¾İ;
+	//æ›´æ–°æ•°æ®;
 	m_mapTagsName2UpdateTime[TagsCode.strTagName] = strTagValueCode;
 	m_mapTagsName2UpdateTime[TagsState.strTagName] = strTagValueState;
 
@@ -705,102 +685,92 @@ int CMainTask::getCodeAndState(TAGINFO &TagsCode, TAGINFO &TagsState, string &ve
 	return 0;
 }
 
-int CMainTask::getEventJsonValue(Json::Value &curDevice, int deviceID, int code, int state)
+int CMainTask::GetEventJsonValue(Json::Value &curDevice, int deviceID, int code, int state)
 {
 	Json::Value curEventData;
+	Json::Value eventDetail;
 	EVENTINFO eventInfo;
 	eventInfo.deviceID = deviceID;
 	eventInfo.code = code;
 
-	curEventData["evt_time"] = getTime();//´Ë´¦Ê±¼äÎª¿ªÊ¼×é×°Êı¾İ°üµÄÊ±¼ä;
 	list<EVENTINFO>::iterator it = find(m_eventInfo.begin(), m_eventInfo.end(), eventInfo);
 	if (it != m_eventInfo.end())
 	{
-		if (it->action == "¼ÇÂ¼")	//Çø·ÖÊÂ¼şµÄÀàĞÍ£¬È»ºó×éÖ¯³ÉÍêÕûµÄÊı¾İ°ü;
+		eventDetail["evt_time"] = getTime();//æ­¤å¤„æ—¶é—´ä¸ºå¼€å§‹ç»„è£…æ•°æ®åŒ…çš„æ—¶é—´;
+		if (it->action == "è®°å½•")			//åŒºåˆ†äº‹ä»¶çš„ç±»å‹ï¼Œç„¶åç»„ç»‡æˆå®Œæ•´çš„æ•°æ®åŒ…;
 		{
 			if (state == 0)
-			{
-				curEventData["evt_name"] = it->name + "»Ö¸´";
-			}
+				eventDetail["evt_name"] = stringToUTF8string(it->name + "æ¢å¤");
 			else
-			{
-				curEventData["evt_name"] = it->name + "ÆôÓÃ";
-			}
+				eventDetail["evt_name"] = stringToUTF8string(it->name + "å¯ç”¨");
 		}
 		else
 		{
 			if (state == 1)
-			{
-				curEventData["evt_name"] = it->name;
-			}
+				eventDetail["evt_name"] = stringToUTF8string(it->name);
 			else
-			{
-				curEventData["evt_name"] = it->name + "»Ö¸´";
-			}
+				eventDetail["evt_name"] = stringToUTF8string(it->name + "æ¢å¤");
 		}
-		curEventData["evt_class"] = it->classes;
-		curEventData["evt_action"] = it->action;
-		curEventData["protect_type"] = it->protecttype;
-		curEventData["evt_source"] = it->source;
-		curEventData["evt_info"] = state;
+		eventDetail["evt_class"] = stringToUTF8string(it->classes);
+		eventDetail["evt_action"] = stringToUTF8string(it->action);
+		eventDetail["protect_type"] = stringToUTF8string(it->protecttype);
+		eventDetail["evt_source"] = stringToUTF8string(it->source);
+		eventDetail["evt_info"] = "None";
 	}
 	else
-	{
-		g_logger.LogMessage(PK_LOGLEVEL_INFO, "Î´ÕÒµ½¶ÔÓ¦µÄÊÂ¼şCode£¬Çë¼ì²éÅäÖÃÊÇ·ñÕıÈ·");
-	}
+		g_logger.LogMessage(PK_LOGLEVEL_INFO, "æœªæ‰¾åˆ°å¯¹åº”çš„äº‹ä»¶Codeï¼Œè¯·æ£€æŸ¥é…ç½®æ˜¯å¦æ­£ç¡®");
+
+	//äº‹ä»¶ä¿¡æ¯æ·»åŠ åˆ°è¾“å‡ºå¯¹è±¡;
+	curEventData.append(eventDetail);
 
 	if (!curEventData.isNull())
-	{
 		curDevice["events"] = curEventData;
-	}
 	return 0;
 }
 
-int CMainTask::getCommonJsonValue(vector<string> &vecTagsValue, vector<TAGINFO> &vecTagsName, Json::Value &deviceInfo)
+int CMainTask::GetCommonJsonValue(vector<string> &vecTagsValue, vector<TAGINFO> &vecTagsName, Json::Value &deviceInfo)
 {
 	Json::Value jsonTagVTQ;
 	Json::Reader jsonReader;
-	Json::Value curDevice;//Éè±¸»ù±¾ĞÅÏ¢;
+	Json::Value curDevice;
 	Json::Value curMeterData;
 	Json::Value curEptStatData;
 	Json::Value curEnvMeasureData;
-	for (int i = 0; i < m_deviceCommon.size(); i++)
+	for (int i = 0; i < m_deviceCommon.size(); i++)	//è®¾å¤‡æ•°é‡ç›¸å¯¹è¾ƒå°‘ï¼Œæ”¾åœ¨å¤–å±‚å¾ªç¯å¯å‡å°‘ç³»ç»Ÿæ¶ˆè€—;
 	{
-		//Èç¹ûÊÇÊÂ¼şÉè±¸,ÔòÌø¹ı²»×ö´¦Àí;
-		if ((m_deviceCommon[i].strName.find("eventDevice") != m_deviceCommon[i].strName.npos))
-		{
+		//å¦‚æœæ˜¯äº‹ä»¶è®¾å¤‡,åˆ™è·³è¿‡ä¸åšå¤„ç†;
+		if (m_deviceCommon[i].driverID == 20000)
 			continue;
-		}
+		//å¼€å§‹ç»„è£…æ•°æ®åŒ…çš„æ—¶é—´ï¼Œä¹Ÿå°±æ˜¯ä»å†…å­˜æ•°æ®åº“è·å–æ•°æ®çš„æ—¶é—´;
+		curDevice["gather_time"] = getTime();
+		curDevice["device_path"] = m_deviceCommon[i].strGatewayName;
+		
+		//æŸäº›è®¾å¤‡çš„IDæ˜¯è·¯å¾„çš„å½¢å¼;
+		if (m_deviceCommon[i].strSubObjectName.empty())
+			curDevice["device_id"] = m_deviceCommon[i].strName;
+		else
+			curDevice["device_id"] = m_deviceCommon[i].strName + "/" + stringToUTF8string(m_deviceCommon[i].strSubObjectName);
 
-		curDevice.clear();
-		curMeterData.clear();
-		curEptStatData.clear();
-		curEnvMeasureData.clear();
-
-		curDevice["gather_time"] = getTime();					//¿ªÊ¼×é×°Êı¾İ°üµÄÊ±¼ä£¬Ò²¾ÍÊÇ´ÓÄÚ´æÊı¾İ¿â»ñÈ¡Êı¾İµÄÊ±¼ä;
-		curDevice["device_path"] = m_deviceCommon[i].strName;	//Éè±¸Â·¾¶£¬¸ñÊ½ Íø¹Ø1±àºÅ/Íø¹Ø2±àºÅ;
-		curDevice["device_id"] = m_deviceCommon[i].strName;		//Éè±¸Ãû³Æ;
 		for (int j = 0; j < vecTagsName.size(); j++)
 		{
-			string strDeviceStatus = "device." + m_deviceCommon[i].strName + ".connstatus"; //»ñÈ¡Éè±¸×´Ì¬;
-			if (m_deviceCommon[i].deviceID == vecTagsName[j].deviceID)
-			{//µ±Ç°Éè±¸µÄĞÅÏ¢;
+			string strDeviceStatus = "device." + m_deviceCommon[i].strName + ".connstatus"; //è·å–è®¾å¤‡çŠ¶æ€ç‚¹ä½;
+			if (m_deviceCommon[i].deviceID == vecTagsName[j].deviceID)						//å½“å‰è®¾å¤‡çš„ä¿¡æ¯;
+			{
 				string &strTagName = vecTagsName[j].strTagName;
 				string &strTagValue = vecTagsValue[j];
-				m_mapTagsName2UpdateTime[strTagName] = strTagValue;							//¸üĞÂÉÏ´«Ê±¼äµãµÄÊı¾İ;
-
-				if ((vecTagsName[j].strTagName.find("eventCode") != vecTagsName[j].strTagName.npos) || (vecTagsName[j].strTagName.find("eventState") != vecTagsName[j].strTagName.npos)) //ÊÂ¼ş²»×öÍ³Ò»ÉÏ´«£¬ĞèÒªµ¥¶À´¦Àí;
+				m_mapTagsName2UpdateTime[strTagName] = strTagValue;							//æ›´æ–°ä¸Šä¼ æ—¶é—´ç‚¹çš„æ•°æ®;
+				if ((vecTagsName[j].strTagName.find("eventCode") != vecTagsName[j].strTagName.npos) || (vecTagsName[j].strTagName.find("eventState") != vecTagsName[j].strTagName.npos)) //äº‹ä»¶ä¸åšç»Ÿä¸€ä¸Šä¼ ï¼Œéœ€è¦å•ç‹¬å¤„ç†;
 					continue;
 
-				string strVal; //´æ´¢»ñÈ¡µ½µÄÊıÖµ;
+				string strVal; //å­˜å‚¨è·å–åˆ°çš„æ•°å€¼;
 				if (jsonReader.parse(strTagValue, jsonTagVTQ, false))
 				{
-					if (jsonTagVTQ["v"].asString() == "*" || jsonTagVTQ["v"].asString() == "**" || jsonTagVTQ["v"].asString() == "***")	//Èç¹ûÎ´»ñÈ¡µ½Êı¾İ£¬Ôò½øÈëÏÂÒ»¸öÑ­»·;
+					if (jsonTagVTQ["v"].asString() == "*" || jsonTagVTQ["v"].asString() == "**" || jsonTagVTQ["v"].asString() == "***")	//å¦‚æœæœªè·å–åˆ°æ•°æ®ï¼Œåˆ™è¿›å…¥ä¸‹ä¸€ä¸ªå¾ªç¯;
 						continue;
 					strVal = jsonTagVTQ["v"].asString();
 				}
 
-				//»ñÈ¡Éè±¸×´Ì¬µãÊı¾İ;
+				//è·å–è®¾å¤‡çŠ¶æ€ç‚¹æ•°æ®;
 				if (strDeviceStatus == strTagName)
 				{
 					if (atoi(strVal.c_str()) == 0)
@@ -810,78 +780,95 @@ int CMainTask::getCommonJsonValue(vector<string> &vecTagsValue, vector<TAGINFO> 
 					continue;
 				}
 
-				//»ñÈ¡ĞèÒªÏÔÊ¾µÄÃû³Æ;
+				//è·å–éœ€è¦æ˜¾ç¤ºçš„åç§°;
 				size_t nLoc = strTagName.find_first_of('_');
 				strTagName = strTagName.substr(nLoc + 1, -1);
-				if (vecTagsName[j].outputType == "int")
+				if (vecTagsName[j].outputType == "int")//å®é™…ä¸Šä¼ æ•°æ®æ˜¯æ•´å‹æ•°æ®;
 				{
 					long nOut;
-					if (vecTagsName[j].calcValue == 0)
-					{
+					if (vecTagsName[j].calcValue == 0) //æ•°æ®åº“ä¸­æ¯”ä¾‹ç³»æ•°åˆ—æœªå¡«å†™æˆ–è€…å¡«å†™ä¸º0;
 						nOut = atoi(strVal.c_str());
-					}
 					else
-					{
 						nOut = atoi(strVal.c_str()) * vecTagsName[j].calcValue;
-					}
 
 					if (vecTagsName[j].showType == "electric_meter")
-					{
 						curMeterData[strTagName] = nOut;
-					}
 					else if (vecTagsName[j].showType == "ept_stat")
-					{
 						curEptStatData[strTagName] = nOut;
-					}
 					else if (vecTagsName[j].showType == "env_measure")
-					{
 						curEnvMeasureData[strTagName] = nOut;
-					}
 				}
-				else if ((vecTagsName[j].outputType == "float"))
+				else if ((vecTagsName[j].outputType == "float")) // å®é™…ä¸Šä¼ æ•°æ®æ˜¯æµ®ç‚¹å‹æ•°æ®;
 				{
 					float fVal;
 					if (vecTagsName[j].calcValue == 0)
-					{
 						fVal = atof(strVal.c_str());
+					else
+						fVal = atof(strVal.c_str()) * vecTagsName[j].calcValue;
+
+					string strPrecision = getRound(fVal, vecTagsName[j].precision);	//è·å–æµ®ç‚¹æ•°ä¿ç•™å°æ•°ä½æ•°;
+					if (vecTagsName[j].showType == "electric_meter")
+						curMeterData[strTagName] = atof(strPrecision.c_str());
+					else if (vecTagsName[j].showType == "ept_stat")
+						curEptStatData[strTagName] = atof(strPrecision.c_str());
+					else if (vecTagsName[j].showType == "env_measure")
+						curEnvMeasureData[strTagName] = atof(strPrecision.c_str());
+				}
+			}
+		}
+		//å¦‚æœç»Ÿè®¡ç»“æœéç©ºåˆ™å°†æ•°æ®æ·»åŠ åˆ°Jsonä¸­;
+		if (!curMeterData.isNull())
+			curDevice["electric_meter"] = curMeterData;
+		if (!curEptStatData.isNull())
+			curDevice["ept_stat"] = curEptStatData;
+		if (!curEnvMeasureData.isNull())
+			curDevice["env_measure"] = curEnvMeasureData;
+		deviceInfo.append(curDevice);
+
+		//æ¸…ç©ºå¯¹è±¡;
+		curDevice.clear();
+		curMeterData.clear();
+		curEptStatData.clear();
+		curEnvMeasureData.clear();
+	}
+	return 0;
+}
+
+int CMainTask::GetEventDetails(vector<TAGINFO> &vecEventTag, vector<string> &vecEventTagValues, map<string, int> &mState, map<string, int> &mCode, vector<string> vecTagsValue)
+{
+	for (int i = 0; i < m_vecTagsInfo.size(); i++)//å°†äº‹ä»¶ç‚¹ä½å’ŒçŠ¶æ€æ”¹å˜æƒ…å†µç­›é€‰å‡ºæ¥;
+	{
+		if ((m_vecTagsInfo[i].strTagName.find("eventCode") != m_vecTagsInfo[i].strTagName.npos) || (m_vecTagsInfo[i].strTagName.find("eventState") != m_vecTagsInfo[i].strTagName.npos))
+		{
+			//å°†äº‹ä»¶ç›¸å…³æ•°æ®å…ˆé¢„å…ˆå­˜æ”¾åœ¨vectorä¸­;
+			vecEventTag.push_back(m_vecTagsInfo[i]);
+			vecEventTagValues.push_back(m_pkAllTagDatas[i].szData);
+
+			map<string, string>::iterator it = m_mapTagsName2UpdateTime.find(m_vecTagsInfo[i].strTagName);
+			if (it != m_mapTagsName2UpdateTime.end())
+			{
+				Json::Value rootPre;
+				Json::Value rootCur;
+				Json::Reader jsonReader;
+				if (jsonReader.parse(vecTagsValue[i], rootPre, false) && jsonReader.parse(it->second, rootCur, false))
+				{
+					if ((m_vecTagsInfo[i].strTagName.find("eventCode") != m_vecTagsInfo[i].strTagName.npos))
+					{
+						if (rootPre["v"] != rootCur["v"])//code æ•°å€¼æ”¹å˜;
+							mCode[m_vecTagsInfo[i].strTagName] = 1;
+						else
+							mCode[m_vecTagsInfo[i].strTagName] = 0;
 					}
 					else
 					{
-						fVal = atof(strVal.c_str()) * vecTagsName[j].calcValue;
-					}
-					string strPrecision = getRound(fVal, vecTagsName[j].precision);
-
-					//long fResult = fVal * pow(10, vecTagsName[j].precision);
-					//float fRet = fResult*1.0 / pow(10, vecTagsName[j].precision);
-					if (vecTagsName[j].showType == "electric_meter")
-					{
-						curMeterData[strTagName] = strPrecision.c_str();
-					}
-					else if (vecTagsName[j].showType == "ept_stat")
-					{
-						curEptStatData[strTagName] = strPrecision.c_str();
-					}
-					else if (vecTagsName[j].showType == "env_measure")
-					{
-						curEnvMeasureData[strTagName] = strPrecision.c_str();
+						if (rootPre["v"] != rootCur["v"])//state æ•°å€¼æ”¹å˜;
+							mState[m_vecTagsInfo[i].strTagName] = 1;
+						else
+							mState[m_vecTagsInfo[i].strTagName] = 0;
 					}
 				}
 			}
 		}
-		//Èç¹ûÍ³¼Æ½á¹û·Ç¿ÕÔò½«Êı¾İÌí¼Óµ½JsonÖĞ;
-		if (!curMeterData.isNull())
-		{
-			curDevice["electric_meter"] = curMeterData;
-		}
-		if (!curEptStatData.isNull())
-		{
-			curDevice["ept_stat"] = curEptStatData;
-		}
-		if (!curEnvMeasureData.isNull())
-		{
-			curDevice["env_measure"] = curEnvMeasureData;
-		}
-		deviceInfo.append(curDevice);
 	}
 	return 0;
 }
@@ -899,21 +886,70 @@ string getRound(float src, int bits)
 {
 	char szValue[32] = { 0 };
 	if (bits == 1)
-	{
 		sprintf(szValue, "%.1f", src);
-	}
 	else if (bits == 2)
-	{
 		sprintf(szValue, "%.2f", src);
-	}
 	else if (bits == 3)
-	{
 		sprintf(szValue, "%.3f", src);
-	}
 	else if (bits == 4)
-	{
 		sprintf(szValue, "%.4f", src);
-	}
 	string strRtn = szValue;
 	return strRtn;
+}
+
+std::wstring MultiChartoWideChar(std::string str)
+{
+	int nLen = MultiByteToWideChar(CP_ACP, 0, str.c_str(), (int)(str.size()), NULL, 0);
+	WCHAR *pBuffer = new WCHAR[nLen + 1];
+	MultiByteToWideChar(CP_ACP, 0, str.c_str(), (int)(str.size()), pBuffer, nLen);
+	pBuffer[nLen] = '\0';
+	std::wstring wstr;
+	wstr.append(pBuffer);
+	delete[] pBuffer;
+	return wstr;
+}
+
+std::string WideChartoMultiChar(std::wstring wstr)
+{
+	int nLen = WideCharToMultiByte(CP_UTF8, 0, wstr.c_str(), (int)(wstr.size()), NULL, 0, NULL, NULL);
+	CHAR *pBuffer = new CHAR[nLen + 1];
+	WideCharToMultiByte(CP_UTF8, 0, wstr.c_str(), (int)(wstr.size()), pBuffer, nLen, NULL, NULL);
+	pBuffer[nLen] = '\0';
+	std::string str;
+	str.append(pBuffer);
+	delete[] pBuffer;
+	return str;
+}
+
+std::string stringToUTF8string(std::string str)
+{
+	std::wstring wstr = MultiChartoWideChar(str);
+	return WideChartoMultiChar(wstr);
+}
+
+std::string GenerateUUID()
+{
+	std::string guid("");
+#ifdef _WIN32
+	UUID uuid;
+	if (RPC_S_OK != UuidCreate(&uuid))
+	{
+		return guid;
+	}
+	char tmp[37] = { 0 };
+	sprintf_s(tmp, "%08x-%04x-%04x-%02x%02x-%02x%02x%02x%02x%02x%02x",
+		uuid.Data1, uuid.Data2, uuid.Data3,
+		uuid.Data4[0], uuid.Data4[1],
+		uuid.Data4[2], uuid.Data4[3],
+		uuid.Data4[4], uuid.Data4[5],
+		uuid.Data4[6], uuid.Data4[7]);
+	guid.assign(tmp);
+#else
+	uuid_t uuid;
+	char str[50] = {};
+	uuid_generate(uuid);
+	uuid_unparse(uuid, str);
+	guid.assign(str);
+#endif
+	return guid;
 }

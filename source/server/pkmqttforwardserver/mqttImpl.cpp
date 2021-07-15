@@ -1,8 +1,12 @@
-/************************************************************************/
-/* 网关实体类：
-初始化，连接，发布，订阅
-*/
-/************************************************************************/
+/**************************************************************
+*  Filename:    mqttImpl.h
+*  Copyright:   XinHong Software Co., Ltd.
+*
+*  Description: mqtt 连接相关操作;
+*
+*  @author:     xingxing
+*  @version     07/06/2021  xingxing  Initial Version
+**************************************************************/
 #include "ace/OS.h"
 #include "mqttImpl.h"
 #include <memory.h>
@@ -31,9 +35,6 @@ CMqttImpl::CMqttImpl(const char* ip, unsigned short port, char* szClientID)
 	m_bConnected = false;
 }
 
-//  init sdk
-//  new handle
-//  connect
 int CMqttImpl::mqttClient_Init(void* pObj)
 {
 	int nRet = 0;
@@ -49,10 +50,7 @@ int CMqttImpl::mqttClient_Init(void* pObj)
 	{
 		g_logger.LogMessage(PK_LOGLEVEL_ERROR, "mosquitto_new failed, retvalue == NULL, ret:%d", MQTT_NEW_HANDLE_ERROR);
 		return MQTT_NEW_HANDLE_ERROR;
-	}
-
-	//init library;
-	//return success;
+	};
 	m_bInit = true;
 	return nRet;
 }
@@ -80,7 +78,8 @@ int CMqttImpl::mqttClient_Pub(const char* topic, int *mid, int msgLen, const cha
 		return MQTT_NO_CONNECTED;
 	}
 
-	int nRet = mosquitto_publish(m_hMqtt, mid, topic, msgLen, szMsg, 0, false);
+	//确保消息发送一次到服务端;
+	int nRet = mosquitto_publish(m_hMqtt, mid, topic, msgLen, szMsg, 2, false);
 	if (nRet != 0)
 	{
 		g_logger.LogMessage(PK_LOGLEVEL_ERROR, "mosquitto_publish failed, return:%d", nRet);
@@ -126,7 +125,7 @@ int CMqttImpl::mqttClient_Connect(int nKeepAlive, CBFuncConnect* CBConn, CBFuncD
 	mosquitto_publish_callback_set(m_hMqtt, CBPub);
 	mosquitto_message_callback_set(m_hMqtt, CBSub);
 
-	//连接mqtt
+	//连接mqtt;
 	int nRet = mosquitto_connect(m_hMqtt, m_szAddrIP, m_nPort, nKeepAlive);
 	if (nRet == MOSQ_ERR_SUCCESS)
 	{
@@ -141,15 +140,6 @@ int CMqttImpl::mqttClient_Connect(int nKeepAlive, CBFuncConnect* CBConn, CBFuncD
 	return nRet;
 }
 
-//************************************
-// Method:    mqttClient_Sub
-// FullName:  CMqttPublish::mqttClient_Sub
-// Access:    public 
-// Returns:   int
-// Qualifier: 订阅topic
-// Parameter: char * topic 需要侦听的通道号，以; 分割
-// Parameter: int * mid
-//************************************
 int CMqttImpl::mqttClient_mSub(vector<string> vecTopics, vector<string>& vecSucceed, int *mid)
 {
 	if (m_bInit == false)
@@ -166,11 +156,10 @@ int CMqttImpl::mqttClient_mSub(vector<string> vecTopics, vector<string>& vecSucc
 
 	ACE_Time_Value tv;
 	tv.set_msec(200);
-
 	for (int i = 0; i < vecTopics.size(); i++)
 	{
 		string &strTopic = vecTopics[i];
-		int nRet = mosquitto_subscribe(m_hMqtt, mid, strTopic.c_str(), 0);
+		int nRet = mosquitto_subscribe(m_hMqtt, mid, strTopic.c_str(), 2);
 		if (nRet == MOSQ_ERR_SUCCESS)
 		{
 			g_logger.LogMessage(PK_LOGLEVEL_INFO, "mosquitto_subscribe success, channel:%s", strTopic.c_str());
@@ -188,20 +177,9 @@ int CMqttImpl::mqttClient_mSub(vector<string> vecTopics, vector<string>& vecSucc
 			vecSucceed.push_back(vecTopics[i]);
 		}
 	}
-	// mosquitto_loop_start(m_hMqtt); // 每次都开启一个线程，还是一个m_hMqtt一个线程？
 	return vecSucceed.size();
 }
 
-
-//************************************
-// Method:    mqttClient_Sub
-// FullName:  CMqttPublish::mqttClient_Sub
-// Access:    public 
-// Returns:   int
-// Qualifier: 订阅topic
-// Parameter: char * topic
-// Parameter: int * mid
-//************************************
 int CMqttImpl::mqttClient_Sub(const char* topic, int *mid)
 {
 	if (m_bInit == false)
@@ -211,7 +189,7 @@ int CMqttImpl::mqttClient_Sub(const char* topic, int *mid)
 		g_logger.LogMessage(PK_LOGLEVEL_ERROR, "连接mqttserver失败，未连接");
 	}
 
-	int nRet = mosquitto_subscribe(m_hMqtt, mid, topic, 0);
+	int nRet = mosquitto_subscribe(m_hMqtt, mid, topic, 2);
 
 	return nRet;
 }
